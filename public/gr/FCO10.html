@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="ko" class="main">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<!-- 190115_ 파비콘 추가 -->
+	<meta name="apple-mobile-web-app-title" content="VinylC">
+	<meta name="application-name" content="VinylC">
+	<link rel="shortcut icon" type="image/x-icon" href="/images/favicon_16.ico">
+	<link rel="apple-touch-icon" href="/images/favicon_192.png">
+	<link rel="apple-touch-icon-precomposed" href="/images/favicon_192.png">
+	<!-- //190115_ 파비콘 추가 -->
+	<title>Home 메인 || VINYLC</title>
+	<link rel="stylesheet" type="text/css" href="/css/common.css">
+	<script type="text/javascript" src="/js/libs/jquery-1.11.2.min.js"></script>
+</head>
+
+<body data-page="main" oncontextmenu="return false" onselectstart="return false" ondragstart="return false">
+
+<div id="skipnavi">
+	<ul>
+		<li><a href="#container_title">본문바로가기</a></li>
+	</ul>
+</div>
+<div id="wrap" data-ajax="/json/home-list.json">
+	<!-- header -->
+	<header class="sub main">
+        <div class="header_wrap">
+            @@include('./include/logo.html')
+        </div>
+        @@include('./include/nav.html')
+    </header>
+
+    <section id="container">
+		<div id="container_title" class="hide" tabindex="-1">본문 시작</div>
+		<!-- content -->
+		<div id="content">
+            <div class="main_wrap">
+                <div class="img_wrap">
+                    <div class="img_container">
+                    </div>
+                </div>
+                <div class="title_wrap">
+                </div>
+                <div class="paging_wrap">
+					<!-- 20190509 구조변경-->
+                    <div class="copyright">
+						<div class="copyright_inner">
+							<div class="copyright_txt">© VinylC Inc. All rights reserved.</div>
+						</div>
+					</div>
+					<!-- //20190509 구조변경-->
+                    <div class="paging"><strong class="num_curr">1</strong><span class="txt_slash">/</span><span class="num_total">6</span></div>
+                </div>
+            </div>
+		</div>
+		<div class="playvContainer">
+			<div class="playvCover"></div>
+			<div class="playvGoBtn"><img src="/images/vinylc_play_bt.jpg"/></div>
+		</div>
+		<!-- //content -->
+	</section>
+
+	<div class="btnTop_wrap">
+		<a href="#wrap" class="btn_top" title="페이지 최상단으로 이동"><span class="hide">Top</span></a>
+	</div>
+</div>
+
+<!--script 영역-->
+</script>
+<script type="text/javascript" src="/js/libs/TweenMax-2.0.2.min.js"></script>
+<script type="text/javascript" src="/js/libs/jquery-1.11.2.min.js"></script>
+<script type="text/javascript" src="/js/vcui.js"></script>
+<script type="text/javascript" src="/js/vinylc.site.js"></script>
+<script type="text/javascript">
+vcui.require( ['vinylc/home'], function( Home ) {
+    new Home('#wrap', {
+		playv_url: "/playv/FPV10.html"
+	});
+});
+</script>
+<!--//script 영역-->
+
+</body>
+</html>

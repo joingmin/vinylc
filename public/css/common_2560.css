@@ -1,0 +1,53 @@
+
+
+/************* 2561 more Screen *************/
+@media only screen and (min-width:2561px) {
+
+/*****************************************
+
+* filename : common_2560.css
+* description : 2560 이상 css
+
+* 1921 CSS 내용에서 2560 해상도에서 문제가 있을 경우 재정의
+  Ex) 1921 CSS 에서 높이기준으로 리사이즈된 2560 이미지의 경우
+
+* px/128 = rem
+
+
+*****************************************/
+
+
+ 
+/* 상단 */
+.head_info_txt .hd_txt.goods .hd_img_goods img {left:0; top:50%; width:100%; height:auto; margin:-3.125rem 0 0 0;}
+
+/* next list */
+.next_list a.nx_link .nx_text {padding-right:2.328125rem;}
+.next_list a.nx_link .bg img {width:100%; height:auto;left:0; margin:0;}
+
+
+/* Service */
+.service_wrap .flow_wrap .img_wrap img {left:0; top:50%; width:100%; height:auto; transform:translate(0, -50%);}
+
+body[data-page="works"] .head_info_txt .hd_txt .em,
+body[data-page="news"] .head_info_txt .hd_txt .em {padding-right:240px;}
+
+/* Goods */
+.head_info_txt .hd_txt.goods .goods_buy .btn {min-width:164px; height:64px; padding:0;}
+.head_info_txt .hd_txt.goods .goods_buy .btn span{font-size:16px; line-height:64px; letter-spacing:-1px;}
+
+.wk_wsite_link .app a.google span:before {background-position:-1.1719rem -0.4531rem;}
+
+.head_info_txt .hd_txt .date_wrap dt,
+.head_info_txt .hd_txt .date_wrap dd{line-height:65px;}
+
+.about_wrap .intro_wrap .img_wrap {background-size:100% auto;height:42.1875vw;}
+
+footer .footer_wrap {margin:260px auto 0;}
+}
+
+
+
+
+
+

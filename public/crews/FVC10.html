@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="ko" class="vinylcrews"><!-- 181219 수정 : 클래스 추가 -->
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<title>VinylCrews || VINYLC</title>
+	<link href="" rel="shortcut icon" type="image/x-icon">
+	<link rel="apple-touch-icon-precomposed" href="">
+	<link rel="stylesheet" type="text/css" href="/css/common.css">
+</head>
+
+<body data-page="vinylcrews">
+<div id="skipnavi">
+	<ul>
+		<li><a href="#container_title">본문바로가기</a></li>
+	</ul>
+</div>
+<div id="wrap">
+	<!-- header -->
+	<header class="sub vinylcrews">
+		<div class="header_wrap">
+			@@include('./include/logo.html')
+			<a href="#" class="go_h_prev">
+				<svg id="svg_go_back" viewBox="0 0 56 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+					<title>이전페이지로 가기</title>
+					<g id="g_go_back" stroke="none" stroke-width="1" fill="#fff" fill-rule="evenodd">
+						<path d="M11.4861406,22.6214132 L23.8648203,35.0000929 L19.6221796,39.2427336 L-7.10542736e-15,19.620554 L19.6222725,-5.32907052e-14 L23.8647274,4.24282648 L11.4850564,16.6214132 L55.2427336,16.6214132 L55.2427336,22.6214132 L11.4861406,22.6214132 Z" id="Stroke-1" fill-rule="nonzero"></path>
+					</g>
+				</svg>
+			</a>
+		</div>
+		@@include('./include/nav.html')
+	</header>
+	<!-- //header -->
+
+	<section id="container">
+		<div id="container_title" class="hide" tabindex="-1">본문 시작</div>
+
+		<div id="content">
+			<div class="crews_wrap" data-ajax="/json/vinylCrews.json">
+				<!-- 181219 수정 -->
+				<!-- 크루 표지 -->
+				<div class="crews_main">
+					<!-- 배경텍스트 -->
+					<div class="quest_cont">
+						<div class="quest_cover">
+							<!-- 190307 수정 -->
+							<div>바이널,</div>
+							<div>바이널씨에 대한</div>
+							<div>생각</div>
+							<!-- //190307 수정 -->
+						</div>
+					</div>
+
+					<!-- 메시지 리스트 -->
+					<div class="msg_wrap">
+						<div class="msg_cont">
+							<div class="msg_cover">
+								<!-- <a href="#">생각이 늙지 않는 것, 천진함을 잃지 않는 것, 그리고 꿈을 잃지 않는 것. </a> -->
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- //181219 수정 -->
+
+				<div class="bg_wrap">
+				</div>
+
+				<div class="info_wrap">
+				</div>
+
+				<div class="indi_wrap">
+					<div class="indi">
+						<span class="now">1</span>
+						<span class="total">555</span>
+					</div>
+				</div>
+
+				<button class="btn_arrow prev"><span class="hide">이전</span></button> <!-- 190304 수정 --> 
+				<button class="btn_arrow next"><span class="hide">다음</span></button> <!-- 190304 수정 -->
+			</div>
+		</div>
+	</section>
+</div>
+
+<script type="text/html" id="template-crew-item">
+<div class="bg_item">
+	<div class="img_cont">
+		<img src="" alt="{{html photo.alt}}" data-src="{{html photo.src}}">
+		<div class="dimmed"></div>
+	</div>
+
+	<div class="txt_cont">
+		<div class="txt_box">
+			<p>
+				{{html answer.message}}
+			</p>
+		</div>
+	</div>
+</div>
+</script>
+
+<script type="text/html" id="template-crew-info">
+<div class="info_item">
+	<div class="info_cont">
+		<div class="info_box">
+			<p class="name">{{html info.name}}</p>
+			<p class="period"><span>{{html info.period.start}}</span> <span>{{html info.period.end}}</span></p>
+			<p class="duty">{{html info.duty}}</p>
+		</div>
+	</div>
+</div>
+</script>
+
+<script type="text/javascript" src="/js/libs/jquery-1.11.2.min.js"></script>
+<script type="text/javascript" src="/js/vcui.js"></script>
+<script type="text/javascript" src="/js/vinylc.site.js"></script>
+<script type="text/javascript">
+$(function() {
+	var requireArr = ['libs/jquery.tinyscrollbar-2.4.2.min','vinylc/vinylCrews'];
+	vcui.require( requireArr, function( VinylCrews ) {
+	    $('#wrap').vcVinylCrews();
+	});
+});
+</script>
+</body>
+</html>

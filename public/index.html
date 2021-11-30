@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>바이널씨 2018 UI개발 진행표</title>
+<link rel="stylesheet" type="text/css" href="./guide/css/base.css">
+	<script>
+		function getCookieValue(a) {
+			var b = document.cookie.match('(^|;)\\s*' + a + '\\s*=\\s*([^;]+)');
+			return b ? b.pop() : '';
+		}
+
+		var width = getCookieValue('colWidth');
+		width && document.addEventListener("DOMContentLoaded", function(){
+			document.querySelector('#colsFrame').setAttribute('cols', width + ',*');
+		});
+	</script>
+</head>
+
+<frameset rows="50,*" frameborder="0" framespacing="0">
+	<frame src="./coding_top.html" name="topFrame" scrolling="no">
+	<frameset cols="400,*" frameborder="0" framespacing="0" id="colsFrame">
+		<frame src="./coding_left.html" name="leftFrame" scrolling="auto">
+		<frame src="./coding_main.html" name="mainFrame">
+	</frameset>
+</frameset>
+<noframes></noframes>
+
+</html>

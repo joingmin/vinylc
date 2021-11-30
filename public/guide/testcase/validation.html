@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        
+        pre {
+            border:1px dashed #000;
+            border-radius: 4px 4px 4px;
+            background-color: #efefef;
+            padding: 3px;
+        }
+        
+        dt {
+            float: left;
+            width: 80px;
+        }
+
+        dd .message {
+            display: none;
+        }
+
+        dd.error .message {
+            display: block;
+        }
+
+        dd.error input {
+            border-color: red;
+        }
+    </style>
+</head>
+<body>
+
+<div>
+    <h1>폼 밸리데이션</h1>
+    <form action="" id="frm" enctype="multipart/form-data">
+        <dl>
+            <dt><label for="a">이름</label></dt>
+            <dd>
+                <input type="text" id="a" name="name" data-valid="required">
+                <span class="message"></span>
+            </dd>
+            <dt><label for="b">이메일</label></dt>
+            <dd>
+                <input type="text" id="b" name="email" data-valid="required|email">
+                <span class="message"></span>
+            </dd>
+            <dt><label for="c">전화번호</label></dt>
+            <dd>
+                <input type="text" id="c" name="tel" data-valid="required|tel">
+                <span class="message"></span>
+            </dd>
+            <dt><label for="e">휴대폰</label></dt>
+            <dd>
+                <select id="e" name="mobile1" data-valid="required|mobile(mobile2, mobile3)">
+                    <option>010</option>
+                    <option>011</option>
+                    <option>016</option>
+                </select> -
+                <input type="text" name="mobile2"> -
+                <input type="text" name="mobile3">
+                <span class="message"></span>
+            </dd>
+            <dt><label for="d">파일</label></dt>
+            <dd>
+                <input type="file" id="d" name="file" accept="application/zip</li><li>image/jpg</li><li>image/png"
+                       data-valid="required|filemaxsize(2MB)|filemaxcount(1)">
+                <span class="message"></span>
+            </dd>
+        </dl>
+        <button>등록</button>
+    </form>
+    <br><br>
+    <p>data-valid 에 넣을 수 있는 값(다중으로 설정가능)</p>
+    <ul>
+        <li>required: 필수입력</li>
+        <li>match(pass1): 암호, 암호 재확인와 같이 동일하게 입력해야 하는 값일 때 사용
+<pre>
+암호 : &lt;input type="password" name="passwd1"&gt;
+암호 재확인: &lt;input type="password" name="passwd2" data-valid="match(passwd1)"&gt;
+</pre>
+        </li>
+        <li>email</li>
+        <li>tel
+<pre>
+1) 입력칸 하나로 입력받을 경우
+    &lt;input type="text" name="tel" data-valid="tel" &gt;
+
+2) 입력칸 2개로 입력받을 경우
+    &lt;input type="text" name="tel1" data-valid="tel(tel2)" &gt;
+    &lt;input type="text" name="tel2" &gt;
+
+2) 입력칸 3개로 입력받을 경우
+    &lt;input type="text" name="tel1" data-valid="tel(tel2, tel3)" &gt;
+    &lt;input type="text" name="tel2" &gt;
+    &lt;input type="text" name="tel3" &gt;
+</pre>
+        </li>
+        <li>mobile: tel랑 동일함</li>
+        <li>minlength(5): 최소길이 체크</li>
+        <li>maxlength(5): 최대길이 체크</li>
+        <li>exactlength(5): 지정된 길이로 입력했는지 체크</li>
+        <li>rangelength(2, 8): 지정된 최소/최대 길이로 입력했는지 체크</li>
+        <li>minbyte(5): minlength 참조</li>
+        <li>maxbyte(5): maxlength 참조</li>
+        <li>exactbyte(5): exactlength 참조</li>
+        <li>minchecked(5): 최소 체크 갯수</li>
+        <li>maxchecked(5): 최대 체크 갯수</li>
+        <li>exactchecked(5): 체크해야 할 갯수</li>
+        <li>rangechecked(2, 8): 체크해야 할 최소/최대 갯수</li>
+        <li>lt(5): 주어진 값이 5보다 작은지 체크</li>
+        <li>gt(5): 주어진 값이 5보다 큰지 체크</li>
+        <li>alpha: 영어만 입력</li>
+        <li>alnum: 영어숫자 입력</li>
+        <li>numeric: 숫자만 입력</li>
+        <li>integer: 숫자에 , 허용</li>
+        <li>decimal: 소수점 허용</li>
+        <li>nozero: 숫자를 입력받되 0이 아닌값만 허용</li>
+        <li>email: 이메일 형식 체크</li>
+        <li>url: url 형식 체크</li>
+        <li>date: 날짜 체크(여러개로 쪼개어서 받는 경우 tel과 동일하게 설정하면 된다.</li>
+        <li>file(jpg;png;zip): 확장자 체크</li>
+        <li>filemaxsize(2MB): 최대 파일 용량 체크</li>
+        <li>filemaxcount(1): 최대 파일 갯수 체크</li>
+    </ul>
+</div>
+
+<script src="/js/libs/jquery-1.11.2.min.js"></script>
+<script src="/js/vcui.js"></script>
+<script src="/js/vinylc.site.js"></script>
+<script>
+    $(function () {
+        vcui.require([
+            'ui/formValidator'
+        ], function (FormValidator) {
+            new FormValidator($('#frm'), {
+                notifyType: 'tooltip', // [alert|tooltip] => alert: 하나 체크하면서 얼럿을 띄우는 방식, tooltip: 전체를 한방에 체크
+
+                // 기본 메세지와 다른 메세지를 표시하고자 할 경우 유효성 유형에 따라 메세지를 설정해주면 된다.
+                // 필수옵션사항은 아님
+                messages: {
+                    required: '필수입력 항목입니다.',
+                    email: "'[name]'항목은 이메일 형식여야 합니다.",
+                    tel: '전화번호가 올바르지 않습니다.'
+                },
+                onBeforeSubmit: function () {
+                    // 전체 다 통과된 다음에 서브밋되기 직전에 실행되는 콜백함수로
+                    // FormValidator기능으로 커버가 안되는 검증를 추가적으로 하고자 할 경우 사용
+
+                    /*
+                    // file에 있는 filemaxsize(20MB)를 제거하고 아래와 같이 하면 filemaxsize와 동일하게 체크할 수 있다.
+
+                    var files = vcui.toArray(this.elements.file.files);
+                    var size = vcui.array.reduce(files, function (cur, item) {
+                        return cur + item.size;
+                    }, 10);
+
+                    if (size > 2 * 1024 * 1024) {
+                        // 유효하지 않을 경우 아래와 같은 형식으로 throwing 해준다.
+                        throw {
+                            el: this.elements.file,
+                            msg: '용량 초과'
+                        };
+                    }*/
+                }
+            });
+        });
+    });
+</script>
+</body>
+</html>

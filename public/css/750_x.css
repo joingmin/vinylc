@@ -1,0 +1,58 @@
+
+
+/************* iphone X Mobile Screen *************/
+@media only screen and (device-width : 375px) and (device-height : 812px) and (-webkit-device-pixel-ratio : 3), (device-width : 414px) and (device-height : 896px) and (-webkit-device-pixel-ratio : 3), (device-width : 414px) and (device-height : 896px) and (-webkit-device-pixel-ratio : 2)  { 
+
+/*****************************************
+
+* filename : common_768_x.css
+* description : 아이폰 X 의 재정의 css
+
+* 아이폰 X 높이 계산 달라 재정의
+
+* px/37.5 = rem
+
+
+*****************************************/
+
+
+ 
+
+header nav .nav_cont .menu {bottom:40vh;}
+header nav .nav_cont .channel {padding:0 0 24vh;}
+
+
+/* 상단 */
+body[data-page="works"] .head_info_txt .hd_txt,
+body[data-page="goods"] .head_info_txt .hd_txt,
+body[data-page="careers"] .head_info_txt .hd_txt {margin-bottom:80px;}
+
+body[data-page="works"] .head_info_txt .hd_txt .em_txt,
+body[data-page="goods"] .head_info_txt .hd_txt .em_txt,
+body[data-page="careers"] .head_info_txt .hd_txt .em_txt {bottom:115px;}
+
+
+
+
+/* VinylCrews */
+/* Modify DATE 2018.11.20 */
+
+.crews_wrap .txt_wrap .txt_cont {bottom:18.9333rem;}
+
+.crews_wrap .bg_wrap .bg_item .txt_cont {bottom:18.9333rem;}
+
+.crews_wrap .info_wrap .info_cont {bottom:9.0666rem;}
+
+.crews_wrap .indi_wrap {bottom:8.48rem;}
+
+.crews_wrap .crews_main .msg_wrap .msg_cover {padding-top:59vh; padding-bottom:13.3333rem;}
+
+
+
+
+} 
+
+
+
+
+

@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<title>Request 메인 || VINYLC</title>
+	<link href="" rel="shortcut icon" type="image/x-icon">
+	<link rel="apple-touch-icon-precomposed" href="">
+	<link rel="stylesheet" type="text/css" href="/css/common.css">
+</head>
+
+<body data-page="request">
+<div id="skipnavi">
+	<ul>
+		<li><a href="#container_title">본문바로가기</a></li>
+	</ul>
+</div>
+<div id="wrap">
+	<!-- header -->
+	<header class="sub request">
+		<div class="header_wrap">
+			@@include('./include/logo.html')
+		</div>
+		@@include('./include/nav.html')
+	</header>
+
+	<!-- //header -->
+	
+  <!-- 190201 수정-->
+	<section id="container">
+		<div id="container_title" class="hide" tabindex="-1">본문 시작</div> 
+		<!-- content -->
+		<div id="content">
+
+			<h1 class="hide">Request 메인</h1>
+
+			<div class="req_wrap">
+
+				<div class="req_main">
+					<div class="txt">
+						<!-- 190125 수정 -->
+						<div class="step_state">
+							<h2 class="now">STEP 1<span class="hide">현재단계</span></h2>
+							<span class="future">2<span class="hide">단계</span></span>
+							<span class="future">3<span class="hide">단계</span></span>
+							<span class="future">4<span class="hide">단계</span></span>
+						</div>
+						<!-- //190125 수정 -->
+
+						<p class="tit">프로젝트를 준비하고 있나요?</p>
+						<p>아래 3가지 사항이 준비되었는지 확인한 후 상황에 따라 프로젝트를 의뢰하면
+						좀 더 빠르고 정확하게 견적과 제안을 받아볼 수 있습니다.</p>
+					</div>
+					
+					<div class="prepare_wrap">
+						<div class="prepare">
+							<!-- 181101 수정 -->
+							<!-- 181217 수정 삭제 -->
+							<!-- <div class="step_state">
+								<h2 class="now"><span class="hide">현재단계</span>STEP 1</h2>
+								<span class="future"><span class="hide">다음단계</span>STEP 2</span>
+								<span class="future"><span class="hide">다음단계</span>STEP 3</span>
+								<span class="future"><span class="hide">다음단계</span>STEP 4</span>
+							</div> -->
+							<!-- //181217 수정 삭제-->
+							<h3 class="title">준비사항을 체크해주세요.</h3>
+							<!-- //181101 수정 -->
+							<ul>
+								<li>
+									<!-- 181101 수정 -->
+									<div class="pos_rel">
+										<span class="chk_wrap">
+										  <input type="checkbox" name="fn_ck_pp" id="fi_ck_pp1"><label for="fi_ck_pp1">회원정책, 과금정책과 같은 <br class="br_750">서비스에 대한 정책이 정리 되어 있습니다.</label>
+										</span>
+										<!-- link -->
+										<a href="#" class="arr_link">샘플보기</a>
+									</div>
+									<!-- //181101 수정 -->
+								</li>
+								<li>
+									<!-- 181101 수정 -->
+									<div class="pos_rel">
+										<span class="chk_wrap">
+										  <input type="checkbox" name="fn_ck_pp" id="fi_ck_pp2"><label for="fi_ck_pp2">프로젝트 계획과 <br class="br_750">제안요청서(REP)가 준비 되었습니다.</label>
+										</span>
+										<!-- link -->
+										<a href="#" class="arr_link">샘플보기</a>
+									</div>
+									<!-- //181101 수정 -->
+								</li>
+								<li>
+									<!-- 181101 수정 -->
+									<div class="pos_rel">
+										<span class="chk_wrap">
+										  <input type="checkbox" name="fn_ck_pp" id="fi_ck_pp3"><label for="fi_ck_pp3">서비스 목표, 방향, <br class="br_750">대략적인 형상에 대한 정리가 되었습니다.</label>
+										</span>
+										<!-- link -->
+										<a href="#" class="arr_link">샘플보기</a>
+									</div>
+									<!-- //181101 수정 -->
+								</li>
+							</ul>
+
+							<!-- button --> <!-- 190125 수정 삭제-->
+							<!-- <div class="btn_wrap">
+								<button type="button" class="btn btn_gray"><span>준비상태 확인</span></button>
+							</div> -->
+						</div><!-- //190125 수정 삭제-->
+					</div>
+
+					<!-- 190125 수정-->
+					<!-- button --> 
+					<div class="btn_wrap">
+						<!-- <button type="button" class="btn btn_gray sample"><span>샘플파일 다운로드</span></button> -->
+						<a href="#request_sample_file" class="btn btn_gray sample" data-control="modal"><span>샘플파일 다운로드</span></a>
+						<button type="button" class="btn btn_gray"><span>준비상태 확인</span></button><!-- 181101 수정 -->
+					</div>
+					<!-- //190125 수정-->
+
+					<!-- mobile layer popup -->
+					<div class="sample_download sample_wrap" id="request_sample_file">
+						<p class="tt">샘플파일 다운로드</p>
+						<div class="btn_sample">
+							<a href="#" class="btn btn_gray sample"><span>샘플 파일명</span></a>
+							<a href="#" class="btn btn_gray sample"><span>샘플 파일명</span></a>
+							<a href="#" class="btn btn_gray sample"><span>샘플 파일명</span></a>
+						</div>
+						<button type="button" class="btn_close ui_modal_close"><span class="hide">닫기</span></button>
+					</div>
+					<!-- //mobile layer popup -->
+
+					<!-- 참고 샘플 -->
+					<!-- 181101 삭제
+					<aside class="refe_wrap">
+						<h1 class="ch_tit">샘플을 참고 하시겠어요?</h1>
+						<div class="box_refe">
+							<ul>
+								<li>
+									<a href="#" class="btn_file ico pdf">
+										바이널씨 회원정책서
+									</a>
+								</li>
+								<li>
+									<a href="#" class="btn_file ico ppt">
+										바이널씨 회원정책서
+									</a>
+								</li>
+								<li>
+									<a href="#" class="btn_file ico pdf">
+										바이널씨 제안요청서
+									</a>
+								</li>
+								<li>
+									<a href="#" class="btn_file ico ppt">
+										바이널씨 제안요청서
+									</a>
+								</li>
+								<li>
+									<a href="#" class="btn_file ico pdf">
+										바이널씨 서비스기획서
+									</a>
+								</li>
+								<li>
+									<a href="#" class="btn_file ico ppt">
+										바이널씨 서비스기획서
+									</a>
+								</li>
+							</ul>
+						</div>
+					</aside>
+					 -->
+				</div>
+
+			</div>
+
+		</div>
+		<!-- //content -->
+	</section>
+	<!-- //190201 수정-->
+
+	<!-- footer -->
+	@@include('./include/footer.html')
+	<!-- //footer -->
+	
+</div>
+
+
+<!--script 영역-->
+<script type="text/javascript" src="/js/libs/jquery-1.11.2.min.js"></script>
+<script type="text/javascript" src="/js/vcui.js"></script>
+<script type="text/javascript" src="/js/vinylc.site.js"></script>
+<script type="text/javascript">
+vcui.require( ['vinylc/selectbox'], function () { 
+	$('.ui_selectbox').vcSelectbox();
+});
+</script>
+<!--//script 영역-->
+
+</body>
+</html>

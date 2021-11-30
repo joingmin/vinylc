@@ -1,0 +1,476 @@
+<!doctype html>
+<html lang="ko"> <!-- GNB 가 열리면 .gr_open 클래스 추가 -->
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <title>Works 목록 || VINYLC</title>
+    <link href="" rel="shortcut icon" type="image/x-icon">
+    <link rel="apple-touch-icon-precomposed" href="">
+    <link rel="stylesheet" type="text/css" href="/css/common.css">
+<style type="text/css">
+header nav .nav_cont .menu li a span.bar { width:0; 
+    -webkit-transition:width 0.3s cubic-bezier(.895,.03,.685,.22); 
+}
+header nav .nav_cont .menu li a:hover span.bar { left:0; width:100%; 
+    -webkit-transition:width 0.4s cubic-bezier(.165,.84,.44,1); 
+}
+</style>
+</head>
+
+<body data-page="works">
+
+<div id="skipnavi">
+    <ul>
+        <li><a href="#container_title">본문바로가기</a></li>
+    </ul>
+</div>
+<div id="wrap">
+    <!-- header -->
+    <header class="sub">
+        <div class="header_wrap">
+            @@include('./include/logo.html')
+        </div>
+        @@include('./include/nav.html')
+    </header>
+
+    <section id="container">
+        <div id="container_title" class="hide" tabindex="-1">본문 시작</div> 
+        <!-- content -->
+        <div id="content">
+            <!-- 정보영역 -->
+            <div class="head_info_txt">
+                <h1 class="hide">Works 목록</h1>
+                <!-- text -->
+                <div class="hd_txt">
+                    <!-- <p class="em_txt">바이널씨는<br>창의적으로 만들어 활성화시키고,<br>그 가치를 확산시켜 냅니다.<br>그리고, 다시 진단하여 발전시키는<br>디지털 융합 전문가 입니다.</p> -->
+                    <div class="em_txt">
+                        <div><span>바이널씨는</span></div>
+                        <div><span>창의적으로 만들어 활성화시키고,</span></div>
+                        <div><span>그 가치를 확산시켜 냅니다.</span></div>
+                        <div><span>그리고, 다시 진단하여 발전시키는</span></div>
+                        <div><span>디지털 융합 전문가 입니다.</span></div>
+                    </div>
+                </div>
+            </div>
+            <!-- //정보영역 -->
+            
+            <!-- 목록 module -->
+            <div class="list_comm more_load" data-template="/template/list.html" data-ajax="/json/works-list.json">
+            <!-- Image & Video List Template 
+                <li>
+                    <a href="${href}">
+                        <div class="img_frame">
+                            <img src="${img_frame.src}" class="img" alt="${img_frame.alt}">
+                            <span class="img_logo"><img src="${img_frame.logo}" class="img_logo" alt=""></span>
+                        </div>
+                        <div class="txt_frame">
+                            <p class="txt">{{html txt_frame.txt}}</p>
+                            <p class="date">${txt_frame.data}</p>
+                        </div>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="${href}">
+                        <div class="video_frame">
+                            <video class="f_mov" title="${video_frame.title}" autoplay loop muted playsinline>
+                                <source src="${video_frame.src}" type="${video_frame.type}">
+                            </video>
+                        </div>
+                        <div class="img_frame">
+                            <img src="${img_frame.src}" class="img" alt="${img_frame.alt}">
+                        </div>
+                        <div class="txt_frame">
+                            <p class="txt">{{html txt_frame.txt}}</p>
+                            <p class="date">${txt_frame.data}</p>
+                        </div>
+                    </a>
+                </li>
+            -->
+            </div>  
+
+            <div class="btn_list_more" style="display:none;">
+                <button type="button"><span>MORE</span></button>
+            </div>
+
+            <div class="list_loading" style="display:none;">
+                <span class="is-show"></span>
+            </div>
+            <!-- //목록 module -->
+        </div>
+        <!-- //content -->
+    </section>
+
+    <!-- footer -->
+    @@include('./include/footer.html')
+    <!-- //footer -->
+</div>
+
+<script type="text/javascript" src="/js/libs/jquery-1.11.2.min.js"></script>
+<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery-color/2.1.2/jquery.color.min.js"></script>
+<script type="text/javascript" src="http://ajax.microsoft.com/ajax/jquery.templates/beta1/jquery.tmpl.min.js"></script>
+<script type="text/javascript" src="/js/vcui.js"></script>
+
+<script type="text/javascript">
+/*! 
+ * module vcui.ui.Header 
+ * extends vcui.ui.View 
+ * description Common Header 
+ * author VinylC UID Group 
+ * create 2018-10-10 
+ * update 2018-11-01 
+*/ 
+
+define( 'vinylc/header', ['jquery','jquery.transit','vcui','greensock','lottie'], function( $, transit, core, greensock, bodymovin ) {
+    'use strict';
+
+    var Hambuger = core.BaseClass.extend({
+        initialize: function( el, options ) {
+            this.$el = $(el); 
+
+            var lottieObj = {}; 
+            lottieObj.wrapper = this.$el[0]; 
+            lottieObj.renderer = 'svg'; 
+            lottieObj.loop = false; 
+            lottieObj.autoplay = false; 
+            lottieObj.animationData = {"v":"5.3.4","fr":60,"ip":0,"op":31,"w":32,"h":33,"nm":"SVG","ddd":0,"assets":[],"layers":[{"ddd":0,"ind":2,"ty":4,"nm":"icon_close Outlines","sr":1,"ks":{"o":{"a":0,"k":100,"ix":11},"r":{"a":1,"k":[{"i":{"x":[0.2],"y":[1]},"o":{"x":[0],"y":[0]},"n":["0p2_1_0_0"],"t":13.801,"s":[60],"e":[0]},{"t":30}],"ix":10},"p":{"a":1,"k":[{"i":{"x":1,"y":1},"o":{"x":0.6,"y":0},"n":"1_1_0p6_0","t":0,"s":[16,29.5,0],"e":[16,16.5,0],"to":[0,0,0],"ti":[0,0,0]},{"i":{"x":0.2,"y":1},"o":{"x":0.333,"y":0},"n":"0p2_1_0p333_0","t":13.801,"s":[16,16.5,0],"e":[16.5,16.5,0],"to":[0,0,0],"ti":[0,0,0]},{"t":30}],"ix":2},"a":{"a":0,"k":[14,16.5,0],"ix":1},"s":{"a":0,"k":[100,100,100],"ix":6}},"ao":0,"shapes":[{"ty":"gr","it":[{"ind":0,"ty":"sh","ix":1,"ks":{"a":1,"k":[{"i":{"x":0.2,"y":1},"o":{"x":0,"y":0},"n":"0p2_1_0_0","t":13.801,"s":[{"i":[[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0]],"o":[[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0]],"v":[[2.774,-10.319],[0.235,-5.917],[-3.276,0.171],[-7.222,7],[-1.16,10.496],[1.032,6.693],[4.567,0.573],[8.834,-6.818]],"c":true}],"e":[{"i":[[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0]],"o":[[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0]],"v":[[6.15,-16.409],[0.046,-6.059],[-3.511,0],[-13.196,16.585],[-6.013,16.585],[0.046,6.058],[3.603,0],[13.196,-16.409]],"c":true}]},{"t":30}],"ix":2},"nm":"Path 1","mn":"ADBE Vector Shape - Group","hd":false},{"ty":"fl","c":{"a":0,"k":[0.137254901961,0.098039215686,0.086274509804,1],"ix":4},"o":{"a":0,"k":100,"ix":5},"r":1,"nm":"Fill 1","mn":"ADBE Vector Graphic - Fill","hd":false},{"ty":"tr","p":{"a":0,"k":[13.196,16.409],"ix":2},"a":{"a":0,"k":[0,0],"ix":1},"s":{"a":0,"k":[100,100],"ix":3},"r":{"a":0,"k":0,"ix":6},"o":{"a":0,"k":100,"ix":7},"sk":{"a":0,"k":0,"ix":4},"sa":{"a":0,"k":0,"ix":5},"nm":"Transform"}],"nm":"Group 1","np":2,"cix":2,"ix":1,"mn":"ADBE Vector Group","hd":false}],"ip":0,"op":60,"st":0,"bm":0},{"ddd":0,"ind":3,"ty":4,"nm":"icon_close Outlines 2","sr":1,"ks":{"o":{"a":0,"k":100,"ix":11},"r":{"a":1,"k":[{"i":{"x":[0.2],"y":[1]},"o":{"x":[0],"y":[0]},"n":["0p2_1_0_0"],"t":13.801,"s":[-60],"e":[0]},{"t":30}],"ix":10},"p":{"a":1,"k":[{"i":{"x":1,"y":1},"o":{"x":0.6,"y":0},"n":"1_1_0p6_0","t":0,"s":[16,3.5,0],"e":[16,16.5,0],"to":[0,0,0],"ti":[0,0,0]},{"i":{"x":0.2,"y":1},"o":{"x":0.333,"y":0},"n":"0p2_1_0p333_0","t":13.801,"s":[16,16.5,0],"e":[16.5,16.5,0],"to":[0,0,0],"ti":[0,0,0]},{"t":30}],"ix":2},"a":{"a":0,"k":[14,16.5,0],"ix":1},"s":{"a":0,"k":[100,100,100],"ix":6}},"ao":0,"shapes":[{"ty":"gr","it":[{"ind":0,"ty":"sh","ix":1,"ks":{"a":1,"k":[{"i":{"x":0.2,"y":1},"o":{"x":0,"y":0},"n":"0p2_1_0_0","t":13.801,"s":[{"i":[[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0]],"o":[[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0]],"v":[[1.069,-6.447],[-1.164,-10.315],[-7.225,-6.817],[-3.253,0.062],[0.257,6.14],[2.773,10.501],[8.832,7.001],[4.58,-0.363]],"c":true}],"e":[{"i":[[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0]],"o":[[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0]],"v":[[0.046,-6.059],[-6.013,-16.409],[-13.196,-16.409],[-3.511,0],[0.046,6.058],[6.15,16.585],[13.196,16.585],[3.603,0]],"c":true}]},{"t":30}],"ix":2},"nm":"Path 1","mn":"ADBE Vector Shape - Group","hd":false},{"ty":"fl","c":{"a":0,"k":[0.137254901961,0.098039215686,0.086274509804,1],"ix":4},"o":{"a":0,"k":100,"ix":5},"r":1,"nm":"Fill 1","mn":"ADBE Vector Graphic - Fill","hd":false},{"ty":"tr","p":{"a":0,"k":[13.196,16.409],"ix":2},"a":{"a":0,"k":[0,0],"ix":1},"s":{"a":0,"k":[100,100],"ix":3},"r":{"a":0,"k":0,"ix":6},"o":{"a":0,"k":100,"ix":7},"sk":{"a":0,"k":0,"ix":4},"sa":{"a":0,"k":0,"ix":5},"nm":"Transform"}],"nm":"Group 1","np":2,"cix":2,"ix":1,"mn":"ADBE Vector Group","hd":false}],"ip":0,"op":60,"st":0,"bm":0}],"markers":[]}; 
+            this.hambuger = bodymovin.loadAnimation( lottieObj ); 
+
+            // this._resizeTop(); 
+        },
+
+        open: function() { 
+            this.hambuger.setDirection(0); 
+            this.hambuger.play(); 
+        }, 
+
+        close: function() { 
+            this.hambuger.setDirection(-1); 
+            this.hambuger.play(); 
+        }, 
+
+        // public method ------------------------------------- 
+
+        resize: function() { 
+            this.windowWidth = $(window).width(); 
+
+            // this._resizeTop(); 
+        }, 
+
+        _resizeTop: function() { 
+            var w=this.windowWidth, vw=(w*0.01)*5, rem; 
+            if( w > 1280 ) rem = -0.92708; // Desktop 
+            else if( 768 <= w && w <= 1280 ) rem = -0.92708; // Tablet 
+            else rem = -3.2266; // Mobile 
+            var y = Math.round( vw * rem ); 
+            this.$el.css( {top:y} ); 
+        } 
+    }); 
+
+    var Gnb = core.BaseClass.extend({
+        initialize: function( el, options ) { 
+            this.$root = $('html'); 
+            this.$el = $(el); 
+            this.$lang = this.$el.find('.choice_lang'); 
+            this.$menu = this.$el.find('.menu'); 
+            this.$channel = this.$el.find('.channel'); 
+            this.$menus = this.$menu.find('ul>li'); 
+            this.menuLength = this.$menus.length; 
+            this.menuIndex = this._getPageByIndex() || 0; 
+            this.windowWidth = $(window).width(); 
+            this.windowHeight = $(window).height(); 
+            this.isAnimation = false; 
+return false; 
+
+            this._setLayout(); 
+            this._bindEvent(); 
+            // vcui.util.delayedCall( this._activateMenu, 400, this ); 
+        }, 
+
+        _getPageByIndex: function( name ) { 
+            var a, page = name || $('body').attr('data-page'); 
+            for( var i=0,len=this.$menus.length; i<len; i++ ) { 
+                a = this.$menus.eq(i).find('span.m_txt').text(); 
+                if( a.toLowerCase() == page ) return i+1; 
+            } 
+            return 0; 
+        }, 
+
+        _setLayout: function() { 
+            this._resizeMenu(); 
+            this._resetMenu(); 
+        }, 
+
+        _resetMenu: function() { 
+            for( var i=0,len=this.menuLength; i<len; i++ ) { 
+                var $text = this.$menus.eq(i).find('a>span'); 
+                var $bar = this.$menus.eq(i).find('span.bar'); 
+                TweenLite.set( $bar, {css:{x:$text.width(), width:0}} );
+            } 
+        }, 
+
+        _resizeMenu: function() { 
+            var w=this.windowWidth, vw=(w*0.01)*5, rem; 
+            if( w > 1280 ) rem = 0.0625; // Desktop 
+            else if( 768 <= w && w <= 1280 ) rem = 0.09375; // Tablet 
+            else rem = 0.16; // Mobile 
+            var barH = Math.round( vw * rem ); 
+
+            for( var i=0,len=this.menuLength; i<len; i++ ) { 
+                var $text = this.$menus.eq(i).find('a>span'); 
+                $text.data('width', $text.width());
+                var $bar = this.$menus.eq(i).find('span.bar'); 
+                $bar.css( {height:barH} ); 
+            } 
+        }, 
+
+        _bindEvent: function() { 
+            this.$menus.on( 'mouseenter', 'a', this._overMenu.bind(this) ); 
+            this.$menus.on( 'mouseleave', 'a', this._outMenu.bind(this) ); 
+            
+            /* this.$menus.find('a').css( {cursor:'default'} ); 
+            this.$menus.find('a>span').css( {cursor:'pointer'} ); 
+            this.$menus.on( 'mouseenter', 'a>span', this._overMenu.bind(this) ); 
+            this.$menus.on( 'mouseleave', 'a>span', this._outMenu.bind(this) ); */ 
+            this.$menus.on( 'click', 'a', this._clickMenu.bind(this) ); 
+        }, 
+
+        _overMenu: function( evt ) { 
+            vcui.util.killDelayedCallsTo( this._activateMenu, this ); 
+
+            // var index = $(evt.currentTarget).parent().index() + 1; 
+            var index = $(evt.currentTarget).closest('li').index() + 1; 
+            this._activateMenu( index ); 
+        }, 
+
+        _activateMenu: function( index ) { 
+            var index = index || this.menuIndex; 
+            for( var i=0,len=this.menuLength; i<len; i++ ) { 
+                var $bar = this.$menus.eq(i).find('span.bar'); 
+                var w = this.$menus.eq(i).find('.m_txt').data('width'); 
+                TweenLite.killTweensOf( $bar ); 
+                if( !this.isAnimation && i == index-1 ) { 
+                    this.isAnimation = true; 
+                    TweenLite.set( $bar, {css:{x:0}} );
+                    TweenLite.to( $bar, 0.4, {width:w, ease:Quart.easeOut} ); 
+
+                } else { 
+                    TweenLite.to( $bar, 0.2, {x:w, width:0, ease:Quart.easeIn, onComplete: function() {
+                        this.isAnimation = false; 
+                    }.bind(this)}); 
+                } 
+            } 
+        }, 
+
+        _outMenu: function( evt ) { 
+            vcui.util.delayedCall( this._activateMenu, 500, this ); 
+        }, 
+
+        _clickMenu: function( evt ) { 
+            var index = $(evt.currentTarget).parent().index() + 1; 
+            this.menuIndex = index; 
+            // return false; 
+        }, 
+
+        // public method ------------------------------------- 
+
+        resize: function() { 
+            this.windowWidth = $(window).width(); 
+            this.windowHeight = $(window).height(); 
+
+            // this._resizeMenu(); 
+        }, 
+
+        open: function() { 
+            TweenLite.killTweensOf( this.$el ); 
+            TweenLite.to( this.$el, 0.7, {y:0, ease:Quart.easeOut} ); 
+            // vcui.util.delayedCall( this._activateMenu, 400+200, this ); 
+        }, 
+
+        close: function() { 
+            var y = ( this.windowHeight < this.$el.height() ) ? -this.$el.height()*1.5 : -this.windowHeight; 
+            TweenLite.killTweensOf( this.$el ); 
+            TweenLite.to( this.$el, 0.7, {y:y, ease:Quart.easeInOut} ); 
+            // vcui.util.delayedCall( this._resetMenu, 700, this ); 
+        } 
+    }); 
+
+    /*! 
+        Header 
+        - hambuger open/close 
+        - gnb open/close 
+        - logo fade in-out 
+        - dimmed fade in-out 
+    */
+    var Header = core.ui('Header', { 
+        bindjQuery: 'header', 
+        selectors: { root:$('html'), logo:'.header_wrap>h1' }, 
+        initialize: function initialize( el, options ) {
+            if( this.supr(el, options) === false ) return; 
+
+            this.index = 1; 
+            this.$logo = this.$el.find('.header_wrap>h1'); 
+            this.$dimmed = $('<div/>').addClass('ui-header-dim'); 
+            this.$dimmed.css( {position:'fixed', left:0, top:0, width:'100%', height:'100%', minHeight:960, background:'#fff'} );
+            this.$dimmed.css( {zIndex:parseInt(this.$el.find('.tabs').css('z-index'))+1} ); 
+            this.$el.prepend( this.$dimmed ); 
+            TweenLite.set( this.$dimmed, {css:{autoAlpha:0}} ); 
+
+            this.hambuger = new Hambuger('.ui-hambuger'); 
+            this.gnb = new Gnb('.nav_wrap'); 
+            this._bindEvent(); 
+
+            setTimeout( function() {
+                this.open(); 
+            }.bind(this), 100 );  
+        }, 
+
+        _bindEvent: function() { 
+            this.on( 'click', '.ui-hambuger', this._clickNavBtn.bind(this) ); 
+
+            $(window).on( 'resize.header', this._resizeHandler.bind(this) ); 
+        }, 
+
+        _clickNavBtn: function( evt ) { 
+            var $allMenuBtn = $(evt.currentTarget); 
+            if( !$allMenuBtn.hasClass('open') ) this.open(); 
+            else this.close(); 
+            $allMenuBtn.toggleClass('open'); 
+        }, 
+
+        _resizeHandler: function() { 
+            this.gnb.resize(); 
+        }, 
+
+        // public method ------------------------------------- 
+
+        open: function() { 
+            this.hambuger.open(); 
+            this.gnb.open(); 
+            TweenLite.killTweensOf( this.$logo ); 
+            TweenLite.to( this.$logo, 0.1, {alpha:0, ease:Quart.easeOut} ); 
+            TweenLite.set( this.$dimmed, {css:{autoAlpha:0}} ); 
+            TweenMax.to( this.$dimmed , 0.3, {autoAlpha:1, ease:Quart.easeOut} ); 
+        }, 
+
+        close: function() { 
+            this.hambuger.close(); 
+            this.gnb.close(); 
+            TweenLite.killTweensOf( this.$logo ); 
+            TweenLite.to( this.$logo, 0.5, {alpha:1, ease:Quart.easeIn} ); 
+            TweenLite.killTweensOf( this.$dimmed ); 
+            TweenMax.to( this.$dimmed, 0.5, {autoAlpha:0, ease:Quart.easeIn} ); 
+        }
+    }); 
+
+    return Header; 
+});
+</script>
+
+<!-- <script type="text/javascript" src="/js/vinylc.site.js"></script> -->
+<script type="text/javascript">
+vcui.require.config( {baseUrl: '/js', waitSeconds: 0, paths: { 
+    'jquery.easing': 'libs/jquery.easing-1.4.1.min', 
+    'jquery.transit': 'libs/jquery.transit-0.9.12.min', 
+    'greensock': 'libs/TweenMax-1.18.0.min', 
+    'lottie': 'libs/lottie-5.1.16.min'
+}});
+
+$.holdReady(true); 
+
+window.vinylc = {
+    init: function() {
+        this.ready();
+    },
+
+    ready: function() {
+        this._.preload( function() {
+            this._.init();
+        }.bind(this));
+    },
+
+    _: {
+        init: function() {
+            this.buildCommonUI();
+            this.bindGlobalEvents();
+        },
+
+        buildCommonUI: function() {
+            vcui.require( ['jquery.transit','ui/accordion', 'ui/dropdown', 'ui/tab', 'vinylc/header'], function() {
+                $('.ui_accordion').vcAccordion(); 
+                $('.ui_tab').vcTab(); 
+                $('.ui_dropdown').vcDropdown(); 
+
+                var header = $('header').vcHeader('instance')
+                /* setTimeout( function() {
+                    header.open(); 
+                }.bind(this), 1000 ); */ 
+            });
+        }, 
+
+        bindGlobalEvents: function() {
+        },
+
+        preload: function( callback ) { 
+            vcui.require( ['ui/modal','ui/accordion','ui/tab'], function() {
+                $.holdReady( false );
+                callback();
+            });
+        }
+    }
+};
+
+document.addEventListener( 'DOMContentLoaded', function() { 
+    vcui.require( ['vcui.common-ui'], function() { 
+        vinylc.init();
+    }); 
+}); 
+
+// VinylC Core Library - Addon components 
+(function( $, core, global, undefined ) {
+    core.addon( 'util', {
+        delayedCall: function( callback, delay, context ) {
+            var context = context || this;
+            context.callbacks = context.callbacks || [];
+            var index = context.callbacks.indexOf( callback.name );
+            if( index > -1 ) return;
+            context.callbacks.unshift( callback );
+
+            if( context.timeout ) clearTimeout( context.timeout );
+            context.timeout = setTimeout( function() {
+                var calls = context.callbacks;
+                for( var i=0,len=calls.length; i<len; i++ ) {
+                    if( calls[i] === callback ) {
+                        callback.apply( context );
+                        context.timeout = null;
+                    }
+                }
+            }, delay );
+        },
+
+        killDelayedCallsTo: function( callback, context ) {
+            var calls = (context||this).callbacks;
+            try {
+                for( var i=0,len=calls.length; i<len; i++ ) {
+                    if( calls[i] === callback ) {
+                        calls.splice( i, 1 );
+                    }
+                }
+            } catch( err ) {
+            }
+        }
+    });
+})( jQuery, window[LIB_NAME], window ); 
+</script>
+
+<script type="text/javascript">
+vcui.require( ['vinylc/works'], function( Works ) { 
+    new Works( '#wrap', {state:'list', menu:1} ); 
+}); 
+</script>
+</body>
+</html>

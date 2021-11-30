@@ -1,0 +1,103 @@
+<!-- Common Image List Template --> <!-- 190220 추가 : 어워드 배지 추가 -->
+<!-- 20190429 logo 태그 구조변경-->
+<script type="text/x-jquery-tmpl" id="template-list-image-type">
+<li>
+    <a href="${href}">
+        {{if !img_frame.context}}
+        <div class="img_frame">
+            <img src="${img_frame.src}" class="img" alt="${img_frame.alt}">
+            <div class="img_logo">
+                <div class="img_logo_inner">
+                    <img src="${img_frame.logo}" alt="">
+                </div>
+            </div>
+            <div class="img_confidential">
+                <div class="img_confidential_inner">
+                    <img src="${confidential}" alt="">
+                </div>
+            </div>
+            {{if !img_frame.context}}<div class="overlay"></div>{{/if}}
+            <div class="award_wrap">
+                    {{each awards}}
+                       <img src="${$value.src}" alt="${$value.alt}">
+                    {{/each}}
+            </div>
+        </div>
+        {{/if}}
+        <div class="txt_cont">
+            {{if img_frame.context}}
+            <p class="txt context">{{html img_frame.context}}</p>
+            {{else}}
+            <p class="txt">{{html txt_cont.txt}}</p>
+            {{/if}}
+            <p class="date">${txt_cont.date}</p>
+        </div>
+    </a>
+</li>
+</script>
+
+<!-- Common Video List Template --> <!-- 190220 추가 : 어워드 배지 추가 -->
+<!-- 190306 추가 : BI 추가 -->
+<!-- 20190416 video 태그 poster 속성 추가-->
+<!-- 20190429 logo 태그 구조변경-->
+<script type="text/x-jquery-tmpl" id="template-list-video-type">
+<li>
+    <a href="${href}">
+        <div class="video_frame">
+            <video class="f_mov" title="${video_frame.title}" loop muted playsinline poster="${video_frame.poster}">
+                <source src="${video_frame.src}" type="${video_frame.type}">
+            </video>
+            <div class="img_logo">
+                    <div class="img_logo_inner">
+                        <img src="${img_frame.logo}" alt="">
+                    </div>
+            </div>
+            <div class="img_confidential">
+                <div class="img_confidential_inner">
+                    <img src="${confidential}" alt="">
+                </div>
+            </div>
+            <div class="overlay"></div>
+            <div class="award_wrap">
+                    {{each awards}}
+                        <img src="${$value.src}" alt="${$value.alt}">
+                    {{/each}}
+            </div>
+        </div>
+        <div class="txt_cont">
+            <p class="txt">{{html txt_cont.txt}}</p>
+            <p class="date">${txt_cont.date}</p>
+        </div>
+    </a>
+</li>
+</script>
+
+<!-- Instagram Image List Template --> <!-- 190220 추가 : <div class="overlay"></div> Dim 추가 -->
+<script type="text/x-jquery-tmpl" id="template-list-instagram-image-type">
+<li>
+    <a href="/news/FNE12_include.html" data-control="modal"> <!-- 181122 �닔�젙 -->
+        <div class="img_frame">
+            <div class="crop_wrap" data-width="${video_frame.width}" data-height="${video_frame.height}">
+                <img src="${img_frame.src}" class="img" alt="${img_frame.alt}">
+            </div>
+            <div class="overlay"></div>
+        </div>
+    </a>
+</li>
+</script>
+
+<!-- Instagram Video List Template -->
+<script type="text/x-jquery-tmpl" id="template-list-instagram-video-type">
+<li>
+	<a href="/news/FNE12_include.html" data-control="modal"> <!-- 181122 �닔�젙 -->
+		<div class="video_frame">
+            <div class="crop_wrap" data-width="${video_frame.width}" data-height="${video_frame.height}">
+			    <video class="f_mov" loop muted playsinline>
+				    <source src="${video_frame.src}" type="${video_frame.type}">
+                </video>
+            </div>
+            <div class="overlay"></div>
+		</div>
+	</a>
+</li>
+</script>

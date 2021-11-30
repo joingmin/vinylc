@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<title>News 목록 || VINYLC</title>
+	<link href="" rel="shortcut icon" type="image/x-icon">
+	<link rel="apple-touch-icon-precomposed" href="">
+	<link rel="stylesheet" type="text/css" href="/css/common.css">
+<!-- 181122 삭제
+<style type="text/css">
+
+footer { display:none; }
+</style>
+-->
+</head>
+
+<body data-page="news">
+<div id="skipnavi">
+	<ul>
+		<li><a href="#container_title">본문바로가기</a></li>
+	</ul>
+</div>
+<div id="wrap">
+	<!-- header -->
+	<header class="sub news"><!-- news 목록페이지일때 news 클래스 추가 -->
+		<div class="header_wrap">
+			@@include('./include/logo.html')
+		</div>
+		@@include('./include/nav.html')
+
+		<!-- news 목록페이지일때 노출 -->
+		<!-- <div class="tabs ui_tab" id="tab01"> // 고정되면 fix 클래스 추가
+			<ul>
+				<li><a href="#id_news_1">NEWS<span class="bar"></span></a></li>
+				<li><a href="#id_news_2">INSTAGRAM<span class="bar"></span></a></li>
+			</ul>
+		</div> -->
+		<div class="tabs" id="tab01">
+			<ul>
+				<li><a href="#id_news_1" data-module='list-news'>NEWS</a></li>
+				<li><a href="#id_news_3" data-module='list-insight'>INSIGHT</a></li> <!-- 2021.07.15 -->
+				<li><a href="#id_news_2" data-module='list-instagram'>INSTA</a></li>
+				<span class="bar"></span>
+			</ul>
+		</div>
+		<!-- //news 목록페이지일때 노출 -->
+	</header>
+	<!-- //header -->
+
+	<section id="container">
+		<div id="container_title" class="hide" tabindex="-1">본문 시작</div>
+		<!-- content -->
+		<div id="content">
+
+			<!-- 정보영역 -->
+			<div class="head_info_txt">
+				<h1 class="hide">News 목록</h1>
+				<!-- text -->
+				<div class="hd_txt">
+					&nbsp;
+				</div>
+			</div>
+			<!-- //정보영역 -->
+
+			<div class="ui_tab_panel" data-template="/template/list.html">
+				<!-- NEWS -->
+				<div id="id_news_1" class="li_news ui_tab_content">
+					<!-- 목록 module -->
+					<div class="list_comm more_load"> <!-- 로딩중일때 more_load 클래스 추가 -->
+						<!--
+						<div class="btn_list_more">
+							<button type="button"><span>MORE</span></button>
+						</div>
+
+						<div class="list_loading">
+							<span class="icon_loading"></span>
+						</div> -->
+					</div>
+					<!-- //목록 module -->
+				</div>
+				
+				<!-- INSIGHT 2021.07.15 -->
+				<div id="id_news_3" class="li_insight ui_tab_content" style="display:none;">
+					<!-- 목록 module -->
+					<div class="list_insight more_load"> <!-- 로딩중일때 more_load 클래스 추가 -->
+						<!--
+						<div class="btn_list_more">
+							<button type="button"><span>MORE</span></button>
+						</div>
+
+						<div class="list_loading">
+							<span class="icon_loading"></span>
+						</div> -->
+					</div>
+					<!-- //목록 module -->
+				</div>
+
+				<!-- instagram -->
+				<div id="id_news_2" class="li_inst ui_tab_content" style="display:none;">
+					<!-- 목록 module -->
+					<div class="list_inst">
+						<!--
+						<div class="btn_list_more">
+							<button type="button"><span>MORE</span></button>
+						</div>
+
+						<div class="list_loading">
+							<span class="icon_loading"></span>
+						</div>
+						-->
+					</div>
+					<!-- //목록 module -->
+
+					<!-- 190123 추가 -->
+					<div class="btn_reativ_more">
+						<button type="button"><span>@vinylc_reative</span></button>
+					</div>
+					<!-- 190123 추가 -->
+				</div>
+
+				<div class="btn_list_more"> 
+					<button type="button"><span>more</span></button> <!-- 190130 수정 : 소문자로 변경 -->
+				</div>
+
+				<!-- 190114 로딩바 삭제 -->
+				<!-- <div class="list_loading">
+					<span class="is-show"></span>
+				</div> -->
+				<!-- //190114 로딩바 삭제 -->
+			</div>
+		</div>
+		<!-- //content -->
+	</section>
+
+	<!-- footer -->
+	@@include('./include/footer.html')
+	<!-- //footer -->
+
+</div>
+<script type="text/javascript" src="/js/libs/jquery-1.11.2.min.js"></script>
+<script type="text/javascript" src="/js/vcui.js"></script>
+<script type="text/javascript" src="/js/vinylc.site.js"></script>
+<script type="text/javascript">
+vcui.require( ['vinylc/news'], function( News ) {
+	var type = ( window.location.href.indexOf('list') > -1 ) ? 'list' : 'view';
+	type = 'list';	// 코딩진행표 테스트용
+    new News( '#wrap', {state:type} );
+});
+
+/*!
+	개발 참고용, 외부 호출 방법
+
+	$(function() {
+	    var news = $('#wrap').vcNews('instance');
+	    news.loadList(2);	// pageCount
+	});
+*/
+</script>
+</body>
+</html>

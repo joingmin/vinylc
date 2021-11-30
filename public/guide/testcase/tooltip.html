@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+            position: relative;
+        }
+
+        pre {
+            border:1px dashed #000;
+            border-radius: 4px 4px 4px;
+            background-color: #efefef;
+            padding: 3px;
+        }
+        
+        .ui_tooltip {
+            width: 200px;
+            background-color: #efefef;
+            border-radius: 6px;
+            border: 1px solid black;
+        }
+
+        .ui_tooltip.top .arrow {
+            content: "";
+            position: absolute;
+            top: -5px;
+            left: 50%;
+            height: 10px;
+            width: 10px;
+            background: blue;
+            transform: rotate(45deg);
+            border-top:inherit;
+            border-left:inherit;
+            box-shadow:inherit;
+            z-index: -1;
+        }
+        .ui_tooltip.bottom .arrow {
+            content: "";
+            position: absolute;
+            bottom: -5px; /*i.e. half the height*/
+            left: 50%;
+            height: 10px;
+            width: 10px;
+            margin-left: -4px;
+            background: blue;
+            transform: rotate(45deg);
+            border-bottom:inherit;
+            border-right:inherit;
+            box-shadow:inherit;
+            z-index: -1;
+        }
+    </style>
+</head>
+<body>
+<h1>툴팁</h1>
+<p>링크에 마우스를 올려보세요. data-tooltip속성을 설정해주기만 하면 자동으로 툴팁이 표시됩니다.</p>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#" data-tooltip="툴팁버튼툴팁버튼툴팁버튼툴팁버튼툴팁버튼툴팁버튼툴팁버튼툴팁버튼툴팁버튼툴팁버튼툴팁버튼툴팁버튼툴팁버튼툴팁버튼툴팁버튼툴팁버튼툴팁버튼">툴팁버튼</a>
+<div style="margin-left:100px;margin-top:200px;">
+    <a href="#" data-tooltip="툴팁버튼툴팁버튼툴팁버튼툴팁버튼툴팁버튼툴팁버튼툴팁버튼툴팁버튼툴팁버튼툴팁버튼툴팁버튼툴팁버튼툴팁버튼툴팁버튼툴팁버튼툴팁버튼툴팁버튼">툴팁버튼</a>
+</div>
+<br><br><br>
+&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#" data-tooltip="툴팁버튼툴팁버튼툴팁버튼툴팁버튼툴팁버튼툴팁버튼툴팁버튼툴팁버튼툴팁버튼툴팁버튼툴팁버튼툴팁버튼툴팁버튼툴팁버튼툴팁버튼툴팁버튼툴팁버튼">툴팁버튼</a>
+<div style="margin-left:100px;margin-top:200px;text-align:right;">
+    <a href="#" data-tooltip="툴팁버튼툴팁버튼툴팁버튼툴팁버튼툴팁버튼툴팁버튼툴팁버튼툴팁버튼툴팁버튼툴팁버튼툴팁버튼툴팁버튼툴팁버튼툴팁버튼툴팁버튼툴팁버튼툴팁버튼">툴팁버튼</a>
+</div>
+<br><br><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#" data-tooltip="툴팁버튼툴팁버튼툴팁버튼툴팁버튼툴팁버튼툴팁버튼툴팁버튼툴팁버튼툴팁버튼툴팁버튼툴팁버튼툴팁버튼툴팁버튼툴팁버튼툴팁버튼툴팁버튼툴팁버튼">툴팁버튼</a>
+<div style="margin-left:100px;margin-top:200px;text-align:right;padding-right:300px;">
+    <a href="#" data-tooltip="툴팁버튼툴팁버튼툴팁버튼툴팁버튼툴팁버튼툴팁버튼툴팁버튼툴팁버튼툴팁버튼툴팁버튼툴팁버튼툴팁버튼툴팁버튼툴팁버튼툴팁버튼툴팁버튼툴팁버튼">툴팁버튼</a>
+</div>
+<br><br><br>
+&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#" data-tooltip="툴팁버튼툴팁버튼툴팁버튼툴팁버튼툴팁버튼툴팁버튼툴팁버튼툴팁버튼툴팁버튼툴팁버튼툴팁버튼툴팁버튼툴팁버튼툴팁버튼툴팁버튼툴팁버튼툴팁버튼">툴팁버튼</a>
+<div style="margin-left:100px;margin-top:200px;text-align:right;padding-right:100px;">
+    <a href="#" data-tooltip="툴팁버튼툴팁버튼툴팁버튼툴팁버튼툴팁버튼툴팁버튼툴팁버튼툴팁버튼툴팁버튼툴팁버튼툴팁버튼툴팁버튼툴팁버튼툴팁버튼툴팁버튼툴팁버튼툴팁버튼">툴팁버튼</a>
+</div>
+<script src="/js/libs/jquery-1.11.2.min.js"></script>
+<script src="/js/vcui.js"></script>
+<script src="/js/vinylc.site.js"></script>
+<script>
+    $(function () {
+
+    });
+</script>
+</body>
+</html>

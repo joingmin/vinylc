@@ -1,0 +1,193 @@
+<!doctype html>
+
+<html lang="ko">
+<head>
+<title>Instagram Feed</title>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta http-equiv="Content-Type" content="text/html; charset=euc-kr" />
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1" />
+<style type="text/css">
+*,*::before,*::after { box-sizing:border-box; }
+
+html { font-size:62.5%; -webkit-tap-highlight-color:transparent; }
+body { margin:0; padding:0; font-family:'Roboto',sans-serif; font-size:1.6rem; line-height:1.5em; }
+img { max-width:100%; height:auto; vertical-align:middle; }
+
+.wrap { margin:0 auto; max-width:480px; text-align:center; clear:both; }
+
+@media all and (min-width:840px) {
+    .wrap { max-width:720px; }
+}
+
+.instagram .media { position:relative; margin:5%; padding:4px; border-radius:4px; background:#fff; }
+
+@media (min-width:480px) {
+    .instagram .media { float:left; margin:2.5%; width:45%; }
+}
+
+@media (min-width:480px) and (max-width:839px) {
+    .instagram .media:nth-child(2n + 1) { clear:left; }
+}
+
+@media all and (min-width:840px) {
+    .instagram .media { margin:2.5%; width:28.3334%; }
+    .instagram .media:nth-child(3n + 1) { clear:left; }
+}
+
+.instagram .media.video .image::before,
+.instagram .media.video .image::after { content:''; position:absolute; left:50%; top:50%; pointer-events:none; }
+.instagram .media.video .image::before { margin-left:-24px; margin-top:-24px; width:48px; height:48px;
+    border:2px solid #fff; border-radius:24px; box-shadow:0 0 4px rgba(0,0,0,0.2); background:rgba(0,0,0,0.5);
+}
+
+.instagram .media.video .image::after { margin-left:-5px; margin-top:-12px; width:16px; height:12px; 
+    border:12px solid transparent; border-left-color:#fff; border-left-width:18px; 
+}
+
+.instagram .media.carousel .image::after { margin-left:-22px; margin-top:-22px; width:44px; height:44px; 
+    border:2px solid #fff; border-radius:4px; box-shadow:0 0 4px rgba(0,0,0,0.2); background:rgba(0,0,0,0.5); 
+}
+
+.instagram .media .user { position:absolute; padding:2px; right:10px; bottom:10px; width:48px; height:48px; 
+    border-radius:4px; box-shadow:0 0 2px rgba(0,0,0,0.2); background:#fff; }
+.load-more { padding:10px 24px; border:none; border-radius:4px; color:#fff; font-size:1.4rem; font-weight:700; line-height:1.5em; outline:none; text-transform:uppercase; background:#ff6514; }
+</style>
+
+<style type="text/css" data-isostyle-id="is68135b1b">
+.u7YqG{-webkit-box-align:end;-webkit-align-items:flex-end;-ms-flex-align:end;align-items:flex-end;bottom:0;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:start;-webkit-justify-content:flex-start;-ms-flex-pack:start;justify-content:flex-start;left:0;pointer-events:none;position:absolute;right:0;top:0
+}
+.u7YqG .qFq_l { position:absolute; right:0; top:0; }
+
+.coreSpriteSidecarIconLarge { display:block; overflow:hidden; position:relative; right:3px; top:-1px; width:47px; height:47px; text-indent:110%; white-space:nowrap;
+    background-image: url('https://www.instagram.com/static/bundles/base/sprite_core.png/21c69c3d4014.png');
+    background-repeat: no-repeat;
+    background-position: -100px -357px;
+}
+</style>
+</head>
+
+<body>
+<div class="wrap">
+    <div id="instagram-media" class="instagram"></div>
+</div>
+
+
+<script id="template-instagram-image" type="text/x-jquery-tmpl">
+<div class="media image">
+    <div class="image"><a href="" target="_blank" title=""><img src="" alt="" /></a></div>
+</div>
+</script>
+
+<script id="template-instagram-video" type="text/x-jquery-tmpl">
+<div class="media video">
+    <div class="image"><a href="" target="_blank" title=""><img src="" alt="" /></a></div>
+</div>
+</script>
+
+<script id="template-instagram-carousel" type="text/x-jquery-tmpl">
+<div class="media carousel">
+    <div class="image"><a href="" target="_blank" title=""><img src="" alt="" /></a></div>
+    <div class="u7YqG">
+        <div class="qFq_l">
+            <span class="Z4Ol1 Szr5J coreSpriteSidecarIconLarge ">Post</span>
+        </div>
+    </div>
+</div>
+</script>
+
+<script type="text/javascript" src="/js/libs/jquery-1.11.2.min.js"></script>
+<script type="text/javascript" src="/js/vcui.js"></script>
+<script type="text/javascript" src="/js/vinylc.site.js"></script>
+<script type="text/javascript">
+var userId = 4474098252; 
+var accessToken = '4474098252.283cc85.fcf5910dca8d4668bda2b2f371b8c54a'; 
+var instagramURL = 'https://api.instagram.com/v1/users/'+userId+'/media/recent?access_token='+accessToken;
+var isMobile = false; 
+var resizeType = 'contain'; 
+var thumb = { margin:10, size:200 }; 
+var $wrap = null; 
+
+$(function() {
+    $wrap = $('.wrap'); 
+    $(window).on( 'breakpointchange', changeBreakPoint ); 
+    $(window).on( 'resize', resizeHandler ); 
+
+    changeBreakPoint(); 
+    loadInstagramFeed(); 
+}); 
+
+function changeBreakPoint() { 
+    isMobile = window.breakpoint.isMobile ? true : false; 
+    thumb.margin = isMobile ? 25 : 10; 
+    thumb.size = isMobile ? $(window).width()-50 : 200; 
+    $wrap.css( {maxWidth:isMobile?'100%':''} ); 
+} 
+
+function resizeHandler() { 
+    thumb.size = isMobile ? $(window).width()-50 : 200; 
+    var $template = $('#instagram-media').find('.media'); 
+    $template.css( {margin:thumb.margin, width:thumb.size, height:thumb.size} ); 
+    resizeImage( $template, thumb.size, thumb.size ); 
+}
+
+function loadInstagramFeed() { 
+    $.ajax( {type:'GET', url:instagramURL, dataType:'jsonp', 
+        success: function( response ) {
+            var responseObj = response;
+            $.each( response.data, function( i, val ) { 
+                var $template = $.tmpl( $('#template-instagram-'+val.type) ); 
+                $template.find('a').attr( {href:val.link} ); 
+                $template.find('a').css( {display:'inline-block'} ); 
+
+                if( val.caption && val.caption.text ) {
+                    $template.find('a').attr( {title:val.caption.text} ); 
+                    $template.find('.image img').attr( {alt:val.caption.text} ); 
+                } 
+
+                $template.css( {margin:thumb.margin, width:thumb.size, height:thumb.size} ); 
+                resizeImage( $template, thumb.size, thumb.size ); 
+                $template.find('.image img').attr( {src:val.images.low_resolution.url} ); 
+                $('#instagram-media').append( $template );
+            }); 
+        }
+    });
+}
+
+function resizeImage( $container, $imgW, $imgH ) {
+    var width = $container.width(), height = $container.height(); 
+    var ratio = $imgW / $imgH; 
+    var size = { x:0, y:0, w:0, h:0 }; 
+
+    if( resizeType == 'cover' ) {
+        if( width / ratio < height ) {
+            size.w = height * ratio;
+            size.h = height;
+            size.x = ( width - size.w ) * 0.5;
+
+        } else {
+            size.w = width;
+            size.h = width / ratio;
+            size.y = ( height - size.h ) * 0.5;
+        }
+
+    } else if( resizeType == 'contain' ) {
+        if( width / ratio < height ) {
+            size.w = width;
+            size.h = width / ratio; 
+
+        } else {
+            size.w = height * ratio;
+            size.h = height;
+        }
+
+        size.x = ( width - size.w ) * 0.5;
+        size.y = ( height - size.h ) * 0.5;
+    }
+
+    $container.find('img').css( {width:size.w, height:size.h} );
+    $container.css( {left:size.x, top:size.y} );
+}
+</script>
+</body>
+</html>

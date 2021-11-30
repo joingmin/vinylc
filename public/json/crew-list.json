@@ -1,0 +1,78 @@
+
+{
+    "page": "crew", 
+    "crew": {
+        "total": "4",
+        "question": "당신에게<br>바이널 혹은 바이널씨란?",
+        "list": [
+        {
+            "photo": {
+                "src": "/images/@img_crew_1.jpg",
+                "alt": "Crew 사진" 
+            }, 
+            "answer": {
+                "direction": "right",
+                "message": "생각이 늙지 않는 것, <br/>천진함을 잃지 않는 것, <br/>그리고 꿈을 잃지 않는 것. " 
+            }, 
+            "info": {
+                "direction": "Seunghong, Cha",
+                "period": {
+                    "start": "JUL 2015 -",
+                    "end": "JUL 2016"
+                }, 
+                "duty": "Interaction Designer at Vinyl C" 
+            }
+        }, {
+            "photo": {
+                "src": "/images/@img_crew_2.jpg",
+                "alt": "Crew 사진" 
+            }, 
+            "answer": {
+                "direction": "left",
+                "message": "자신의 부족한 점을 <br/>더 많이 부끄러워할 줄 아는 이는 <br/>더 존경받을 가치가 있는 사람이다." 
+            }, 
+            "info": {
+                "direction": "Subin, Lee",
+                "period": {
+                    "start": "DEB 2017 ~",
+                    "end": ""
+                }, 
+                "duty": "UI Designer at Vinyl C" 
+            }
+        }, {
+            "photo": {
+                "src": "/images/@img_crew_3.jpg",
+                "alt": "Crew 사진" 
+            }, 
+            "answer": {
+                "direction": "left",
+                "message": "산은 산이요. <br/>물은 self" 
+            }, 
+            "info": {
+                "direction": "Kisang, Kim",
+                "period": {
+                    "start": "AUG 2016 -",
+                    "end": "OCT 2018"
+                }, 
+                "duty": "Interaction Designer at Vinyl C" 
+            }
+        }, {
+            "photo": {
+                "src": "/images/@img_crew_4.jpg",
+                "alt": "Crew 사진" 
+            }, 
+            "answer": {
+                "direction": "right",
+                "message": "함께 할 수 있음에 <br/>감사를" 
+            }, 
+            "info": {
+                "direction": "Nayoung, Kang",
+                "period": {
+                    "start": "DEC 2017 -",
+                    "end": ""
+                }, 
+                "duty": "UI Designer at Vinyl C" 
+            }
+        }]
+    }
+}

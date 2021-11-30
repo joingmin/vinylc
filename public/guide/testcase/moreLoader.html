@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+        pre {
+            border:1px dashed #000;
+            border-radius: 4px 4px 4px;
+            background-color: #efefef;
+            padding: 3px;
+        }
+                
+        @keyframes spinner {
+            to {transform: rotate(360deg);}
+        }
+
+        .list .control_wrap {
+            position: relative;
+            width: 80px;
+            height: 50px;
+        }
+
+        .list .control_wrap button { /* 더보기 버튼 기본 숨김 */
+            display: none;
+        }
+
+        .list.has_more .control_wrap button { /* 이전에 가져온 데이타가 있고 새로 가져올 데이타가 있을 경우 */
+            display: block;
+        }
+
+
+        .list .loading_list {
+            display: none;
+        }
+
+        /* 리스트가 비어있으면서 로딩중일 때(처음 로딩 때, 검색을 눌렀을 때) */
+        .list.loading .loading_list {
+            display: block;
+        }
+
+        .list.has_more.loading .loading_list,
+        .list.has_more.loading .control_wrap button {
+            display: none;
+        }
+
+        /** 이전에 가져온 데이타가 있는 상태에서 다음 리스트를 불러올 때 */
+        .list.has_more.loading .control_wrap:before {
+            content: '';
+            box-sizing: border-box;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 20px;
+            height: 20px;
+            margin-top: -10px;
+            margin-left: -10px;
+            border-radius: 50%;
+            border: 2px solid #ccc;
+            border-top-color: #333;
+            animation: spinner .6s linear infinite;
+        }
+
+        .list .no_result {
+            display: none;
+        }
+
+        /* 리스트가 아예 없을 때 */
+        .list.no_items .no_result {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+<div>
+    <div class="list loading" id="list"> <!-- 로딩중이 경우: loading, 더가져올 데이타가 있을 경우: has_more, 데이타가 아예 없을 때: no_items 클래스가 추가됨 -->
+        <div class="search">
+            <input type="text" id="keyword"> <button type="button" id="searchButton">검색</button>
+        </div>
+        <div class="ui_moreloader_list">
+
+        </div>
+        <div class="loading_list">로딩중입니다.</div>
+        <div class="no_result">결과가 없습니다.</div>
+        <div class="control_wrap">
+            <button type="button" id="moreButton">더보기</button>
+        </div>
+    </div>
+</div>
+
+<script src="/js/libs/jquery-1.11.2.min.js"></script>
+<script src="/js/vcui.js"></script>
+<script src="/js/vinylc.site.js"></script>
+<script>
+    $(function () {
+        vcui.require([
+            'ui/moreLoader'
+        ], function (MoreLoader) {
+            var moreLoader = new MoreLoader('#moreButton', {
+                target: '#list',
+                dataSource: function () {
+                    return $.ajax({
+                        url: 'moreLoader_ajax.html',
+                        data: {
+                            keyword: $('#keyword').val()
+                        }
+                    });
+                }
+            });
+
+            $('#searchButton').click(function () {
+                moreLoader.clear();
+                moreLoader.load();
+            });
+        })
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+        pre {
+            border:1px dashed #000;
+            border-radius: 4px 4px 4px;
+            background-color: #efefef;
+            padding: 3px;
+        }
+                
+        .ui_carousel {
+            visibility: hidden;
+        }
+
+        .item {
+            height: 300px;
+            float: left;
+            font-size: 20pt;
+            text-align: center;
+            line-height: 300px;
+        }
+
+        .one {
+            background-color: red;
+        }
+
+        .two {
+            background-color: blue;
+        }
+
+        .three {
+            background-color: #98fb98;
+        }
+
+        .four {
+            background-color: #4e136c;
+        }
+
+        .five {
+            background-color: #40724b;
+        }
+
+        .ui_carousel_dots {
+            list-style: none;
+            display: table;
+        }
+
+        .ui_carousel_dots > li {
+            display: table-cell;
+            border: 1px solid black;
+            border-radius: 10px;
+            width: 20px;
+            height: 20px;
+            text-align: center;
+        }
+
+        .ui_carousel_dots .on a {
+            color: red;
+        }
+
+        #carousel03 {
+            position: relative;
+        }
+
+        #carousel03 .ui_carousel_controls {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+        }
+
+        #carousel03 .ui_carousel_prev, #carousel03 .ui_carousel_next {
+            position: absolute;
+            top: 150px;
+        }
+
+        #carousel03 .ui_carousel_prev {
+            left: 0;
+        }
+
+        #carousel03 .ui_carousel_next {
+            right: 0;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <h1>일반 배너</h1>
+    <div class="ui_carousel" id="carousel01">
+        <div class="ui_carousel_list">
+            <div class="ui_carousel_track">
+                <div class="item one">1</div>
+                <div class="item two">2</div>
+                <div class="item three">3</div>
+                <div class="item four">4</div>
+                <div class="item five">5</div>
+            </div>
+        </div>
+        <ul class="ui_carousel_dots">
+            <li><a href="">{{no}}</a></li>
+        </ul>
+        <div class="ui_carousel_controls">
+            <button class="ui_carousel_prev">Prev</button>
+            <button class="ui_carousel_next">Next</button>
+        </div>
+    </div>
+    <br><br><br><br>
+
+    <h1>반응형 배너(pc: 2, mobile: 1)</h1>
+    <div class="ui_carousel" id="carousel02">
+        <div class="ui_carousel_list">
+            <div class="ui_carousel_track">
+                <div class="item one"></div>
+                <div class="item two"></div>
+                <div class="item three"></div>
+                <div class="item four"></div>
+                <div class="item five"></div>
+            </div>
+        </div>
+        <div class="ui_carousel_controls">
+            <button class="ui_carousel_prev">Prev</button>
+            <button class="ui_carousel_next">Next</button>
+        </div>
+    </div>
+
+
+    <h1>반응형 배너: 좌우 패딩없는거(pc: 2, mobile: 1)</h1>
+    <div class="ui_carousel" id="carousel03">
+        <div class="ui_carousel_list">
+            <div class="ui_carousel_track">
+                <div class="item one"></div>
+                <div class="item two"></div>
+                <div class="item three"></div>
+                <div class="item four"></div>
+                <div class="item five"></div>
+            </div>
+        </div>
+        <div class="ui_carousel_controls">
+            <button class="ui_carousel_prev">Prev</button>
+            <button class="ui_carousel_next">Next</button>
+        </div>
+    </div>
+</div>
+<script src="/js/libs/jquery-1.11.2.min.js"></script>
+<script src="/js/vcui.js"></script>
+<script src="/js/vinylc.site.js"></script>
+<script>
+    $(function () {
+        vcui.require([
+            'ui/carousel',
+            'ui/responseCarousel'
+        ], function () {
+            $('#carousel01').vcCarousel();
+
+            $('#carousel02').vcResponseCarousel({
+                pc: 2,
+                mobile: {
+                    slidesToShow: 1,
+                    centerPadding: '40px'
+                }
+            });
+
+            $('#carousel03').vcResponseCarousel({
+                pc: 2,
+                mobile: 1
+            });
+        })
+    });
+</script>
+</body>
+</html>

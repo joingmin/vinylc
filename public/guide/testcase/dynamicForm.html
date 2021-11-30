@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        ul, li {
+            list-style: none;       
+            margin: 0;     
+            padding: 6px 0;
+        }
+        label {
+            width: 80px;
+            display: inline-block;
+        }
+        
+        textarea, ul ul {
+            margin-left: 80px;
+        }
+
+        .ui-list-item {
+            border: 1px solid rgba(0, 0, 0, .6);
+            margin-bottom: 10px;
+            border-radius: 6px;
+            padding: 5px;
+        }
+
+        .ui-sub-item {
+            border: 1px solid rgba(255, 0, 0, .6);
+            margin-bottom: 10px;
+            border-radius: 6px;
+            padding: 5px;
+        }
+
+        .ui-list-item>.ui-controls {
+            margin-bottom: 10px;
+        }
+
+        .ui-item.collapse .ui-sub-item-wrap {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <form action="" enctype="multipart/form-data" method="POST" id="frm1">
+
+    <div id="listWrap1">           
+        <script type="application/json" class="ui-list-data">[
+            {
+                "no": 1,
+                "children": [
+                    {
+                        "subno": 1,
+                        "title": "제목",
+                        "content": "내용<a href=\"aa\"></a>",
+                        "type1": "a",
+                        "type2": "b",
+                        "type3": "c",
+                        "file": "file.jpg"
+                    },
+                    {
+                        "subno": 2,
+                        "title": "제목2",
+                        "content": "내용2<a href=\"aa\"></a>",
+                        "type1": "b",
+                        "type2": "a",
+                        "type3": "a",
+                        "file": "file.jpg"
+                    }
+                ]
+            },            
+            {
+                "no": 2,
+                "children": [
+                    {
+                        "subno": 1,
+                        "title": "제목",
+                        "content": "내용<a href=\"aa\"></a>",
+                        "type1": "a",
+                        "type2": "b",
+                        "type3": "c",
+                        "file": "file.jpg"
+                    },
+                    {
+                        "subno": 2,
+                        "title": "제목2",
+                        "content": "내용2<a href=\"aa\"></a>",
+                        "type1": "b",
+                        "type2": "a",
+                        "type3": "a",
+                        "file": "file.jpg"
+                    }
+                ]
+            }
+        ]</script>
+        <script type="text/html" class="ui-item-tmpl">
+            <div class="ui-list-item ui-item">
+                <input type="hidden" name="no" value="{{no}}">
+                <div class="ui-controls">
+                    <button type="button" class="ui-btn-remove">컬럼삭제</button>
+                    <button type="button" class="ui-btn-up">위로</button>
+                    <button type="button" class="ui-btn-down">아래로</button>
+                    <button type="button" class="ui-btn-add">컬럼추가</button>
+                    <button type="button" class="ui-btn-expand">확장</button>
+                    <button type="button" class="ui-btn-collapse">축소</button>
+                </div>
+                <div class="ui-sub-item-wrap">
+                    <!-- 하위리스트가 들어갈 공간 -->
+                </div>
+                <div class="ui-controls">
+                    <button type="button" class="ui-btn-remove">컬럼삭제</button>
+                    <button type="button" class="ui-btn-up">위로</button>
+                    <button type="button" class="ui-btn-down">아래로</button>
+                    <button type="button" class="ui-btn-add">컬럼추가</button>
+                    <button type="button" class="ui-btn-expand">확장</button>
+                    <button type="button" class="ui-btn-collapse">축소</button>
+                </div>
+            </div>    
+        </script>
+
+        <script type="text/html" class="ui-subitem-tmpl">
+            <div class="ui-sub-item ui-item">
+                <input type="hidden" name="subno" value="{{subno}}">
+                <div class="ui-controls">
+                    <button type="button" class="ui-btn-remove">컬럼삭제</button>
+                    <button type="button" class="ui-btn-up">위로</button>
+                    <button type="button" class="ui-btn-down">아래로</button>
+                </div>
+                <ul>
+                    <li><label>title:</label> <input type="text" name="title" value="{{title}}"></li>
+                    <li><label>content: </label><br>
+                        <textarea name="content" cols="30" rows="10" counting="true" data-max-count="2000">{{content}}</textarea>      
+                        <div class="count"></div>                  
+                    </li>
+                    <li>
+                        <label>Type1</label><input type="checkbox" name="type1_a" value="a" {{isCheck type1 "a"}}>a
+                        <input type="checkbox" name="type1_b" value="b" {{isCheck type1 "b"}}>b
+                    </li>
+                    <li>
+                        <label>Type2</label><input type="radio" name="type2" value="a" {{isCheck type2 "a"}}>a
+                        <input type="radio" name="type2" value="b" {{isCheck type2 "b"}}>b
+                    </li>
+                    <li>
+                        <label>Type3</label>
+                        <select name="type3">
+                            <option value="a" {{isSelect type3 "a"}}>a</option>
+                            <option value="b" {{isSelect type3 "b"}}>b</option>
+                            <option value="c" {{isSelect type3 "c"}}>c</option>
+                        </select>
+                    </li>
+                    <li>
+                        <label>파일</label><br>
+                        <ul>
+                            <li>
+                                기존파일: {{this}}<br>
+                                바꿀파일: <input type="file" name="file{{$index}}">
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="ui-controls">
+                    <button type="button" class="ui-btn-remove">컬럼삭제</button>
+                    <button type="button" class="ui-btn-up">위로</button>
+                    <button type="button" class="ui-btn-down">아래로</button>
+                </div>
+            </div>
+        </script>
+    </div>    
+    <div>
+        <button type="button" id="btnAdd1">추가</button> <button>서브밋</button>
+    </div>
+    </form>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.12/handlebars.js"></script>
+<script src="/js/libs/jquery-1.11.2.min.js"></script>
+<script src="/guide/js/jquery.dynamicForm.js"></script>
+<script>
+    $('#listWrap1').dynamicForm({
+        addButton: '#btnAdd1',
+        autoNaming: true, // 알아서 이름뒤에 [0], [1]가 붙도록 할 것인가...
+        // 추가되기전에 호출됨
+        onBeforeAdd: function (e) {
+            if ($(this).children().length >= 3) {
+                alert('더이상 추가 불가');
+                e.preventDefault(); // 이를 호출하면 추가가 취소 됨
+                return;
+            }
+        },
+        // 추가된 후에 호출됨
+        onAdded: function (e, itemElement) {
+            console.log('상위항목 추가됨', itemElement);
+        },
+        // 삭제전에 호출됨
+        onBeforeRemove: function (e, itemElement) {
+            if (!confirm('상위항목을 삭제하시겠습니까?')) {
+                e.preventDefault(); // 이를 호출하면 삭제가 취소된다.
+                return;
+            }
+        },
+        // 삭제된 후에 호출
+        onRemoved: function (e) {
+            console.log('상위항목 삭제됨');
+        },
+
+        /////////////////////////////////////////////////////////////////////////////
+        // 하위항목 추가전에 호출
+        onBeforeSubAdd: function (e) {
+            if ($(this).children().length >= 3) {
+                alert('더이상 추가 불가');
+                e.preventDefault(); // 이를 호출하면 추가가 취소 됨
+                return;
+            }
+        },
+        // 서브항목이 추가된 후에 호출
+        onSubAdded: function (e, itemElement) {
+            console.log('하위항목 추가됨', itemElement);
+        },
+        // 서브항목의 삭제 전에 호출
+        onBeforeSubRemove: function (e, itemElement) {
+            if (!confirm('서브항목을 삭제하시겠습니까?')) {
+                e.preventDefault(); // 이를 호출하면 삭제가 취소된다.
+                return;
+            }
+        },
+        onSubRemoved: function (e) {
+            console.log('하위항목 삭제됨');
+        },
+        ////////////////////////////////////////////////////////////////////////////////////////
+        // counting="true" 속성이 설정된 textarea의 내용이 변경될때 마다 글자수 정보를 알려줌.
+        onTextCounting: function (e, data) {
+            // e.target 은 textarea임..
+            $(e.target).next('.count').text(data.characters);
+        }
+    });
+
+    $('#frm1').on('submit', function (e) {
+        e.preventDefault();
+
+        console.log($(this).serializeObject());
+    });
+</script>
+</body>
+</html>

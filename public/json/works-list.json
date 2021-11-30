@@ -1,0 +1,251 @@
+{
+    "page": "works", 
+    "category": "list", 
+    "pageTotal": 5,
+    "startCount": 1,
+    "endCount": 1,
+    "module": {
+        "set_length": 4,
+        "list": [
+        {
+            "href": "/works/FWO11.html?id=1&amp;pageCount=52&amp;searchCate=", 
+            "title": "CJ 오쇼핑  CelebShop", 
+            "ga_code": "tracking_code_01", 
+            "video_frame": { 
+                "title": "동영상 제목", 
+                "src": "/movie/h_264.mp4", 
+                "m_src": "http://dev.vinylc.com/upload/work/WK00000046/namuh.mp4",
+                "type": "video/mp4" 
+            }, 
+            "img_frame": {
+                "src": "/images/@img_list_module.jpg", 
+                "logo": "/images/@img_list_logo.png", 
+                "alt": "CJ One" 
+            }, 
+            "aword":[{"src":"/images/award_app.jpg", "alt":"Award APP"}],
+            "txt_frame": {
+                "txt": "CJ 오쇼핑  CelebShop<br>쇼핑몰 웹사이트 오픈했습니다.1", 
+                "data": "Life - 06.28" 
+            }
+        }, {
+            "href": "/works/FWO11.html?id=1&amp;pageCount=52&amp;searchCate=", 
+            "title": "Mobile MP4 Test", 
+            "ga_code": "tracking_code_01", 
+            "img_frame": {
+                "src": "/images/@img_list_module.jpg", 
+                "logo": "/images/@img_list_logo.png", 
+                "alt": "CJ One" 
+            }, 
+            "aword":[{"src":"/images/award_app.jpg", "alt":"Award APP"},{"src":"/images/award_if.jpg","alt":"Award IF"}],
+            "txt_frame": {
+                "txt": "Mobile MP4 Test2", 
+                "data": "Life - 06.28" 
+            }
+        }, {
+            "href": "/works/FWO11.html?id=1&amp;pageCount=52&amp;searchCate=", 
+            "title": "CJ 오쇼핑  CelebShop", 
+            "ga_code": "tracking_code_01", 
+            "video_frame": { 
+                "title": "동영상 제목", 
+                "src": "/movie/h_264.mp4", 
+                "type": "video/mp4" 
+            }, 
+            "img_frame": {
+                "src": "/images/@img_list_module.jpg", 
+                "logo": "/images/@img_list_logo.png", 
+                "alt": "CJ One" 
+            }, 
+            "txt_frame": {
+                "txt": "CJ 오쇼핑  CelebShop<br>쇼핑몰 웹사이트 오픈했습니다.3", 
+                "data": "Life - 06.28" 
+            }
+        }, {
+            "href": "/works/FWO11.html?id=1&amp;pageCount=52&amp;searchCate=", 
+            "title": "CJ 오쇼핑  CelebShop", 
+            "ga_code": "tracking_code_01", 
+            "img_frame": {
+                "src": "/images/@img_list_module.jpg", 
+                "logo": "/images/@img_list_logo.png", 
+                "alt": "CJ One" 
+            }, 
+            "aword":[{"src":"/images/award_app.jpg", "alt":"Award APP"},{"src":"/images/award_if.jpg","alt":"Award IF"},{"src":"/images/award_web.jpg","alt":"Award WEB"}],
+            "txt_frame": {
+                "txt": "CJ 오쇼핑  CelebShop<br>쇼핑몰 웹사이트 오픈했습니다.4", 
+                "data": "Life - 06.28" 
+            }
+        }, {
+            "href": "/works/FWO11.html?id=1&amp;pageCount=52&amp;searchCate=", 
+            "title": "CJ 오쇼핑  CelebShop", 
+            "ga_code": "tracking_code_01", 
+            "img_frame": {
+                "src": "/images/@img_list_module.jpg", 
+                "logo": "/images/@img_list_logo.png", 
+                "alt": "CJ One" 
+            }, 
+            "aword":[{"src":"/images/award_app.jpg", "alt":"Award APP"},{"src":"/images/award_if.jpg","alt":"Award IF"},{"src":"/images/award_web.jpg","alt":"Award WEB"}],
+            "txt_frame": {
+                "txt": "CJ 오쇼핑  CelebShop<br>쇼핑몰 웹사이트 오픈했습니다.", 
+                "data": "Life - 06.28" 
+            }
+        }, {
+            "href": "/works/FWO11.html?id=1&amp;pageCount=52&amp;searchCate=", 
+            "title": "CJ 오쇼핑  CelebShop", 
+            "ga_code": "tracking_code_01", 
+            "img_frame": {
+                "src": "/images/@img_list_module.jpg", 
+                "logo": "/images/@img_list_logo.png", 
+                "alt": "CJ One" 
+            }, 
+            "txt_frame": {
+                "txt": "CJ 오쇼핑  CelebShop<br>쇼핑몰 웹사이트 오픈했습니다.", 
+                "data": "Life - 06.28" 
+            }
+        }, {
+            "href": "/works/FWO11.html?id=1&amp;pageCount=52&amp;searchCate=", 
+            "title": "CJ 오쇼핑  CelebShop", 
+            "ga_code": "tracking_code_01", 
+            "img_frame": {
+                "src": "/images/@img_list_module.jpg", 
+                "logo": "/images/@img_list_logo.png", 
+                "alt": "CJ One" 
+            }, 
+            "aword":[{"src":"/images/award_web.jpg","alt":"Award WEB"}],
+            "txt_frame": {
+                "txt": "CJ 오쇼핑  CelebShop<br>쇼핑몰 웹사이트 오픈했습니다.", 
+                "data": "Life - 06.28" 
+            }
+        }, {
+            "href": "/works/FWO11.html?id=1&amp;pageCount=52&amp;searchCate=", 
+            "title": "CJ 오쇼핑  CelebShop", 
+            "ga_code": "tracking_code_01", 
+            "img_frame": {
+                "src": "/images/@img_list_module.jpg", 
+                "logo": "/images/@img_list_logo.png", 
+                "alt": "CJ One" 
+            }, 
+            "aword":[{"src":"/images/award_if.jpg","alt":"Award IF"}],
+            "txt_frame": {
+                "txt": "CJ 오쇼핑  CelebShop<br>쇼핑몰 웹사이트 오픈했습니다.", 
+                "data": "Life - 06.28" 
+            }
+        }, {
+            "href": "/works/FWO11.html?id=1&amp;pageCount=52&amp;searchCate=", 
+            "title": "CJ 오쇼핑  CelebShop", 
+            "ga_code": "tracking_code_01", 
+            "img_frame": {
+                "src": "/images/@img_list_module.jpg", 
+                "logo": "/images/@img_list_logo.png", 
+                "alt": "CJ One" 
+            }, 
+            "aword":[{"src":"/images/award_if.jpg","alt":"Award IF"},{"src":"/images/award_web.jpg","alt":"Award WEB"}],
+            "txt_frame": {
+                "txt": "CJ 오쇼핑  CelebShop<br>쇼핑몰 웹사이트 오픈했습니다.", 
+                "data": "Life - 06.28" 
+            }
+        }, {
+            "href": "/works/FWO11.html?id=1&amp;pageCount=52&amp;searchCate=", 
+            "title": "CJ 오쇼핑  CelebShop", 
+            "ga_code": "tracking_code_01", 
+            "img_frame": {
+                "src": "/images/@img_list_module.jpg", 
+                "logo": "/images/@img_list_logo.png", 
+                "alt": "CJ One" 
+            }, 
+            "aword":[{"src":"/images/award_app.jpg", "alt":"Award APP"},{"src":"/images/award_if.jpg","alt":"Award IF"},{"src":"/images/award_web.jpg","alt":"Award WEB"}],
+            "txt_frame": {
+                "txt": "CJ 오쇼핑  CelebShop<br>쇼핑몰 웹사이트 오픈했습니다.", 
+                "data": "Life - 06.28" 
+            }
+        }, {
+            "href": "/works/FWO11.html?id=1&amp;pageCount=52&amp;searchCate=", 
+            "title": "CJ 오쇼핑  CelebShop", 
+            "ga_code": "tracking_code_01", 
+            "video_frame": { 
+                "title": "동영상 제목", 
+                "src": "/movie/h_264.mp4", 
+                "type": "video/mp4" 
+            }, 
+            "img_frame": {
+                "src": "/images/@img_list_module.jpg", 
+                "logo": "/images/@img_list_logo.png", 
+                "alt": "CJ One" 
+            }, 
+            "aword":[{"src":"/images/award_app.jpg", "alt":"Award APP"},{"src":"/images/award_if.jpg","alt":"Award IF"},{"src":"/images/award_web.jpg","alt":"Award WEB"}],
+            "txt_frame": {
+                "txt": "CJ 오쇼핑  CelebShop<br>쇼핑몰 웹사이트 오픈했습니다.", 
+                "data": "Life - 06.28" 
+            }
+        }, {
+            "href": "/works/FWO11.html?id=1&amp;pageCount=52&amp;searchCate=", 
+            "title": "CJ 오쇼핑  CelebShop", 
+            "ga_code": "tracking_code_01", 
+            "img_frame": {
+                "src": "/images/@img_list_module.jpg", 
+                "logo": "/images/@img_list_logo.png", 
+                "alt": "CJ One" 
+            }, 
+            "aword":[{"src":"/images/award_app.jpg", "alt":"Award APP"},{"src":"/images/award_if.jpg","alt":"Award IF"},{"src":"/images/award_web.jpg","alt":"Award WEB"}],
+            "txt_frame": {
+                "txt": "CJ 오쇼핑  CelebShop<br>쇼핑몰 웹사이트 오픈했습니다.", 
+                "data": "Life - 06.28" 
+            }
+        }, {
+            "href": "/works/FWO11.html?id=1&amp;pageCount=52&amp;searchCate=", 
+            "title": "CJ 오쇼핑  CelebShop", 
+            "ga_code": "tracking_code_01", 
+            "video_frame": { 
+                "title": "동영상 제목", 
+                "src": "/movie/h_264.mp4", 
+                "type": "video/mp4" 
+            }, 
+            "img_frame": {
+                "src": "/images/@img_list_module.jpg", 
+                "logo": "/images/@img_list_logo.png", 
+                "alt": "CJ One" 
+            }, 
+            "aword":[{"src":"/images/award_app.jpg", "alt":"Award APP"},{"src":"/images/award_if.jpg","alt":"Award IF"},{"src":"/images/award_web.jpg","alt":"Award WEB"}],
+            "txt_frame": {
+                "txt": "CJ 오쇼핑  CelebShop<br>쇼핑몰 웹사이트 오픈했습니다.", 
+                "data": "Life - 06.28" 
+            }
+        }, {
+            "href": "/works/FWO11.html?id=1&amp;pageCount=52&amp;searchCate=", 
+            "title": "CJ 오쇼핑  CelebShop", 
+            "ga_code": "tracking_code_01", 
+            "video_frame": { 
+                "title": "동영상 제목", 
+                "src": "/movie/h_264.mp4", 
+                "type": "video/mp4" 
+            }, 
+            "img_frame": {
+                "src": "/images/@img_list_module.jpg", 
+                "logo": "/images/@img_list_logo.png", 
+                "alt": "CJ One" 
+            }, 
+            "aword":[{"src":"/images/award_app.jpg", "alt":"Award APP"},{"src":"/images/award_if.jpg","alt":"Award IF"},{"src":"/images/award_web.jpg","alt":"Award WEB"}],
+            "txt_frame": {
+                "txt": "CJ 오쇼핑  CelebShop<br>쇼핑몰 웹사이트 오픈했습니다.", 
+                "data": "Life - 06.28" 
+            }
+        }, {
+            "href": "/works/FWO11.html?id=1&amp;pageCount=52&amp;searchCate=", 
+            "title": "CJ 오쇼핑  CelebShop", 
+            "ga_code": "tracking_code_01", 
+            "video_frame": { 
+                "title": "동영상 제목", 
+                "src": "/movie/h_264.mp4", 
+                "type": "video/mp4" 
+            }, 
+            "img_frame": {
+                "src": "/images/@img_list_module.jpg", 
+                "logo": "/images/@img_list_logo.png", 
+                "alt": "CJ One" 
+            }, 
+            "aword":[{"src":"/images/award_app.jpg", "alt":"Award APP"},{"src":"/images/award_if.jpg","alt":"Award IF"},{"src":"/images/award_web.jpg","alt":"Award WEB"}],
+            "txt_frame": {
+                "txt": "CJ 오쇼핑  CelebShop<br>쇼핑몰 웹사이트 오픈했습니다.", 
+                "data": "Life - 06.28" 
+            }
+        }]
+    }
+}

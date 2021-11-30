@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge ,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+	<meta name="format-detection" content="telephone=no">
+	<meta http-equiv="Cache-Control" content="no-cache">
+	<meta http-equiv="Pragma" content="no-cache">
+	<title>UI개발 체크리스트</title>
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+
+	<link rel="stylesheet" type="text/css" href="../guide/css/base.css">
+	<link rel="stylesheet" type="text/css" href="../guide/css/pretty.css">
+	<link rel="stylesheet" type="text/css" href="../pcweb/css/base.css">
+	<script type="text/javascript" src=""></script>
+</head>
+
+<body>
+
+<div id="wrap" class="coding_guide">
+	<h1 class="h1_guide">UI개발 체크리스트</h1>
+
+	<h2 class="h2_guide">기본 사항</h2>
+	<div class="d_desc">
+		<p>- 모든 경로는 절대경로로 지정합니다.</p>
+		<p>- 모듈 기본 작성 관련사항은 <a href="/kr/wsg/guide_module.html" class="uline">링크</a>에서 확인하시기 바랍니다.</p>
+	</div>
+
+	<h3 class="h3_guide">1. 이미지 저장</h3>
+	<div class="d_desc">
+		<p class="t_point">공통사항</p>
+		<ol class="num_list">
+			<li>기본 .png(PNG-8)로 저장하되 반투명값이 포함될 경우 .png(PNG-24)로 저장합니다.</li>
+			<li>jpg - 이미지 중요도에따라 opacity 40 ~ 60 차등적용하여 저장.</li>
+			<li>메타정보는 포함하지 않습니다.</li>
+			<li>그 외 .png(PNG-24)의 경우 무손실 압축이므로 원본이미지를 그대로 유지하므로 중요한 잡티현상 없이 저장해야할 경우 jpg와 선택적 사용.</li>
+			<li>Image Sprites 사용 시 각 이미지의 간격은 최소 10px로 적용합니다.</li>
+		</ol>
+		<p class="t_point">스케치 앱</p>
+		<ol class="num_list">
+			<li>Export시 "Export Desktop"를 통해 "Save for Web"체크 후 저장합니다.</li>
+		</ol>
+
+	</div>
+
+	<h3 class="h3_guide">2. html 페이지 명</h3>
+	<div class="d_desc">
+		각각의 html산출물에는 각각의 화면명을 적용합니다.(화면명은 화면명세서 참조)<br>
+		(예 : &lt;title&gt;화면명명, 현대자동차 상용 글로벌 대표 홍보사이트 구축(영문)&lt;/title&gt;)
+	</div>
+
+	<h3 class="h3_guide">3. Validation체크</h3>
+	<div class="d_desc">
+		필수적으로 체크하여 전달하여, 최고의 산출물을 유지 합니다.
+	</div>
+
+	<h3 class="h3_guide">4. Browser 체크</h3>
+	<div class="d_desc">
+		Browser 체크는 설치되어 있는 각각의 최신 브라우저를 체크하시고 IE하위 버전의 경우 가상머신 및 그 외의 방법으로 체크합니다.<br>
+	</div>
+
+	<h3 class="h3_guide">5. CSS 기법 및 문법</h3>
+	<div class="d_desc">
+		<ol class="num_list">
+			<li>z-index는 9999를 넘지 않으며, 증가간격은 10단뒤로 합니다. 다만, 주변 obj보다 위로 표현이 되어야 할 경우에는 2부터 시작합니다.</li>
+			<li>마지막 property의 세미콜론(;)은 삭제합니다.
+				<p>예 : .classname {border:1px solid #ddd; font-size:20px}
+			</li>
+		</ol>
+	</div>
+
+	<h3 class="h3_guide">6. CSS Property순서</h3>
+	<div class="d_desc">
+		<p class="t_point">기본 아래의 순서로 적용하되 css3 속성은 비슷한 속성 뒤에 작성(<strong>예 : border:1px solid #eee; border-radius:5px</strong>)하며, transition등은 etc와 동일한 위치에 적용합니다.</p>
+		<ol class="num_list">
+			<li>display</li>
+			<li>position</li>
+			<li>float</li>
+			<li>clear</li>
+			<li>width</li>
+			<li>height</li>
+			<li>margin</li>
+			<li>padding</li>
+			<li>border</li>
+			<li>background</li>
+			<li>color</li>
+			<li>font</li>
+			<li>text-align</li>
+			<li>vertical-align</li>
+			<li>etc</li>
+		</ol>
+	</div>
+
+	<h3 class="h3_guide">7. 가이드(WSG) 추가 및 수정</h3>
+	<div class="d_desc">
+		어떠한 경우라도 가이드가 추가 및 수정이 이루어질 경우 해당 단위에 대해서 <strong>세부적인 내용을 메일로 공유</strong>한다.
+	</div>
+
+	<h3 class="h3_guide">8. 테스트</h3>
+	<div class="d_desc">
+		테스트가 필요한 경우 서버에 적용을 해도 무관하나, 가능하면 로컬에서만 진행합니다.<br>서버에 적용 시에는 /testcase/에서 진행하며, 파일명은 test_yymmdd_xx.html로 적용합니다.(css, js파일도 동일)
+	</div>
+
+</div>
+
+<script type="text/javascript" src="../guide/js/pretty.js"></script>
+<!--script 영역-->
+<script type="text/javascript" src=""></script>
+<!--//script 영역-->
+
+</body>
+</html>

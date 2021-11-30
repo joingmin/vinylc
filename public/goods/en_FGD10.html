@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<title>Goods 목록 || VINYLC</title>
+	<link href="" rel="shortcut icon" type="image/x-icon">
+	<link rel="apple-touch-icon-precomposed" href="">
+	<link rel="stylesheet" type="text/css" href="/css/common.css">
+<!-- 181122 삭제
+<style type="text/css">
+
+footer { display:none; }
+</style>
+-->
+</head>
+
+<body data-page="goods">
+<div id="skipnavi">
+	<ul>
+		<li><a href="#container_title">Go to Body Matter</a></li>
+	</ul>
+</div>
+<div id="wrap">
+	<!-- header -->
+	<header class="sub">
+		<div class="header_wrap">
+			@@include('./include/logo.html')
+		</div>
+		@@include('./include/nav.html')
+	</header>
+	<!-- //header -->
+
+	<section id="container">
+		<div id="container_title" class="hide" tabindex="-1">Body Matter Starts</div>
+		<!-- content -->
+		<div id="content">
+
+			<!-- 정보영역 -->
+			<div class="head_info_txt">
+				<h1 class="hide">Goods 목록</h1>
+				<div class="hd_txt">
+					<!-- 190308 수정 -->
+					<p class="em_txt goods">We start our day with small, but meaningful props. </p>
+					<!-- //190308 수정 -->
+				</div>
+			</div>
+			<!-- //정보영역 -->
+
+			<!-- 목록 module -->
+			<div class="list_comm more_load" data-template="/template/list.html" data-ajax="/json/goods-list.json">
+			<!-- Image & Video List Template
+				<li>
+				    <a href="${href}">
+				        <div class="img_frame">
+				            <img src="${img_frame.src}" class="img" alt="${img_frame.alt}">
+				            <span class="img_logo"><img src="${img_frame.logo}" class="img_logo" alt=""></span>
+				        </div>
+				        <div class="txt_frame">
+				            <p class="txt">{{html txt_frame.txt}}</p>
+				            <p class="date">${txt_frame.data}</p>
+				        </div>
+				    </a>
+				</li>
+
+				<li>
+				    <a href="${href}">
+				        <div class="video_frame">
+				            <video class="f_mov" title="${video_frame.title}" autoplay loop muted playsinline>
+				                <source src="${video_frame.src}" type="${video_frame.type}">
+				            </video>
+				        </div>
+				        <div class="img_frame">
+				            <img src="${img_frame.src}" class="img" alt="${img_frame.alt}">
+				        </div>
+				        <div class="txt_frame">
+				            <p class="txt">{{html txt_frame.txt}}</p>
+				            <p class="date">${txt_frame.data}</p>
+				        </div>
+				    </a>
+				</li>
+			-->
+			</div>
+
+			<div class="btn_list_more">
+				<button type="button"><span>more</span></button> <!-- 190130 수정 : 소문자로 변경 -->
+			</div>
+
+			<!-- 190114 로딩바 삭제 -->
+			<!-- <div class="list_loading">
+				<span class="is-show"></span>
+			</div> -->
+			<!-- //190114 로딩바 삭제 -->
+			<!-- //목록 module -->
+		</div>
+		<!-- //content -->
+	</section>
+
+	<!-- footer -->
+	@@include('./include/footer.html')
+	<!-- //footer -->
+</div>
+
+<script type="text/javascript" src="/js/libs/jquery-1.11.2.min.js"></script>
+<script type="text/javascript" src="/js/vcui.js"></script>
+<script type="text/javascript" src="/js/vinylc.site.js"></script>
+<script type="text/javascript">
+vcui.require( ['vinylc/goods'], function( Goods ) {
+	var type = ( window.location.href.indexOf('list') > -1 ) ? 'list' : 'view';
+	type = 'list';	// 코딩진행표 테스트용
+    new Goods( '#wrap', {state:type} );
+});
+
+/*!
+	개발 참고용, 외부 호출 방법
+
+	$(function() {
+	    var goods = $('#wrap').vcGoods('instance');
+	    goods.loadList(2);	// pageCount
+	});
+*/
+</script>
+</body>
+</html>

@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<title>calendar</title>
+	<link href="" rel="shortcut icon" type="image/x-icon">
+	<link rel="apple-touch-icon-precomposed" href="">
+	<link rel="stylesheet" type="text/css" href="/css/common.css">
+
+</head>
+
+<body style="padding:100px 20px;">
+
+
+<div class="s_cal wran"><!-- 달력이 열리면 on 클래스 추가, 에러일 경우는 wran 추가 --> <!-- 181221 수정 : 에러 케이스 -->
+	<button type="button" class="input_cal"><span class="hide">날짜 선택</span></button>
+	<input type="text" value="" class="input_txt" readonly="" data-placeholder="프로젝트 시작일을 선택 해주세요" placeholder="프로젝트 시작일을 선택 해주세요" required>
+	
+	<div class="ui-calendar-container" tabindex="0" style="display:none;">
+		<div class="ui-select-day">
+			<div class="ui-calendar-header-second">
+				<a href="#" class="ui-calendar-prev" tabindex="-1" style="outline: none;">
+					2017년 08월<span class="hide">로 이동</span>
+				</a>
+				<span class="ui-calendar-now">
+					2017<span class="webf_b">년</span> 09<span class="webf_b">월</span><span class="hide">이 선택됨</span>
+				</span>
+				<a href="#" class="ui-calendar-next" tabindex="0" style="outline: none;">
+					2017년 10월<span class="hide">로 이동</span>
+				</a>
+			</div>
+			<div class="ui-calendar-date">
+				<table class="ui-calendar-table" border="0">
+					<caption>캘린더입니다. 글은 일요일, 월요일, 화요일, 수요일, 목요일, 금요일, 토요일 순으로 나옵니다.</caption>
+					<colgroup>
+						<col width="14.28%">
+						<col width="14.28%">
+						<col width="14.28%">
+						<col width="14.28%">
+						<col width="14.28%">
+						<col width="14.28%">
+						<col width="14.28%">
+					</colgroup>
+					<thead>
+						<tr>
+							<th class="ui-calendar-dayname  ui-calendar-sunday" scope="col">일</th>
+							<th class="ui-calendar-dayname " scope="col">월</th>
+							<th class="ui-calendar-dayname " scope="col">화</th>
+							<th class="ui-calendar-dayname " scope="col">수</th>
+							<th class="ui-calendar-dayname " scope="col">목</th>
+							<th class="ui-calendar-dayname " scope="col">금</th>
+							<th class="ui-calendar-dayname  ui-calendar-saturday" scope="col">토</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td class="ui-calendar-20170827 ui-calendar-cell disabled ui-calendar-other" data-year="2017" data-month="8" data-day="27">&nbsp;</td>
+							<td class="ui-calendar-20170828 ui-calendar-cell disabled ui-calendar-other" data-year="2017" data-month="8" data-day="28">&nbsp;</td>
+							<td class="ui-calendar-20170829 ui-calendar-cell disabled ui-calendar-other" data-year="2017" data-month="8" data-day="29">&nbsp;</td>
+							<td class="ui-calendar-20170830 ui-calendar-cell disabled ui-calendar-other" data-year="2017" data-month="8" data-day="30">&nbsp;</td>
+							<td class="ui-calendar-20170831 ui-calendar-cell disabled ui-calendar-other" data-year="2017" data-month="8" data-day="31">&nbsp;</td>
+							<td class="ui-calendar-20170901 ui-calendar-cell disabled" data-year="2017" data-month="9" data-day="1">
+								<button type="button" class="ui-calendar-day disabled" title="2017년 09월 01일 선택할 수 없음" disabled="disabled" style="cursor:default">1</button>
+							</td>
+							<td class="ui-calendar-20170902 ui-calendar-cell disabled ui-calendar-saturday" data-year="2017" data-month="9" data-day="2">
+								<button type="button" class="ui-calendar-day disabled" title="2017년 09월 02일 선택할 수 없음" disabled="disabled" style="cursor:default">2</button>
+							</td>
+						</tr>
+						<tr>
+							<td class="ui-calendar-20170903 ui-calendar-cell disabled ui-calendar-sunday" data-year="2017" data-month="9" data-day="3">
+								<button type="button" class="ui-calendar-day disabled" title="2017년 09월 03일 선택할 수 없음" disabled="disabled" style="cursor:default">3</button>
+							</td>
+							<td class="ui-calendar-20170904 ui-calendar-cell disabled" data-year="2017" data-month="9" data-day="4">
+								<button type="button" class="ui-calendar-day disabled" title="2017년 09월 04일 선택할 수 없음" disabled="disabled" style="cursor:default">4</button>
+							</td>
+							<td class="ui-calendar-20170905 ui-calendar-cell disabled" data-year="2017" data-month="9" data-day="5">
+								<button type="button" class="ui-calendar-day disabled" title="2017년 09월 05일 선택할 수 없음" disabled="disabled" style="cursor:default">5</button>
+							</td>
+							<td class="ui-calendar-20170906 ui-calendar-cell ui-calendar-holiday" data-year="2017" data-month="9" data-day="6">
+								<button type="button" class="ui-calendar-day" title="2017년 09월 06일">6</button>
+							</td>
+							<td class="ui-calendar-20170907 ui-calendar-cell ui-calendar-holiday" data-year="2017" data-month="9" data-day="7">
+								<button type="button" class="ui-calendar-day" title="2017년 09월 07일">7</button>
+							</td>
+							<td class="ui-calendar-20170908 ui-calendar-cell ui-calendar-holiday" data-year="2017" data-month="9" data-day="8">
+								<button type="button" class="ui-calendar-day" title="2017년 09월 08일">8</button>
+							</td>
+							<td class="ui-calendar-20170909 ui-calendar-cell ui-calendar-saturday" data-year="2017" data-month="9" data-day="9">
+								<button type="button" class="ui-calendar-day" title="2017년 09월 09일">9</button>
+							</td>
+						</tr>
+						<tr>
+							<td class="ui-calendar-20170910 ui-calendar-cell ui-calendar-sunday" data-year="2017" data-month="9" data-day="10">
+								<button type="button" class="ui-calendar-day" title="2017년 09월 10일">10</button>
+							</td>
+							<td class="ui-calendar-20170911 ui-calendar-cell" data-year="2017" data-month="9" data-day="11">
+								<button type="button" class="ui-calendar-day" title="2017년 09월 11일">11</button>
+							</td>
+							<td class="ui-calendar-20170912 ui-calendar-cell" data-year="2017" data-month="9" data-day="12">
+								<button type="button" class="ui-calendar-day" title="2017년 09월 12일">12</button>
+							</td>
+							<td class="ui-calendar-20170913 ui-calendar-cell" data-year="2017" data-month="9" data-day="13">
+								<button type="button" class="ui-calendar-day" title="2017년 09월 13일">13</button>
+							</td>
+							<td class="ui-calendar-20170914 ui-calendar-cell" data-year="2017" data-month="9" data-day="14">
+								<button type="button" class="ui-calendar-day" title="2017년 09월 14일">14</button>
+							</td>
+							<td class="ui-calendar-20170915 ui-calendar-cell" data-year="2017" data-month="9" data-day="15">
+								<button type="button" class="ui-calendar-day" title="2017년 09월 15일">15</button>
+							</td>
+							<td class="ui-calendar-20170916 ui-calendar-cell ui-calendar-saturday ui-calendar-active" data-year="2017" data-month="9" data-day="16">
+								<button type="button" class="ui-calendar-day" title="2017년 09월 16일 선택일">16</button>
+							</td>
+						</tr>
+						<tr>
+							<td class="ui-calendar-20170917 ui-calendar-cell ui-calendar-sunday" data-year="2017" data-month="9" data-day="17">
+								<button type="button" class="ui-calendar-day" title="2017년 09월 17일">17</button>
+							</td>
+							<td class="ui-calendar-20170918 ui-calendar-cell" data-year="2017" data-month="9" data-day="18">
+								<button type="button" class="ui-calendar-day" title="2017년 09월 18일">18</button>
+							</td>
+							<td class="ui-calendar-20170919 ui-calendar-cell" data-year="2017" data-month="9" data-day="19">
+								<button type="button" class="ui-calendar-day" title="2017년 09월 19일">19</button>
+							</td>
+							<td class="ui-calendar-20170920 ui-calendar-cell" data-year="2017" data-month="9" data-day="20">
+								<button type="button" class="ui-calendar-day" title="2017년 09월 20일">20</button>
+							</td>
+							<td class="ui-calendar-20170921 ui-calendar-cell" data-year="2017" data-month="9" data-day="21">
+								<button type="button" class="ui-calendar-day" title="2017년 09월 21일">21</button>
+							</td>
+							<td class="ui-calendar-20170922 ui-calendar-cell" data-year="2017" data-month="9" data-day="22">
+								<button type="button" class="ui-calendar-day" title="2017년 09월 22일">22</button>
+							</td>
+							<td class="ui-calendar-20170923 ui-calendar-cell ui-calendar-saturday" data-year="2017" data-month="9" data-day="23">
+								<button type="button" class="ui-calendar-day" title="2017년 09월 23일">23</button>
+							</td>
+						</tr>
+						<tr>
+							<td class="ui-calendar-20170924 ui-calendar-cell ui-calendar-sunday" data-year="2017" data-month="9" data-day="24">
+								<button type="button" class="ui-calendar-day" title="2017년 09월 24일">24</button>
+							</td>
+							<td class="ui-calendar-20170925 ui-calendar-cell" data-year="2017" data-month="9" data-day="25">
+								<button type="button" class="ui-calendar-day" title="2017년 09월 25일">25</button>
+							</td>
+							<td class="ui-calendar-20170926 ui-calendar-cell" data-year="2017" data-month="9" data-day="26">
+								<button type="button" class="ui-calendar-day" title="2017년 09월 26일">26</button>
+							</td>
+							<td class="ui-calendar-20170927 ui-calendar-cell" data-year="2017" data-month="9" data-day="27">
+								<button type="button" class="ui-calendar-day" title="2017년 09월 27일">27</button>
+							</td>
+							<td class="ui-calendar-20170928 ui-calendar-cell" data-year="2017" data-month="9" data-day="28">
+								<button type="button" class="ui-calendar-day" title="2017년 09월 28일">28</button>
+							</td>
+							<td class="ui-calendar-20170929 ui-calendar-cell" data-year="2017" data-month="9" data-day="29">
+								<button type="button" class="ui-calendar-day" title="2017년 09월 29일">29</button>
+							</td>
+							<td class="ui-calendar-20170930 ui-calendar-cell ui-calendar-saturday" data-year="2017" data-month="9" data-day="30">
+								<button type="button" class="ui-calendar-day" title="2017년 09월 30일">30</button>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+</div>
+
+<br><br><br><br>
+
+
+
+<div class="s_cal">
+	<button type="button" class="ui_calendar input_cal" data-input-target="#startDate" data-min-date="2017-09-06" data-max-date="2020-09-06"><span class="hide">날짜 선택</span></button>
+	<input type="text" id="startDate" class="input_txt" readonly="" placeholder="프로젝트 시작일을 선택 해주세요" required>
+</div>
+
+
+
+
+<br><br><br><br>
+
+
+
+<div class="s_cal wran"><!-- 에러일 경우는 wran 추가 --> <!-- 181221 수정 : 에러 케이스 -->
+	<button type="button" class="ui_calendar input_cal" data-input-target="#startDate" data-min-date="2017-09-06" data-max-date="2020-09-06"><span class="hide">날짜 선택</span></button>
+	<input type="text" id="startDate" class="input_txt" readonly="" placeholder="프로젝트 시작일을 선택 해주세요" required>
+</div>
+
+
+<script type="text/javascript" src="/js/libs/jquery-1.11.2.min.js"></script>
+<script type="text/javascript" src="/js/vcui.js"></script>
+<script type="text/javascript" src="/js/vinylc.site.js"></script>
+<script type='text/javascript'>
+$(function() {
+	vcui.require( ['vinylc/calendar'], function( Calendar ) { 
+		$('.ui_calendar').vcCalendar();
+	}); 
+});
+</script>
+</body>
+</html>

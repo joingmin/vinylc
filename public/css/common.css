@@ -1,0 +1,29 @@
+@charset "utf-8";
+
+@import url('/css/common_1920.css');
+@import url('/css/common_1921.css');
+@import url('/css/common_2560.css');
+@import url('/css/common_1280.css');
+@import url('/css/common_750.css');
+@import url('/css/common_750_x.css');
+@import url('/css/common_750_land.css');
+@import url('/css/common_750_land_x.css');
+
+/************************************************************************
+* filename : common.css
+* description : 전체 css
+
+
+common_1920.css : px/96 = rem (1281 ~ 1920)
+common_1921.css : px/128 = rem (1921 이상)
+common_2560.css : px/128 = rem (2560이상일때 재정의가 필요한 경우만)
+common_1280.css : px/64 = rem (769 ~ 1280)
+common_768.css :  px/37.5 = rem (768 이하 또는 디바이스 기기 1024 이하)
+common_768_x.css : px/37.5 = rem (디바이스 아이폰X 일 경우)
+common_768_land.css : px/71.5 = rem (디바이스 기기 1024 이하 landscape)
+common_768_land_x.css : px/71.5 = rem (디바이스 아이폰X landscape 일 경우)
+ 
+
+***********************************************************************/
+
+

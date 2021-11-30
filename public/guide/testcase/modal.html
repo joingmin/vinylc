@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+        pre {
+            border:1px dashed #000;
+            border-radius: 4px 4px 4px;
+            background-color: #efefef;
+            padding: 3px;
+        }
+
+        .ui_modal {
+            width: 300px;
+            height: 300px;
+            box-shadow: 5px 5px 5px 5px #000;
+            background-color: #fff;
+        }
+    </style>
+</head>
+<body>
+
+<div style="height:2000px">
+    <h1>모달창 예제</h1>
+    <h2>모달을 본문안에 넣어놓고 띄우는 경우</h2>
+    <div><a href="#modal1" data-control="modal">Modal 1</a></div>
+    <br><br>
+    <h2>모달을 ajax로 불러와서 띄우는 경우</h2>
+    <div><a href="modal_ajax.html" data-control="modal">Modal 2</a></div>
+</div>
+
+<div id="modal1" class="ui_modal" style="display: none;">
+    <div class="modal_header">헤더</div>
+    <div class="modal_content">본문</div>
+    <div class="modal_footer">푸터 <br><button type="button" class="ui_modal_close">닫기</button> </div>
+</div>
+<script src="/js/libs/jquery-1.11.2.min.js"></script>
+<script src="/js/vcui.js"></script>
+<script src="/js/vinylc.site.js"></script>
+<script>
+    $(function () {
+        $(document).on('modalshown', function (e) {
+            console.log(e.target);
+        });
+    });
+</script>
+</body>
+</html>

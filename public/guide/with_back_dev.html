@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge ,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+	<meta name="format-detection" content="telephone=no">
+	<meta http-equiv="Cache-Control" content="no-cache">
+	<meta http-equiv="Pragma" content="no-cache">
+	<title>프로젝트 사전 협의 사항, 현대캐피탈 인증중고차</title>
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+
+	<link rel="stylesheet" type="text/css" href="../guide/css/base.css">
+	<link rel="stylesheet" type="text/css" href="../guide/css/pretty.css">
+	<link rel="stylesheet" type="text/css" href="../pcweb/css/base.css">
+	<script type="text/javascript" src=""></script>
+</head>
+
+<body>
+
+<div id="wrap" class="coding_guide">
+	<h1 class="h1_guide">현대자동차 상용 글로벌 대표 홍보사이트 구축(영문) 사전 협의 사항</h1>
+
+	<h2 class="h2_guide">환경협의</h2>
+
+	<h3 class="h3_guide">1. 웹서버 및 개발 언어 종류</h3>
+	<div class="d_desc">아파치/JSP</div>
+
+	<h3 class="h3_guide">2. 웹표준 준수 여부 (DTD 종류 등)</h3>
+	<div class="d_desc">
+		&lt;!DOCTYPE html&gt;
+	</div>
+
+	<h3 class="h3_guide">3. 웹사이트 인코딩 방식</h3>
+	<div class="d_desc">utf-8</div>
+
+	<h3 class="h3_guide">4. 크로스브라우징 정책</h3>
+	<div class="d_desc">
+		<dl class="info">
+			<dt>PC</dt>
+			<dd>IE9이상(Edge 제외), Chrome, (Mac)Safari, Firefox 최신</dd>
+			<dt>Tablet</dt>
+			<dd>
+				<ul>
+					<li>갤럭시 탭 S2 : 호환</li>
+					<li>갤럭시 탭 S3 : 최적</li>
+					<li>iPad mini 2 : 호환</li>
+					<li>iPad mini 3 ~ : 최적</li>
+					<li>iPad(5세대) Pro 9.7 ~ : 최적</li>
+				</ul>
+			</dd>
+			<dt>Mobile</dt>
+			<dd>
+				<ul>
+					<li>갤러시 S5 : 호환</li>
+					<li>갤럭시 S6 : 호환</li>
+					<li>갤럭시 S7 ~ : 최적</li>
+					<li>갤럭시 노트 4 : 호환</li>
+					<li>갤럭시 노트 5 : 호환</li>
+					<li>갤럭시 노트 7 ~. : 최적</li>
+					<li>G4 : 호환</li>
+					<li>G5 : 최적</li>
+					<li>G6 : 최적iPhone 5 : 호환</li>
+					<li>iPhone 6 ~ : 최적</li>
+				</ul>
+			</dd>
+		</dl>
+	</div>
+
+	<h3 class="h3_guide">5. OS적용 범위</h3>
+	<div class="d_desc">
+		<dl class="info">
+			<dt>PC</dt>
+			<dd>윈도우(windows 7 이상)</dd>
+			<dt>Mobile(Android)</dt>
+			<dd>
+				<ul>
+					<li>4.3(젤리빈) : 호환</li>
+					<li>5.x(롤리팝) : 호환</li>
+					<li>마시멜로우(6.x), 누가(7.x) : 최적</li>
+				</ul>
+			</dd>
+			<dt>Mobile(iOS)</dt>
+			<dd>
+				<ul>
+					<li>8.x : 호환</li>
+					<li>9.x, 10.x : 최적</li>
+				</ul>
+			</dd>
+		</dl>
+	</div>
+
+	<h3 class="h3_guide">6. Breakpoint</h3>
+	<div class="d_desc">
+		<dl class="info">
+			<dt>PC</dt>
+			<dd>1280px ~ Max 1920px</dd>
+			<dt>Tablet</dt>
+			<dd>768px ~ 1279px</dd>
+			<dt>Mobile</dt>
+			<dd>~ 767px</dd>
+		</dl>
+	</div>
+
+	<h2 class="h2_guide">업무협의</h2>
+
+	<h3 class="h3_guide">1. 디렉토리구조</h3>
+	<div class="d_desc">
+		<table class="guide_table">
+			<caption>현대자동차 상용 글로벌 대표 홍보사이트 구축(영문)디렉토리 구조</caption>
+			<colgroup>
+				<col style="width:15%">
+				<col style="width:15%">
+				<col style="width:15%">
+				<col style="width:15%">
+				<col>
+			</colgroup>
+			<thead>
+				<tr>
+					<th scope="col">1depth</th>
+					<th scope="col">2depth</th>
+					<th scope="col">3depth</th>
+					<th scope="col">4depth</th>
+					<th scope="col">설명</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<th scope="row" rowspan="4">/css</th>
+					<td>&nbsp;</td>
+					<td>&nbsp;</td>
+					<td>&nbsp;</td>
+					<td>css폴더</td>
+				</tr>
+				<tr>
+					<td>/font</td>
+					<td>&nbsp;</td>
+					<td>&nbsp;</td>
+					<td>웹폰트</td>
+				</tr>
+				<tr>
+					<td>base.css</td>
+					<td>&nbsp;</td>
+					<td>&nbsp;</td>
+					<td>사이트 공통 css</td>
+				</tr>
+				<tr>
+					<td>메뉴명(brand 등).css</td>
+					<td>&nbsp;</td>
+					<td>&nbsp;</td>
+					<td>각 메뉴 css</td>
+				</tr>
+				<tr>
+					<th scope="row" rowspan="4">/images</th>
+					<td>&nbsp;</td>
+					<td>&nbsp;</td>
+					<td>&nbsp;</td>
+					<td>image 폴더</td>
+				</tr>
+				<tr>
+					<td>/common</td>
+					<td>&nbsp;</td>
+					<td>&nbsp;</td>
+					<td>사이트 공통 이미지</td>
+				</tr>
+				<tr>
+					<td>/메뉴명(Brand 등)</td>
+					<td>&nbsp;</td>
+					<td>&nbsp;</td>
+					<td>각 메뉴 별 이미지 파일</td>
+				</tr>
+				<tr>
+					<td>/thumb</td>
+					<td>&nbsp;</td>
+					<td>&nbsp;</td>
+					<td>임시 이미지 파일</td>
+				</tr>
+				<tr>
+					<th scope="row">/js</th>
+					<td>&nbsp;</td>
+					<td>&nbsp;</td>
+					<td>&nbsp;</td>
+					<td>js 폴더</td>
+				</tr>
+				<tr>
+					<th scope="row">/메뉴명(brand 등)</th>
+					<td>&nbsp;</td>
+					<td>&nbsp;</td>
+					<td>&nbsp;</td>
+					<td>각 메뉴 별 html파일</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+
+	<h3 class="h3_guide">2. UI개발 진행표 협의 (각 페이지의 네이밍 정책 등)</h3>
+	<div class="d_desc">
+	- url : http://hcg.vinylc.com/<br>
+	- SVN url : https://boss2.vi-nyl.com/svn/hcg/<br>
+	- html파일 네이밍 정책 : 화면명세서 화면ID 번호.html(예: GR1.1.html)
+	</div>
+
+	<h3 class="h3_guide">3. UI개발 산출물 파일 전달방식 협의</h3>
+	<div class="d_desc">
+		개발팀 전용 SVN계정이 존재하며, 해당 계정으로 개발파트에서 수급합니다.
+	</div>
+
+	<h3 class="h3_guide">4. Include 방식 협의 (header/footer/기타)</h3>
+	<div class="d_desc">기본 header/footer은 include로 적용합니다.</div>
+
+	<h3 class="h3_guide">5. 주석가이드</h3>
+	<div class="d_desc">
+		<div class="t_point">
+			<p>기본은 yymmdd_로 하고, 각 상황(수정/삭제 등)에 따라 코멘트만 변경합니다.</p>
+		</div>
+		- 수정 시작 주석 : &lt;!-- yymmdd_수정_xx --&gt;<br>
+		- 수정 끝 주석 : &lt;!-- //yymmdd_수정_xx --&gt;
+	</div>
+
+	<h3 class="h3_guide">6. 이미지 관련</h3>
+	<div class="d_desc">
+		<p class="t_point">공통사항</p>
+		<ol class="num_list">
+			<li>파일명은 기본 SEO기준에 맞게 작성하되, 작은 해상도에 적용되는 이미지는 이미지 파일명 끝에 -m을 적용하여 구분한다.</li>
+			<li>이미지 기본 파일명은 디자인 파일 기준으로 기획에서 이미지 파일명 정리된 문서를 통해서 전달 후 퍼블리싱 작업 시 적용한다.</li>
+			<li>작은 해상도에 적용되어야 할 이미지는 디자인 파트에서 판단하여 2개의 이미지로 갈 경우 디자인 파트에서 전달합니다.</li>
+			<li>2개의 이미지가 적용되어야 할 경우 아래의 형태로 html소스에 적용하며, ui_responsive_image클래스는 js전용 클래스이므로 디자인 관련된 css작성 시 사용하지 않습니다
+				<p><strong>&lt;img src="기본-이미지-파일명.png" data-src-mobile="모바일-이미지-파일명-m.png" data-src-pc="기본-이미지-파일명.png" class="ui_responsive_image" alt=""&gt;</strong></p>
+			</li>
+		</ol>
+	</div>
+
+	<h2 class="h2_guide">기타사항</h2>
+	<div class="d_desc">
+		-
+	</div>
+
+
+</div>
+
+<script type="text/javascript" src="../guide/js/pretty.js"></script>
+<!--script 영역-->
+<script type="text/javascript" src=""></script>
+<!--//script 영역-->
+
+</body>
+</html>

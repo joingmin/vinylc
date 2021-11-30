@@ -1,0 +1,565 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<title>Request 메인 || VINYLC</title>
+	<link href="" rel="shortcut icon" type="image/x-icon">
+	<link rel="apple-touch-icon-precomposed" href="">
+	<link rel="stylesheet" type="text/css" href="/css/common.css">
+</head>
+
+<body data-page="request">
+<div id="skipnavi">
+	<ul>
+		<li><a href="#container_title">본문바로가기</a></li>
+	</ul>
+</div>
+<div id="wrap">
+	<!-- header -->
+	<header class="sub">
+		<div class="header_wrap">
+			@@include('./include/logo.html')
+		</div>
+
+		<!-- ###include virtual="/include/nav.html"-->
+		<nav>
+			<div class="btn_nav_wrap">
+				<button type="button" class="btn_nav ui-hambuger">
+					<span class="hide">메뉴</span>
+
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 33" width="32" height="33" preserveAspectRatio="xMidYMid meet" style="width: 100%; height: 100%; transform: translate3d(0px, 0px, 0px);"><g clip-path="url(#animationMask_fflqDZff4B)"><g transform="matrix(0.5,-0.8660253882408142,0.8660253882408142,0.5,-5.289419174194336,7.374355316162109)" opacity="1" style="display: block;"><g opacity="1" transform="matrix(1,0,0,1,13.196000099182129,16.409000396728516)"><path fill="rgb(35,25,22)" fill-opacity="1" d=" M1.069000005722046,-6.447000026702881 C1.069000005722046,-6.447000026702881 -1.1640000343322754,-10.3149995803833 -1.1640000343322754,-10.3149995803833 C-1.1640000343322754,-10.3149995803833 -7.224999904632568,-6.816999912261963 -7.224999904632568,-6.816999912261963 C-7.224999904632568,-6.816999912261963 -3.253000020980835,0.06199999898672104 -3.253000020980835,0.06199999898672104 C-3.253000020980835,0.06199999898672104 0.25699999928474426,6.139999866485596 0.25699999928474426,6.139999866485596 C0.25699999928474426,6.139999866485596 2.7730000019073486,10.50100040435791 2.7730000019073486,10.50100040435791 C2.7730000019073486,10.50100040435791 8.831999778747559,7.000999927520752 8.831999778747559,7.000999927520752 C8.831999778747559,7.000999927520752 4.579999923706055,-0.3630000054836273 4.579999923706055,-0.3630000054836273 C4.579999923706055,-0.3630000054836273 1.069000005722046,-6.447000026702881 1.069000005722046,-6.447000026702881z"></path></g></g><g transform="matrix(0.5,0.8660253882408142,-0.8660253882408142,0.5,23.289419174194336,9.12564468383789)" opacity="1" style="display: block;"><g opacity="1" transform="matrix(1,0,0,1,13.196000099182129,16.409000396728516)"><path fill="rgb(35,25,22)" fill-opacity="1" d=" M2.7739999294281006,-10.319000244140625 C2.7739999294281006,-10.319000244140625 0.23499999940395355,-5.916999816894531 0.23499999940395355,-5.916999816894531 C0.23499999940395355,-5.916999816894531 -3.2760000228881836,0.17100000381469727 -3.2760000228881836,0.17100000381469727 C-3.2760000228881836,0.17100000381469727 -7.2220001220703125,7 -7.2220001220703125,7 C-7.2220001220703125,7 -1.159999966621399,10.496000289916992 -1.159999966621399,10.496000289916992 C-1.159999966621399,10.496000289916992 1.031999945640564,6.692999839782715 1.031999945640564,6.692999839782715 C1.031999945640564,6.692999839782715 4.566999912261963,0.5730000138282776 4.566999912261963,0.5730000138282776 C4.566999912261963,0.5730000138282776 8.833999633789062,-6.817999839782715 8.833999633789062,-6.817999839782715 C8.833999633789062,-6.817999839782715 2.7739999294281006,-10.319000244140625 2.7739999294281006,-10.319000244140625z"></path></g></g></g><defs><clipPath id="animationMask_fflqDZff4B"><rect width="32" height="33" x="0" y="0"></rect></clipPath></defs></svg>
+				</button>
+			</div>
+
+			<!-- layer -->
+			<div class="nav_wrap">
+				<div class="nav_cont">
+					<!-- 언어선택 -->
+					<div class="choice_lang">
+						<div class="selectbox_wrap placeholder ui_selectbox" data-title="언어 선택">
+							<select name="select1" style="display:none;">
+								<option value="">KOR</option>
+								<option value="">JPN</option>
+								<option value="">ENG</option>
+							</select>
+							<div class="selectbox_view">
+								<a href="#" title="언어 선택 열기">
+									<span class="select_text">KOR</span>
+									<span class="hide">선택됨</span>
+									<span class="ico"></span>
+								</a>
+							</div>
+							<div class="selectbox_list" style="display:none;"></div>
+						</div>
+					</div>
+
+					<!-- manu -->
+					<div class="menu">
+						<ul>
+							<li><a href="/works/FWO10.html"><span class="m_txt">Works<span class="bar"></span></span></a></li>
+							<li><a href="#"><span class="m_txt">About<span class="bar"></span></span></a></li>
+							<li><a href="/news/FNE10.html"><span class="m_txt">News<span class="bar"></span></span></a></li>
+							<li><a href="/request/FRQ10.html"><span class="m_txt">Request<span class="bar"></span></span></a></li>
+							<li><a href="/careers/FCR10.html"><span class="m_txt">Careers<span class="bar"></span></span></a></li>
+							<li><a href="/contact/FCT10.html"><span class="m_txt">Contact<span class="bar"></span></span></a></li>
+							<li><a href="/goods/FGD10.html"><span class="m_txt">Goods<span class="bar"></span></span></a></li>
+							<li><a href="/crews/FVC10.html"><span class="m_txt">VinylCrew<span class="bar"></span></span></a></li>
+						</ul>
+					</div>
+
+					<!-- channel -->
+					<div class="channel">
+						<p>Channel</p>
+						<ul>
+							<!-- 181108 수정 -->
+							<li><a href="#">Facebook</a></li>
+							<li><a href="#">Youtube</a></li>
+							<li><a href="#">Instagram</a></li>
+							<!-- //181108 수정 -->
+						</ul>
+					</div>
+				</div>
+			</div>
+		</nav>
+	</header>
+
+	<section id="container">
+		<div id="container_title" class="hide" tabindex="-1">본문 시작</div> 
+		<!-- content -->
+		<div id="content">
+
+			<h1 class="hide">Request 메인</h1>
+
+			<div class="req_wrap">
+
+				<div class="req_main">
+					<div class="txt">
+						<p class="tit">프로젝트를 준비하고 있나요?</p>
+						<p>아래 3가지 사항이 준비되었는지 확인한 후 상황에 따라 프로젝트를 의뢰하면<br>
+						좀 더 빠르고 정확하게 견적과 제안을 받아볼 수 있습니다.</p>
+					</div>
+					
+					<div class="prepare_wrap">
+						<div class="prepare">
+							<!-- 181101 수정 -->
+							<h2 class="now"><span class="hide">현재단계</span>STEP 1</h2>
+							<h3 class="title">준비사항을 체크해주세요.</h3>
+							<!-- //181101 수정 -->
+							<ul>
+								<li>
+									<!-- 181101 수정 -->
+									<div class="pos_rel">
+										<span class="chk_wrap">
+										  <input type="checkbox" name="fn_ck_pp" id="fi_ck_pp1"><label for="fi_ck_pp1">회원정책, 과금정책과 같은 서비스에 대한 정책이 정리 되어 있습니다.</label>
+										</span>
+										<!-- link -->
+										<a href="#" class="arr_link">샘플보기</a>
+									</div>
+									<!-- //181101 수정 -->
+								</li>
+								<li>
+									<!-- 181101 수정 -->
+									<div class="pos_rel">
+										<span class="chk_wrap">
+										  <input type="checkbox" name="fn_ck_pp" id="fi_ck_pp2"><label for="fi_ck_pp2">프로젝트 계획과 제안요청서(REP)가 준비 되었습니다.</label>
+										</span>
+										<!-- link -->
+										<a href="#" class="arr_link">샘플보기</a>
+									</div>
+									<!-- //181101 수정 -->
+								</li>
+								<li>
+									<!-- 181101 수정 -->
+									<div class="pos_rel">
+										<span class="chk_wrap">
+										  <input type="checkbox" name="fn_ck_pp" id="fi_ck_pp3"><label for="fi_ck_pp3">서비스 목표, 방향, 대략적인 형상에 대한 정리가 되었습니다.</label>
+										</span>
+										<!-- link -->
+										<a href="#" class="arr_link">샘플보기</a>
+									</div>
+									<!-- //181101 수정 -->
+								</li>
+							</ul>
+
+							<!-- button -->
+							<div class="btn_wrap">
+								<button type="button" class="btn btn_gray"><span>준비상태 확인</span></button><!-- 181101 수정 -->
+							</div>
+						</div>
+					</div>
+
+					<!-- 참고 샘플 -->
+					<!-- 181101 삭제
+					<aside class="refe_wrap">
+						<h1 class="ch_tit">샘플을 참고 하시겠어요?</h1>
+						<div class="box_refe">
+							<ul>
+								<li>
+									<a href="#" class="btn_file ico pdf">
+										바이널씨 회원정책서
+									</a>
+								</li>
+								<li>
+									<a href="#" class="btn_file ico ppt">
+										바이널씨 회원정책서
+									</a>
+								</li>
+								<li>
+									<a href="#" class="btn_file ico pdf">
+										바이널씨 제안요청서
+									</a>
+								</li>
+								<li>
+									<a href="#" class="btn_file ico ppt">
+										바이널씨 제안요청서
+									</a>
+								</li>
+								<li>
+									<a href="#" class="btn_file ico pdf">
+										바이널씨 서비스기획서
+									</a>
+								</li>
+								<li>
+									<a href="#" class="btn_file ico ppt">
+										바이널씨 서비스기획서
+									</a>
+								</li>
+							</ul>
+						</div>
+					</aside>
+					 -->
+				</div>
+
+			</div>
+
+		</div>
+		<!-- //content -->
+	</section>
+
+	<!-- footer -->
+	@@include('./include/footer.html')
+	<!-- //footer -->
+</div>
+
+
+<script type="text/javascript" src="/js/libs/jquery-1.11.2.min.js"></script> 
+<script type="text/javascript" src="/js/libs/jquery-tmpl-1.0.0.min.js"></script> 
+<script type="text/javascript" src="/js/vcui.js"></script>
+
+<!-- <script type="text/javascript" src="/js/vinylc/header.js"></script> -->
+<script type="text/javascript">
+var requireArr = ['jquery','jquery.transit','vcui','greensock','lottie', 'vinylc/selectbox']; 
+define( 'vinylc/header', requireArr, function( $, transit, core, greensock, bodymovin ) {
+    'use strict';
+
+    var Hambuger = core.BaseClass.extend({
+        initialize: function( el, options ) {
+            this.$el = $(el); 
+			this.$el.empty(); 
+
+            var page = $('body').attr('data-page'); 
+            this.isGoodsOrCrews = ( page == 'goods' || page == 'vinylcrews' ) ? true : false; 
+
+            var lottieObj = {}; 
+            lottieObj.wrapper = this.$el[0]; 
+            lottieObj.renderer = 'svg'; 
+            lottieObj.loop = false; 
+            lottieObj.autoplay = false; 
+            lottieObj.animationData = {"v":"5.3.4","fr":60,"ip":0,"op":31,"w":32,"h":33,"nm":"SVG","ddd":0,"assets":[],"layers":[{"ddd":0,"ind":2,"ty":4,"nm":"icon_close Outlines","sr":1,"ks":{"o":{"a":0,"k":100,"ix":11},"r":{"a":1,"k":[{"i":{"x":[0.2],"y":[1]},"o":{"x":[0],"y":[0]},"n":["0p2_1_0_0"],"t":13.801,"s":[60],"e":[0]},{"t":30}],"ix":10},"p":{"a":1,"k":[{"i":{"x":1,"y":1},"o":{"x":0.6,"y":0},"n":"1_1_0p6_0","t":0,"s":[16,29.5,0],"e":[16,16.5,0],"to":[0,0,0],"ti":[0,0,0]},{"i":{"x":0.2,"y":1},"o":{"x":0.333,"y":0},"n":"0p2_1_0p333_0","t":13.801,"s":[16,16.5,0],"e":[16.5,16.5,0],"to":[0,0,0],"ti":[0,0,0]},{"t":30}],"ix":2},"a":{"a":0,"k":[14,16.5,0],"ix":1},"s":{"a":0,"k":[100,100,100],"ix":6}},"ao":0,"shapes":[{"ty":"gr","it":[{"ind":0,"ty":"sh","ix":1,"ks":{"a":1,"k":[{"i":{"x":0.2,"y":1},"o":{"x":0,"y":0},"n":"0p2_1_0_0","t":13.801,"s":[{"i":[[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0]],"o":[[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0]],"v":[[2.774,-10.319],[0.235,-5.917],[-3.276,0.171],[-7.222,7],[-1.16,10.496],[1.032,6.693],[4.567,0.573],[8.834,-6.818]],"c":true}],"e":[{"i":[[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0]],"o":[[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0]],"v":[[6.15,-16.409],[0.046,-6.059],[-3.511,0],[-13.196,16.585],[-6.013,16.585],[0.046,6.058],[3.603,0],[13.196,-16.409]],"c":true}]},{"t":30}],"ix":2},"nm":"Path 1","mn":"ADBE Vector Shape - Group","hd":false},{"ty":"fl","c":{"a":0,"k":[0.137254901961,0.098039215686,0.086274509804,1],"ix":4},"o":{"a":0,"k":100,"ix":5},"r":1,"nm":"Fill 1","mn":"ADBE Vector Graphic - Fill","hd":false},{"ty":"tr","p":{"a":0,"k":[13.196,16.409],"ix":2},"a":{"a":0,"k":[0,0],"ix":1},"s":{"a":0,"k":[100,100],"ix":3},"r":{"a":0,"k":0,"ix":6},"o":{"a":0,"k":100,"ix":7},"sk":{"a":0,"k":0,"ix":4},"sa":{"a":0,"k":0,"ix":5},"nm":"Transform"}],"nm":"Group 1","np":2,"cix":2,"ix":1,"mn":"ADBE Vector Group","hd":false}],"ip":0,"op":60,"st":0,"bm":0},{"ddd":0,"ind":3,"ty":4,"nm":"icon_close Outlines 2","sr":1,"ks":{"o":{"a":0,"k":100,"ix":11},"r":{"a":1,"k":[{"i":{"x":[0.2],"y":[1]},"o":{"x":[0],"y":[0]},"n":["0p2_1_0_0"],"t":13.801,"s":[-60],"e":[0]},{"t":30}],"ix":10},"p":{"a":1,"k":[{"i":{"x":1,"y":1},"o":{"x":0.6,"y":0},"n":"1_1_0p6_0","t":0,"s":[16,3.5,0],"e":[16,16.5,0],"to":[0,0,0],"ti":[0,0,0]},{"i":{"x":0.2,"y":1},"o":{"x":0.333,"y":0},"n":"0p2_1_0p333_0","t":13.801,"s":[16,16.5,0],"e":[16.5,16.5,0],"to":[0,0,0],"ti":[0,0,0]},{"t":30}],"ix":2},"a":{"a":0,"k":[14,16.5,0],"ix":1},"s":{"a":0,"k":[100,100,100],"ix":6}},"ao":0,"shapes":[{"ty":"gr","it":[{"ind":0,"ty":"sh","ix":1,"ks":{"a":1,"k":[{"i":{"x":0.2,"y":1},"o":{"x":0,"y":0},"n":"0p2_1_0_0","t":13.801,"s":[{"i":[[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0]],"o":[[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0]],"v":[[1.069,-6.447],[-1.164,-10.315],[-7.225,-6.817],[-3.253,0.062],[0.257,6.14],[2.773,10.501],[8.832,7.001],[4.58,-0.363]],"c":true}],"e":[{"i":[[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0]],"o":[[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0]],"v":[[0.046,-6.059],[-6.013,-16.409],[-13.196,-16.409],[-3.511,0],[0.046,6.058],[6.15,16.585],[13.196,16.585],[3.603,0]],"c":true}]},{"t":30}],"ix":2},"nm":"Path 1","mn":"ADBE Vector Shape - Group","hd":false},{"ty":"fl","c":{"a":0,"k":[0.137254901961,0.098039215686,0.086274509804,1],"ix":4},"o":{"a":0,"k":100,"ix":5},"r":1,"nm":"Fill 1","mn":"ADBE Vector Graphic - Fill","hd":false},{"ty":"tr","p":{"a":0,"k":[13.196,16.409],"ix":2},"a":{"a":0,"k":[0,0],"ix":1},"s":{"a":0,"k":[100,100],"ix":3},"r":{"a":0,"k":0,"ix":6},"o":{"a":0,"k":100,"ix":7},"sk":{"a":0,"k":0,"ix":4},"sa":{"a":0,"k":0,"ix":5},"nm":"Transform"}],"nm":"Group 1","np":2,"cix":2,"ix":1,"mn":"ADBE Vector Group","hd":false}],"ip":0,"op":60,"st":0,"bm":0}],"markers":[]}; 
+            this.hambuger = bodymovin.loadAnimation( lottieObj ); 
+
+            // this._resizeTop(); 
+        },
+
+        open: function() { 
+            this.hambuger.setDirection(0); 
+            this.hambuger.play(); 
+            
+            if( this.isGoodsOrCrews ) { 
+                this.$el.addClass('black'); 
+            } 
+        }, 
+
+        close: function() { 
+            this.hambuger.setDirection(-1); 
+            this.hambuger.play(); 
+
+            if( this.isGoodsOrCrews ) { 
+                vcui.util.delayedCall( function() {
+                    this.$el.removeClass('black'); 
+                }.bind(this), 500, this ); 
+            } 
+        }, 
+
+        // public method ------------------------------------- 
+
+        resize: function() { 
+            this.windowWidth = $(window).width(); 
+
+            // this._resizeTop(); 
+        }, 
+
+        _resizeTop: function() { 
+            var w=this.windowWidth, vw=(w*0.01)*5, rem; 
+            if( w > 1280 ) rem = -0.92708; // Desktop 
+            else if( 768 <= w && w <= 1280 ) rem = -0.92708; // Tablet 
+            else rem = -3.2266; // Mobile 
+            var y = Math.round( vw * rem ); 
+            this.$el.css( {top:y} ); 
+        } 
+    }); 
+
+    var Gnb = core.BaseClass.extend({
+        initialize: function( el, options ) { 
+            this.$root = $('html'); 
+            this.$el = $(el); 
+            this.$lang = this.$el.find('.choice_lang'); 
+            this.$menu = this.$el.find('.menu'); 
+            this.$channel = this.$el.find('.channel'); 
+            this.$menus = this.$menu.find('ul>li'); 
+            this.menuLength = this.$menus.length; 
+            this.menuIndex = this._getPageByIndex() || 0; 
+            this.windowWidth = $(window).width(); 
+            this.windowHeight = $(window).height(); 
+            this.isAnimation = false; 
+
+            this._setLayout(); 
+        }, 
+
+        _getPageByIndex: function( name ) { 
+            var a, page = name || $('body').attr('data-page'); 
+            for( var i=0,len=this.$menus.length; i<len; i++ ) { 
+                a = this.$menus.eq(i).find('span.m_txt').text(); 
+                if( a.toLowerCase() == page ) return i+1; 
+            } 
+            return 0; 
+        }, 
+
+        _setLayout: function() { 
+            this._resizeMenu(); 
+            this._resetMenu(); 
+        }, 
+
+         _resetMenu: function() { 
+            this.$menus.removeClass('on'); 
+        },  
+
+        _resizeMenu: function() { 
+            var w=this.windowWidth, vw=(w*0.01)*5, rem; 
+            if( w > 1280 ) rem = 0.0625; // Desktop 
+            else if( 768 <= w && w <= 1280 ) rem = 0.09375; // Tablet 
+            else rem = 0.16; // Mobile 
+            var barH = Math.round( vw * rem ); 
+
+            for( var i=0,len=this.menuLength; i<len; i++ ) { 
+                var $text = this.$menus.eq(i).find('a>span'); 
+                $text.data('width', $text.width());
+                var $bar = this.$menus.eq(i).find('span.bar'); 
+                $bar.css( {height:barH} ); 
+            } 
+        }, 
+
+        _bindEvent: function() { 
+            this.$menus.on( 'click', 'a', this._clickMenu.bind(this) ); 
+        }, 
+
+        _clickMenu: function( evt ) { 
+            var index = $(evt.currentTarget).parent().index() + 1; 
+            this.menuIndex = index; 
+            // return false; 
+        }, 
+
+        _activateMenu: function( index ) { 
+            var index = index || this.menuIndex; 
+            if( index == 0 ) return; 
+            this.$menus.eq(index-1).addClass('on'); 
+        }, 
+
+        // public method ------------------------------------- 
+
+        resize: function() { 
+            this.windowWidth = $(window).width(); 
+            this.windowHeight = $(window).height(); 
+
+            this._resizeMenu(); 
+        }, 
+
+        open: function() { 
+            TweenLite.killTweensOf( this.$el ); 
+            TweenLite.to( this.$el, 0.7, {y:0, ease:Quart.easeOut} ); 
+            vcui.util.delayedCall( this._activateMenu, 0, this );    // 400+200 
+
+        }, 
+
+        close: function() { 
+            var y = ( this.windowHeight < this.$el.height() ) ? -this.$el.height()*1.5 : -this.windowHeight; 
+            TweenLite.killTweensOf( this.$el ); 
+            TweenLite.to( this.$el, 0.7, {y:y, ease:Quart.easeInOut} ); 
+            vcui.util.delayedCall( this._resetMenu, 700, this ); 
+        } 
+    }); 
+
+    /*! 
+        Header 
+        - hambuger open/close 
+        - gnb open/close 
+        - logo fade in-out 
+        - dimmed fade in-out 
+    */
+    var Header = core.ui('Header', { 
+        bindjQuery: 'header', 
+        selectors: { root:$('html'), logo:'.header_wrap>h1', lang:'.ui_selectbox' }, 
+        initialize: function initialize( el, options ) {
+            if( this.supr(el, options) === false ) return; 
+
+            this.index = 1; 
+            this.$logo = this.$el.find('.header_wrap>h1'); 
+            this.$dimmed = $('<div/>').addClass('ui-header-dim'); 
+            this.$dimmed.css( {position:'fixed', left:0, top:0, width:'100%', height:'100%', minHeight:960, background:'#fff'} );
+            this.$dimmed.css( {zIndex:parseInt(this.$el.find('.tabs').css('z-index'))+1} ); 
+            this.$el.prepend( this.$dimmed ); 
+            TweenLite.set( this.$dimmed, {css:{autoAlpha:0}} ); 
+
+            this.$lang.vcSelectbox(); 
+            this.hambuger = new Hambuger('.ui-hambuger'); 
+            this.gnb = new Gnb('.nav_wrap'); 
+            this._bindEvent(); 
+        }, 
+
+        _bindEvent: function() { 
+            this.on( 'click', '.ui-hambuger', this._clickNavBtn.bind(this) ); 
+
+            $(window).on( 'resize.header', this._resizeHandler.bind(this) ); 
+        }, 
+
+        _clickNavBtn: function( evt ) { 
+            // var type = $(evt.currentTarget).attr('data-type'); 
+            // if( $(window).data('breakpoint').isPc ) this.gnb[type](); 
+            // else console.log( 'mobile' ); 
+            
+            if( !$('html').hasClass('gr_open') ) { 
+                $('body').attr( {'data-scrollTop':$(window).scrollTop()} ); 
+                this.open(); 
+
+            } else { 
+                this.close(); 
+                $(window).scrollTop( $('body').attr('data-scrollTop') ); 
+                $('body').removeAttr('data-scrollTop'); 
+            }
+            $('html').toggleClass('gr_open'); 
+        }, 
+
+        _resizeHandler: function() { 
+            this.gnb.resize(); 
+        }, 
+
+        // public method ------------------------------------- 
+
+        open: function() { 
+            this.hambuger.open(); 
+            this.gnb.open(); 
+            TweenLite.killTweensOf( this.$logo ); 
+            TweenLite.to( this.$logo, 0.1, {alpha:0, ease:Quart.easeOut} ); 
+            TweenLite.set( this.$dimmed, {css:{autoAlpha:0}} ); 
+            TweenMax.to( this.$dimmed , 0.3, {autoAlpha:1, ease:Quart.easeOut} ); 
+        }, 
+
+        close: function() { 
+            this.hambuger.close(); 
+            this.gnb.close(); 
+            TweenLite.killTweensOf( this.$logo ); 
+            TweenLite.to( this.$logo, 0.5, {alpha:1, ease:Quart.easeIn} ); 
+            TweenLite.killTweensOf( this.$dimmed ); 
+            TweenMax.to( this.$dimmed, 0.5, {autoAlpha:0, ease:Quart.easeIn} ); 
+        }
+    }); 
+
+    return Header; 
+});
+</script>
+
+<!-- <script type="text/javascript" src="/js/vinylc.site.js"></script> -->
+<script type="text/javascript">
+vcui.require.config( {baseUrl: '/js', waitSeconds: 0, paths: { 
+    'jquery.easing': 'libs/jquery.easing-1.4.1.min', 
+    'jquery.transit': 'libs/jquery.transit-0.9.12.min', 
+    'greensock': 'libs/TweenMax-1.18.0.min', 
+    'lottie': 'libs/lottie-5.1.16.min'
+}});
+
+$.holdReady(true); 
+
+window.vinylc = {
+    init: function() {
+        if( document.readyState === "complete" || document.readyState === "loaded" || document.readyState === "interactive" ) {
+            this.ready();
+
+        } else {
+            $(document).on('DOMContentLoaded', function() {
+                this.ready();
+            }.bind(this));
+        }
+    },
+
+    ready: function() {
+        this._.preload( function() {
+            this._.init();
+        }.bind(this));
+    },
+
+    _: {
+        init: function() {
+            this.buildCommonUI();
+        },
+
+        buildCommonUI: function() {
+            vcui.require( ['jquery.transit','vinylc/header'], function() {
+                $('header').vcHeader(); 
+            });
+        }, 
+
+        preload: function( callback ) { 
+            vcui.require( [], function() {
+                $.holdReady( false );
+                callback();
+            });
+        }
+    }
+};
+
+document.addEventListener( 'DOMContentLoaded', function() { 
+    vcui.require( ['vcui.common-ui'], function() { 
+        vinylc.init();
+    }); 
+});
+
+(function( $, core, global, undefined ) {
+    core.addon( 'util', {
+        // Provides a simple way to call a function after a set amount of time
+        delayedCall: function( callback, delay, context ) {
+            var context = context || this;
+            context.callbacks = context.callbacks || [];
+            var index = context.callbacks.indexOf( callback.name );
+            if( index > -1 ) return;
+            context.callbacks.unshift( callback );
+
+            if( context.timeout ) clearTimeout( context.timeout );
+            context.timeout = setTimeout( function() {
+                var calls = context.callbacks;
+                for( var i=0,len=calls.length; i<len; i++ ) {
+                    if( calls[i] === callback ) {
+                        callback.apply( context );
+                        context.timeout = null;
+                    }
+                }
+            }, delay );
+        },
+
+        // Immediately kills all of the delayedCalls to a particular function
+        killDelayedCallsTo: function( callback, context ) {
+            var calls = (context||this).callbacks;
+            try {
+                for( var i=0,len=calls.length; i<len; i++ ) {
+                    if( calls[i] === callback ) {
+                        calls.splice( i, 1 );
+                    }
+                }
+            } catch( err ) {
+            }
+        },
+
+        // Framer - Utils.modulate();
+        modulate: function( value, rangeA, rangeB, limit ) {
+            var fromLow = rangeA[0], fromHigh = rangeA[1];
+            var toLow = rangeB[0], toHigh = rangeB[1];
+            var result = toLow + ( ((value-fromLow) / (fromHigh-fromLow)) * (toHigh-toLow) );
+            if( limit === true ) {
+                if( toLow < toHigh ) {
+                    if( result < toLow ) return toLow;
+                    if( result > toHigh ) return toHigh;
+
+                } else {
+                    if( result > toLow ) return toLow;
+                    if( result < toHigh ) return toHigh;
+                }
+            }
+            return result;
+        }, 
+
+        // Detect Physical device 
+        isDevice: ( window.orientation !== undefined ) ? true : false 
+    });
+})( jQuery, window[LIB_NAME], window ); 
+</script>
+
+<script type="text/javascript">
+vcui.require( ['vinylc/selectbox'], function () { 
+	$('.ui_selectbox').vcSelectbox();
+});
+</script>
+</body>
+</html>

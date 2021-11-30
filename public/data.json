@@ -1,0 +1,143 @@
+﻿{
+	"WSG" : {
+		"작업문서 가이드" : ["./wsg/info.html"],
+		"기본 Guide" : {
+			"select" : ["./wsg/select.html"],
+			"calendar" : ["./wsg/calendar.html"]
+		},
+		"모듈 Guide" : {
+		},
+		"Layout" : {
+			"gnb/footer" : ["./wsg/guide_layout.html"]
+		}
+	},
+	"테스트" : {
+		"가변레이아웃" : {
+			"flexable" : ["/wsg/test.html"]
+		},
+		"Script:open":{
+			"breakpoint": ["/guide/testcase/breakpoint.html"],
+			"dropdown": ["/guide/testcase/dropdown.html"],
+			"carousel": ["/guide/testcase/carousel.html"],
+			"accordion": ["/guide/testcase/accordion.html"],
+			"modal": ["/guide/testcase/modal.html"],
+			"tab": ["/guide/testcase/tab.html"],
+			"tooltip": ["/guide/testcase/tooltip.html"],
+			"밸리데이션 체크": ["/guide/testcase/validation.html"],
+			"이미지 지연 로딩": ["/guide/testcase/lazyLoad.html"],
+			"더보기": ["/guide/testcase/moreLoader.html"],
+			"다이나믹폼(관리자용) 샘플": ["/guide/testcase/dynamicForm.html"]
+		}
+	},
+	"Front" : {
+		"공통(GR)" : {
+			"FCO10_홈": ["/gr/FCO10.html"],
+			"FCO93_공통에러": ["/gr/FCO93.html"],
+			"en" : {
+				"FGD10_Goods 목록": ["/gr/en_FCO93.html"]
+			},
+			"ja" : {
+				"FGD10_Goods 목록": ["/gr/ja_FCO93.html"]
+			}
+		},
+		"Works(FWO)" : {
+			"FWO10_Works 목록": ["/works/FWO10.html"],
+			"FWO11_Works 상세": ["/works/FWO11.html"]
+		},
+		"About(FAB)" : {
+			"FAB10_About 메인": ["/about/FAB10.html"],
+			"FAB11_Hapche": ["/about/FAB11.html"],
+			"FAB12_Hapche 라이선스": ["/about/FAB12.html"],
+			"en" : {
+				"FAB10_About 메인": ["/about/en_FAB10.html"],
+				"FAB11_Hapche": ["/about/en_FAB11.html"],
+				"FAB12_Hapche 라이선스": ["/about/en_FAB12.html"]
+			},
+			"ja" : {
+				"FAB10_About 메인": ["/about/ja_FAB10.html"],
+				"FAB11_Hapche": ["/about/ja_FAB11.html"],
+				"FAB12_Hapche 라이선스": ["/about/ja_FAB12.html"]
+			}
+		},
+		"News(FNE)" : {
+			"FNE10_News 목록": ["/news/FNE10.html"],
+			"FNE11_News 상세": ["/news/FNE11.html"],
+			"FNE12_인스타 네임태그화면": ["/news/FNE12.html"],
+			"en" : {
+				"FNE12_인스타 네임태그화면": ["/news/en_FNE12.html"]
+			},
+			"ja" : {
+				"FNE12_인스타 네임태그화면": ["/news/ja_FNE12.html"]
+			}
+		},
+		"Request(FRQ)" : {
+			"FRQ12_Request 의뢰등록": ["/request/FRQ12.html"],
+			"FRQ12-1_Request 의뢰작성완료": ["/request/FRQ12-1.html"],
+			"FRQ13_의뢰접수 알림메일": ["/request/FRQ13.html"],
+			"FRQ14_개인정보취급방침": ["/request/FRQ14.html"],
+			"en" : {
+				"FRQ12_Request 의뢰등록": ["/request/en_FRQ12.html"],
+				"FRQ12-1_Request 의뢰작성완료": ["/request/en_FRQ12-1.html"],
+				"FRQ13_의뢰접수 알림메일": ["/request/en_FRQ13.html"],
+				"FRQ14_개인정보취급방침": ["/request/en_FRQ14.html"]
+			},
+			"ja" : {
+				"FRQ12_Request 의뢰등록": ["/request/ja_FRQ12.html"],
+				"FRQ12-1_Request 의뢰작성완료": ["/request/ja_FRQ12-1.html"],
+				"FRQ13_의뢰접수 알림메일": ["/request/ja_FRQ13.html"],
+				"FRQ14_개인정보취급방침": ["/request/ja_FRQ14.html"]
+			}
+		},
+		"Careers(FCR)" : {
+			"FCR10_Careers": ["/careers/FCR10.html"],
+			"FCR10_Careers_Culture_1": ["/careers/FCR10_culture01.html"],
+			"FCR10_Careers_Culture_2": ["/careers/FCR10_culture02.html"],
+			"FCR10_Careers_Culture_3": ["/careers/FCR10_culture03.html"],
+			"FCR10_Careers_Culture_4": ["/careers/FCR10_culture04.html"],
+			"FCR12_모집공고종료도래 알림메일": ["/careers/FCR12.html"],
+			"FCR13_모집공고 등록알림메일": ["/careers/FCR13.html"],
+			"FCR14_수신거부 처리완료": ["/careers/FCR14.html"],
+			"FCR15_알림등록완료": ["/careers/FCR15.html"],
+			"en" : {
+				"FCR10_Careers": ["/careers/en_FCR10.html"],
+				"FCR10_Careers_Culture_1": ["/careers/en_FCR10_culture01.html"],
+				"FCR10_Careers_Culture_2": ["/careers/en_FCR10_culture02.html"],
+				"FCR10_Careers_Culture_3": ["/careers/en_FCR10_culture03.html"],
+				"FCR10_Careers_Culture_4": ["/careers/en_FCR10_culture04.html"],
+				"FCR13_모집공고 등록알림메일": ["/careers/en_FCR13.html"],
+				"FCR14_수신거부 처리완료": ["/careers/en_FCR14.html"],
+				"FCR15_알림등록완료": ["/careers/en_FCR15.html"]
+			},
+			"ja" : {
+				"FCR10_Careers": ["/careers/ja_FCR10.html"],
+				"FCR10_Careers_Culture_1": ["/careers/ja_FCR10_culture01.html"],
+				"FCR10_Careers_Culture_2": ["/careers/ja_FCR10_culture02.html"],
+				"FCR10_Careers_Culture_3": ["/careers/ja_FCR10_culture03.html"],
+				"FCR10_Careers_Culture_4": ["/careers/ja_FCR10_culture04.html"],
+				"FCR13_모집공고 등록알림메일": ["/careers/ja_FCR13.html"],
+				"FCR14_수신거부 처리완료": ["/careers/ja_FCR14.html"],
+				"FCR15_알림등록완료": ["/careers/ja_FCR15.html"]
+			}
+		},
+		"Contact(FCT)" : {
+			"FCT10_Contact 메인": ["/contact/FCT10.html"],
+			"en" : {
+				"FCT10_Contact 메인": ["/contact/en_FCT10.html"]
+			}
+		},
+		"Goods(FGD)" : {
+			"FGD10_Goods 목록": ["/goods/FGD10.html"],
+			"FGD11_Goods 상세": ["/goods/FGD11.html"],
+			"FGD12_Goods 상품구매하기": ["/goods/FGD12.html"],
+			"en" : {
+				"FGD12_Goods 상품구매하기": ["/goods/en_FGD12.html"]
+			},
+			"ja" : {
+				"FGD12_Goods 상품구매하기": ["/goods/ja_FGD12.html"]
+			}
+		},
+		"VinylCrews(FVC)" : {
+			"FVC10_VinylCrews": ["/crews/FVC10.html"]
+		}
+	}
+}

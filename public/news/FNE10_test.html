@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<title>News 목록 || VINYLC</title>
+	<link href="" rel="shortcut icon" type="image/x-icon">
+	<link rel="apple-touch-icon-precomposed" href="">
+	<link rel="stylesheet" type="text/css" href="/css/common.css">
+	<style>
+
+	.list_type li .img_frame {opacity:1;}
+	.list_type li .img_frame img.img {width:100%;}
+	header .tabs ul li {transform:translateY(0);}
+	</style>
+</head>
+
+<body>
+
+<div id="skipnavi">
+	<ul>
+		<li><a href="#container_title">본문바로가기</a></li>
+	</ul>
+</div>
+<div id="wrap">
+	<!-- header -->
+	<header class="sub news"><!-- news 목록페이지일때 news 클래스 추가 -->
+		<div class="header_wrap">
+			@@include('./include/logo.html')
+		</div>
+		@@include('./include/nav.html')
+		
+		<!-- news 목록페이지일때 노출 -->
+		<!-- <div class="tabs ui_tab" id="tab01"> // 고정되면 fix 클래스 추가 
+			<ul>
+				<li><a href="#id_news_1">NEWS<span class="bar"></span></a></li>
+				<li><a href="#id_news_2">INSTAGRAM<span class="bar"></span></a></li>
+			</ul>
+		</div> --> 
+		<div class="tabs ui_tab" id="tab01">
+			<ul>
+				<li><a href="#id_news_1">NEWS</a></li>
+				<li><a href="#id_news_2">INSTAGRAM</a></li>
+				<span class="bar"></span>
+			</ul>
+		</div>
+		<!-- //news 목록페이지일때 노출 -->
+	</header>
+
+	<!-- //header -->
+
+	<section id="container">
+		<div id="container_title" class="hide" tabindex="-1">본문 시작</div> 
+		<!-- content -->
+		<div id="content">
+
+			<!-- 정보영역 -->
+			<div class="head_info_txt">
+				<h1 class="hide">News 목록</h1>
+				<!-- text -->
+				<div class="hd_txt">
+					&nbsp;
+				</div>
+			</div>
+			<!-- //정보영역 -->
+
+			<div class="ui_tab_panel">
+				<!-- NEWS -->
+				<div id="id_news_1" class="li_news">
+					<!-- 목록 module -->
+					@@include('./include/list.html')
+				</div>
+				
+				<!-- instagram -->
+				<div id="id_news_2" class="li_inst">
+					<!-- 목록 module -->
+					<div class="list_inst">
+						<ul>
+							<li>
+								<a href="#">
+									<!-- image -->
+									<div class="img_frame">
+										<img src="/images/@img_list_instagram.jpg" class="img" alt="">
+									</div>				
+								</a>
+							</li>
+							<li>
+								<!-- 181015 수정 : 동영상 case 추가 -->
+								<div class="mov_wrap">
+									<!-- 동영상일 경우 -->
+									<a href="http://www.naver.com" target="_blank">
+										<!-- image -->
+										<div class="img_frame">
+											<img src="/images/img_trans.png" class="img" alt="">
+										</div>
+									</a>
+								
+									<video class="f_mov" autoplay loop muted playsinline>
+										<source src="https://scontent.cdninstagram.com/vp/e299edc3905611688886120b2eb4a761/5BC60F7C/t50.2886-16/40807438_355065918368599_8219990581846212608_n.mp4" type="video/mp4">
+									</video>
+								</div>
+								<!-- //181015 수정 : 동영상 case 추가 -->
+							</li>
+							<li>
+								<a href="#">
+									<!-- image -->
+									<div class="img_frame">
+										<img src="/images/@img_list_instagram.jpg" class="img" alt="">
+									</div>				
+								</a>
+							</li>
+							<li>
+								<!-- 181015 수정 : 동영상 case 추가 -->
+								<div class="mov_wrap">
+									<!-- 동영상일 경우 -->
+									<a href="#">
+										<!-- image -->
+										<div class="img_frame">
+											
+										</div>
+									</a>
+								
+									<video class="f_mov" autoplay loop muted playsinline>
+										<source src="https://scontent.cdninstagram.com/vp/79477376518c88930e1986ff917d15f5/5BC6EC88/t50.2886-16/41980828_543180429454811_1006974057712713728_n.mp4" type="video/mp4">
+									</video>
+								</div>
+								<!-- //181015 수정 : 동영상 case 추가 -->
+							</li>
+							<li>
+								<a href="#">
+									<!-- image -->
+									<div class="img_frame">
+										<img src="/images/@img_list_instagram.jpg" class="img" alt="">
+									</div>				
+								</a>
+							</li>
+							<li>
+								<!-- 181015 수정 : 동영상 case 추가 -->
+								<div class="mov_wrap">
+									<!-- 동영상일 경우 -->
+									<a href="#">
+										<!-- image -->
+										<div class="img_frame">
+											
+										</div>
+									</a>
+								
+									<video autoplay loop muted playsinline>
+										<source src="https://scontent.cdninstagram.com/vp/707fd299603f747a87d04a408e3140e7/5BC62227/t50.2886-16/37304540_2061836604065846_6253834839561076736_n.mp4" type="video/mp4">
+									</video>
+								</div>
+								<!-- //181015 수정 : 동영상 case 추가 -->
+							</li>
+							<li>
+								<a href="#">
+									<!-- image -->
+									<div class="img_frame">
+										<img src="/images/@img_list_instagram.jpg" class="img" alt="">
+									</div>				
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<!-- image -->
+									<div class="img_frame">
+										<img src="/images/@img_list_instagram.jpg" class="img" alt="">
+									</div>				
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<!-- image -->
+									<div class="img_frame">
+										<img src="/images/@img_list_instagram.jpg" class="img" alt="">
+									</div>				
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<!-- image -->
+									<div class="img_frame">
+										<img src="/images/@img_list_instagram.jpg" class="img" alt="">
+									</div>				
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<!-- image -->
+									<div class="img_frame">
+										<img src="/images/@img_list_instagram.jpg" class="img" alt="">
+									</div>				
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<!-- image -->
+									<div class="img_frame">
+										<img src="/images/@img_list_instagram.jpg" class="img" alt="">
+									</div>				
+								</a>
+							</li>
+						</ul>
+
+						<!-- 
+						// 더보기 button 
+						<div class="btn_list_more">
+							<button type="button"><span>MORE</span></button>
+						</div>
+
+						// loading icon 
+						<div class="list_loading">
+							<span class="icon_loading"></span>
+						</div>
+						--> 
+					</div>
+
+					<div class="list_loading">
+						<span class="is-show"></span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- //content -->
+	</section>
+
+	<!-- footer -->
+	@@include('./include/footer.html')
+	<!-- //footer -->
+</div>
+
+<script type="text/javascript" src="/js/libs/jquery-1.11.2.min.js"></script>
+<script type="text/javascript" src="/js/vcui.js"></script>
+<script type="text/javascript" src="/js/vinylc.site.js"></script>
+<script type="text/javascript">
+
+</script>
+
+
+
+
+</body>
+</html>

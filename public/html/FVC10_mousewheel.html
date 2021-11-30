@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="ko" class="vinylcrews"><!-- 181212 수정 : 클래스 추가 -->
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<title>VinylCrews || VINYLC</title>
+	<link href="" rel="shortcut icon" type="image/x-icon">
+	<link rel="apple-touch-icon-precomposed" href="">
+	<link rel="stylesheet" type="text/css" href="/css/common.css">
+
+<style type="text/css">
+.crews_wrap .crews_main .msg_wrap .msg_cont { outline:1px solid red; }
+.crews_wrap .crews_main .msg_wrap .msg_cover { outline:1px solid yellow; }
+.crews_wrap .crews_main .msg_wrap .msg_cover a { outline:1px solid blue; }
+
+/* 
+.crews_wrap .crews_main {  position:relative; z-index:25 }
+.crews_wrap .crews_main .msg_wrap .msg_cont {  width:100%; height: 100vh; overflow-y: scroll; }
+*/ 
+
+.crews_wrap .bg_wrap { display:none; } 
+.crews_wrap .info_wrap { display:none; } 
+.crews_wrap .indi_wrap { display:none; } 
+</style>
+</head>
+
+<body data-page="vinylcrews">
+<div id="skipnavi">
+	<ul>
+		<li><a href="#container_title">본문바로가기</a></li>
+	</ul>
+</div>
+<div id="wrap">
+	<!-- header -->
+	<header class="sub vinylcrews">
+		<div class="header_wrap">
+			<!--#include virtual="/include/logo.html"-->
+		</div>
+		<!--#include virtual="/include/nav.html"-->
+	</header>
+
+	<!-- //header -->
+
+	<section id="container">
+		<div id="container_title" class="hide" tabindex="-1">본문 시작</div> 
+		<!-- content -->
+		<div id="content">
+
+			<div class="crews_wrap">
+				<!-- 181212 수정 -->
+				<!-- 크루 표지 -->
+				<div class="crews_main">
+					<!-- 배경텍스트 -->
+					<div class="quest_cont">
+						<div class="quest_cover">
+							<div>바이널, 바이널씨에 대한</div>
+							<div>생각</div>
+						</div>
+					</div>
+
+					<!-- 메시지 리스트 -->
+					<div class="msg_wrap">
+						<div class="msg_cont">
+							<div class="msg_cover">
+								<a href="#">생각이 늙지 않는 것, 천진함을 잃지 않는 것, 그리고 꿈을 잃지 않는 것. </a>
+								<a href="#">자신의 부족한 점을 더 많이 부끄러워할 줄 아는 이는 더 존경받을 가치가 있는 사람이다.</a>
+								<a href="#">산은 산이요. 물은 self</a>
+								<a href="#">함께 할 수 있음에 감사를</a>
+								<a href="#">생각이 늙지 않는 것, 천진함을 잃지 않는 것, 그리고 꿈을 잃지 않는 것. </a>
+								<a href="#">자신의 부족한 점을 더 많이 부끄러워할 줄 아는 이는 더 존경받을 가치가 있는 사람이다.</a>
+								<a href="#">산은 산이요. 물은 self</a>
+								<a href="#">함께 할 수 있음에 감사를</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- //181212 수정 -->
+
+				<!-- image -->
+				<div class="bg_wrap">
+					<!-- item -->
+					<div class="bg_item" data-index="0" style="transform: matrix(1, 0, 0, 1, 1920, 0); z-index: 5;">
+						<div class="img_cont" style="width: 1485px; height: 1067px; left: -57.75px; top: 0px; transform: matrix(1, 0, 0, 1, 0, 0);">
+							<img src="/images/@img_crew_1.jpg" alt="Crew 사진" style="width: 1600.5px; height: 1067px;">
+							<div class="dimmed" style="width: 1601px; height: 1067px; opacity: 0.5;"></div>
+						</div>
+						<div class="txt_cont">
+							<div class="txt_box right">
+								<p style="opacity: 0; transform: matrix(1, 0, 0, 1, 0, 15);">
+									생각이 늙지 않는 것, <br>천진함을 잃지 않는 것, <br>그리고 꿈을 잃지 않는 것.
+								</p>
+							</div>
+						</div>
+					</div>
+
+				</div>
+				<!-- //image -->
+
+				<!-- info -->
+				<div class="info_wrap">
+
+					<!-- item -->
+					<div class="info_item">
+						<div class="info_cont">
+							<div class="info_box" style="opacity: 0; transform: matrix(1, 0, 0, 1, -50, 0);">
+								<p class="name">Seunghong, Cha</p>
+								<p class="period"><span>JUL 2015 -</span> <span>JUL 2016</span></p>
+								<p class="duty">UI Designer at Vinyl C</p>
+							</div>
+						</div>
+					</div>
+
+				</div>
+
+				<!-- indicator -->
+				<div class="indi_wrap">
+					<div class="indi">
+						<span class="now">1</span>
+						<span class="total">555</span>
+					</div>
+				</div>
+
+			</div>
+
+		</div>
+		<!-- //content -->
+	</section>
+	
+</div>
+
+
+<script type="text/html" id="template-crew-info">
+<div class="info_item">
+	<div class="info_cont">
+		<div class="info_box">
+			<p class="name">${info.name}</p>
+			<p class="period"><span>${info.period.start}</span> <span>${info.period.end}</span></p>
+			<p class="duty">${info.duty}</p>
+		</div>
+	</div>
+</div>
+</script>
+
+<script type="text/javascript" src="/js/libs/TweenMax-1.18.0.min.js"></script>
+<script type="text/javascript" src="/js/libs/jquery-1.11.2.min.js"></script>
+<script type="text/javascript" src="/js/vcui.js"></script>
+<script type="text/javascript" src="/js/vinylc.site.js"></script>
+<script type="text/javascript">
+define( 'vinylc/vinylCrews', ['jquery', 'jquery.transit', 'vcui', 'greensock'], function( $, transit, core, greensock ) { 
+    'use strict';
+
+    var VinylCrews = core.ui( 'VinylCrews', { 
+        bindjQuery: 'vinylCrews', 
+        defaults: { state:'list', ajax:'/json/vinylCrews.json' }, 
+        selectors: { 
+            wrap: '.crews_wrap', 
+            coverWrap: '.txt_wrap', 
+            itemWrap: '.bg_wrap', 
+            infoWrap: '.info_wrap', 
+            indicatorWrap: '.indi_wrap', 
+            indicator: '.indi_wrap > .indi', 
+            prev: 'button.prev', 
+            next: 'button.next'
+        }, 
+
+        initialize: function initialize( el, options ) {
+            if( this.supr(el, options) === false ) return; 
+
+            this.ajax = this.$wrap.attr('data-ajax') || this.options.ajax; 
+            this.windowWidth = $(window).width(); 
+            this.windowHeight = $(window).height(); 
+
+            this._loadCrewsData(); 
+        }, 
+
+        _loadCrewsData: function() { 
+            var settings = {}; 
+            settings.dataType = 'json'; 
+            settings.url = this.ajax; 
+            settings.error = this._errorCrewsData.bind(this); 
+            settings.success = this._completeCrewsData.bind(this); 
+
+            $.ajax( settings ); 
+        }, 
+
+        _errorCrewsData: function( $data, $status, $message ) { 
+            console.log( 'JSON load error Status: '+$status+' - Message: '+$message );
+        }, 
+
+        _mousewheelHandler: function( evt, delta ) { 
+            if( delta == undefined ) { 
+                delta = evt.originalEvent.wheelDelta || -evt.originalEvent.detail; 
+            } 
+
+            if( delta > 0 ) this.keyValue = 'up'; 
+            else if( delta < 0 ) this.keyValue = 'down'; 
+
+            var y = $('.msg_cover').data('y'); 
+            if( this.keyValue == 'down' ) { 
+                // y = y - 10; 
+                if( y <= -this.msgCoverH + this.windowHeight ) {
+
+                } else {
+                    y = y - 30; 
+                }
+
+            } else { 
+                // y = y + 10; 
+                if( y < 0 ) {
+                    y = y + 30; 
+                }
+            } 
+            TweenLite.set( $('.msg_cover'), {css:{y:y}} ); 
+            $('.msg_cover').data('y',y); 
+            // console.log( '/// '+$('.msg_cover').data('y') ); 
+        }, 
+
+        _completeCrewsData: function( data ) { 
+			/*
+			crews_main 
+			- quest_cont
+			 - quest_cover 
+
+			- msg_wrap
+			 - msg_cont 
+			  - msg_cover - a
+			*/
+
+			this.msgCoverH = $('.msg_cover').height(); 
+			$('.msg_cover').data('y',0); 
+			// $('.msg_cont').on( 'DOMMouseScroll mousewheel', this._mousewheelHandler.bind(this) ); 
+			// $('.msg_cont').on( 'DOMMouseScroll wheel mousewheel scroll', this._mousewheelHandler.bind(this) ); 
+			$(window).on( 'DOMMouseScroll wheel mousewheel scroll', this._mousewheelHandler.bind(this) ); 
+        }
+    });
+
+    return VinylCrews;
+});
+</script>
+
+<script type="text/javascript">
+$(function() {
+	vcui.require( ['vinylc/vinylCrews'], function( VinylCrews ) { 
+	    $('#wrap').vcVinylCrews(); 
+	}); 
+});
+</script>
+</body>
+</html>

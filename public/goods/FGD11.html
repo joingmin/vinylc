@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<title>Goods 상세 || VINYLC</title>
+	<link href="" rel="shortcut icon" type="image/x-icon">
+	<link rel="apple-touch-icon-precomposed" href="">
+	<link rel="stylesheet" type="text/css" href="/css/common.css">
+</head>
+
+<body data-page="goods">
+<div id="skipnavi">
+	<ul>
+		<li><a href="#container_title">본문바로가기</a></li>
+	</ul>
+</div>
+<div id="wrap">
+	<!-- header -->
+	<header class="det goods"> <!-- 181122 수정 : 클래스 수정 --> <!-- goods 클래스 추가. 정보영역을 넘어가면 goods 클래스 삭제  -->
+		<!-- 181101 수정 : svg로 교체 -->
+		<div class="header_wrap">
+			@@include('./include/logo_det.html')
+			<a href="#" class="go_h_prev">
+				<svg id="svg_go_back" viewBox="0 0 56 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+					<title>이전페이지로 가기</title>
+					<g id="g_go_back" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+						<path d="M11.4861406,22.6214132 L23.8648203,35.0000929 L19.6221796,39.2427336 L-7.10542736e-15,19.620554 L19.6222725,-5.32907052e-14 L23.8647274,4.24282648 L11.4850564,16.6214132 L55.2427336,16.6214132 L55.2427336,22.6214132 L11.4861406,22.6214132 Z" id="Stroke-1" fill-rule="nonzero"></path>
+					</g>
+				</svg>
+			</a>
+		</div>
+		<!-- //181101 수정 : svg로 교체 -->
+		@@include('./include/nav.html')
+	</header>
+	<!-- //header -->
+
+	<section id="container">
+		<div id="container_title" class="hide" tabindex="-1">본문 시작</div>
+		<!-- content -->
+		<div id="content">
+
+			<div class="news_detail"><!-- 181220 수정 : news_detail div 추가 -->
+				<!-- 정보영역 -->
+				<div class="head_info_txt det"><!-- 181122 수정 : det 클래스 추가 -->
+					<h1 class="hide">Goods 상세</h1>
+					<!-- text -->
+					<div class="hd_txt goods"> <!-- goods 일 경우 goods 클래스 추가 -->
+						<div class="em">
+							127명의 특별한 생각이<br>담긴 노트
+							<!-- 190313 구매하기버튼 구조수정 -->
+							<div class="goods_buy">
+								<a href="#" class="btn btn_gray"><span>상품 구매하기</span></a>
+							</div>							
+						</div>
+						<!-- 190109 추가 -->
+						<div class="btn_buy">
+						<!-- // 190313 구매하기버튼 구조수정 -->						
+							<!-- pc layer popup -->
+							<section class="lay_wrap comm" id="shp_pc_layer">
+								<div class="lay_head">
+									<h1>상품구매하기</h1>
+								</div>
+								<div class="lay_conts">
+									<div class="conts terms">
+										<ul class="product_link">
+											<li>
+												<a href="#"><img src="/images/img_btn_naver.png" alt=""><span class="hide">네이버 바로가기</span></a>
+											</li>
+											<li>
+												<a href="#"><img src="/images/img_btn_11st.png" alt=""><span class="hide">11번가 바로가기</span></a>
+											</li>
+											<li>
+												<a href="#"><img src="/images/img_btn_10by10.png" alt=""><span class="hide">10X10 바로가기</span></a>
+											</li>
+											<li>
+												<a href="#"><img src="/images/img_btn_13ook.png" alt=""><span class="hide">13ook 바로가기</span></a>
+											</li>
+											<li>
+												<a href="#"><img src="/images/img_btn_ebazar.png" alt=""><span class="hide">EBAZAR 바로가기</span></a>
+											</li>
+										</ul>
+									</div>
+								</div>
+								<button type="button" class="btn_close ui_modal_close"><span class="hide">닫기</span></button>
+							</section>
+							<!-- //pc layer popup -->
+							<!-- mobile layer popup -->
+							<div class="shopping_cont shoppingShare_wrap" id="shp_mo_layer">
+								<p class="tt">상품구매하기</p>
+								<div class="btn_shopping">
+									<a href="#">
+										<img src="/images/img_btn_naver_m.png" alt=""><span class="hide">네이버 바로가기</span>
+									</a>
+									<a href="#">
+										<img src="/images/img_btn_11st_m.png" alt=""><span class="hide">11번가 바로가기</span>
+									</a>
+									<a href="#">
+										<img src="/images/img_btn_10by10_m.png" alt=""><span class="hide">10X10 바로가기</span>
+									</a>
+									<a href="#">
+										<img src="/images/img_btn_13ook_m.png" alt=""><span class="hide">13ook 바로가기</span>
+									</a>
+									<a href="#">
+										<img src="/images/img_btn_ebazar_m.png" alt=""><span class="hide">EBAZAR 바로가기</span>
+									</a>
+								</div>
+								<button type="button" class="btn_close ui_modal_close"><span class="hide">닫기</span></button>
+							</div>
+							<!-- //mobile layer popup -->
+						</div>
+						<!-- //190109 추가 -->
+						<!-- image -->
+						<div class="hd_img_goods"><img src="/images/@img_head_goods_img.jpg" class="ui_image_swap" alt=""></div> <!-- 181206 : 모바일 이미지가 등록될 경우 img 태그에 .ui_image_swap 클래스 추가해주세요. -->
+					</div>
+				</div>
+				<!-- //정보영역 -->
+				<!-- 181122 추가 -->
+				<!-- goods link -->
+				<div class="gs_link">
+					<div class="txt_frame">
+						<div>
+							<a href="#" class="ko"><span>CJ오쇼핑, 셀렙샵 '글로벌 패션 편집샵'으로 키운다</span></a><!-- 190121 수정 -->
+							<a href="#" class="en"><span>http://www.i-award.or.kr/Web/</span></a><!-- 190121 수정 -->
+						</div>
+					</div>
+				</div>
+				<!-- //181122 추가 -->
+
+				<!-- 상세 module -->
+				@@include('./include/module.html')
+				<!-- //상세 module -->
+			</div><!-- //181220 수정 : news_detail div 추가 -->
+
+			<!-- next list -->
+			<aside class="next_list goods"> <!-- goods 일 경우 goods 클래스 추가 -->
+				<a href="#" class="nx_link">
+					<div class="nx_text">
+						<p class="tit">Next Product</p>
+						<div class="txt">
+							CJ오쇼핑 CelebShop 웹사이트를<br> 오픈하였습니다.
+						</div>
+					</div>
+					<div class="bg"><img src="/images/@img_bottom_goods_img.jpg" class="ui_image_swap" alt=""></div>
+					<div class="overlay"></div> <!-- 190220 추가 : Dim 추가 -->
+				</a>
+			</aside>
+			<!-- //next list -->
+
+		</div>
+		<!-- //content -->
+	</section>
+
+	<!-- footer -->
+	@@include('./include/footer.html')
+	<!-- //footer -->
+
+</div>
+
+<script type="text/javascript" src="/js/libs/jquery-1.11.2.min.js"></script>
+<script type="text/javascript" src="/js/vcui.js"></script>
+<script type="text/javascript" src="/js/vinylc.site.js"></script>
+<script type="text/javascript">
+vcui.require( ['vinylc/detail'], function( Detail ) {
+    new Detail('#wrap');
+});
+</script>
+
+<script type="text/javascript">
+$(function() {
+	// Back 뒤로가기, 리스트 페이지 임시 Link
+	$('a.go_h_prev').attr( {'href':'/goods/FGD10.html?pageCount=12&searchCate='} );
+});
+</script>
+</body>
+</html>

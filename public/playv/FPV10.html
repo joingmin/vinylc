@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="ko" class="playv">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<!-- 190115_ 파비콘 추가 -->
+	<meta name="apple-mobile-web-app-title" content="VinylC">
+	<meta name="application-name" content="VinylC">
+	<link rel="shortcut icon" type="image/x-icon" href="/images/favicon_16.ico">
+	<link rel="apple-touch-icon" href="/images/favicon_192.png">
+	<link rel="apple-touch-icon-precomposed" href="/images/favicon_192.png">
+	<!-- //190115_ 파비콘 추가 -->
+	<title>Play Vinylc || VINYLC</title>
+	<link rel="stylesheet" type="text/css" href="/css/common.css">
+	<script type="text/javascript" src="/js/libs/jquery-1.11.2.min.js"></script>
+</head>
+
+<body data-page="playv">
+
+<div id="skipnavi">
+	<ul>
+		<li><a href="#container_title">본문바로가기</a></li>
+	</ul>
+</div>
+<div id="wrap">
+	<!-- header -->
+	<header class="sub playv">
+        <div class="header_wrap">
+            @@include('./include/logo.html')
+        </div>
+        @@include('./include/nav.html')
+    </header>
+
+    <section id="container">
+		<div id="container_title" class="hide" tabindex="-1">본문 시작</div>
+		<!-- content -->
+		<div id="content">
+			<div class="descriptionContainer">
+				<p>Our experience with Video and Micro-interaction</p>
+				<p>
+					디지털 환경의 사용자경험은<br>
+					상호작용을 통한 마이크로 인터랙션과<br> 
+					정보의 의도적인 움직임에 의해<br>
+					가치와 성과가 달라집니다.
+				</p>
+			</div>
+			<div class="thumContainer"></div>
+			<div class="videoContainer">
+				<div class="videos"></div>
+				<div class="videoCover"></div>
+				<div class="playProgress">
+					<div class="progressBg"></div>
+					<div class="progressBar"></div>
+				</div>
+				<div class="videoCloser">
+					<div class="closerBar"></div>
+					<div class="closerBar"></div>
+				</div>
+			</div>
+			<div class="titleContainer"></div>
+			<div class="goHome"><img src="/images/btn_gohome.jpg"/></div>
+		</div>
+		<!-- //content -->
+	</section>
+</div>
+
+<!--script 영역-->
+</script>
+<script type="text/javascript" src="/js/libs/jquery-1.11.2.min.js"></script>
+<script type="text/javascript" src="/js/vcui.js"></script>
+<script type="text/javascript" src="/js/vinylc.site.js"></script>
+<script type="text/javascript">
+vcui.require( ['vinylc/playv'], function( PlayV ) {
+    new PlayV('#wrap', {
+        playList: "/json/playv_list.json",
+		homeLink: "/gr/FCO10.html"
+    });
+});
+</script>
+<!--//script 영역-->
+
+</body>
+</html>

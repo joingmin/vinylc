@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<title>Request Step1 상태확인 || VINYLC</title>
+	<link href="" rel="shortcut icon" type="image/x-icon">
+	<link rel="apple-touch-icon-precomposed" href="">
+	<link rel="stylesheet" type="text/css" href="/css/common.css">
+</head>
+
+<body data-page="request"><!-- 181101 수정 -->
+
+<div id="skipnavi">
+	<ul>
+		<li><a href="#container_title">본문바로가기</a></li>
+	</ul>
+</div>
+<div id="wrap">
+	<!-- header -->
+	<header class="sub request">
+		<div class="header_wrap">
+			@@include('./include/logo.html')
+		</div>
+		@@include('./include/nav.html')
+	</header>
+
+	<!-- //header -->
+	
+	<!-- 190201 수정-->
+	<section id="container">
+		<div id="container_title" class="hide" tabindex="-1">본문 시작</div> 
+		<!-- content -->
+		<div id="content">
+
+			<h1 class="hide">Request Step1 상태확인</h1>
+
+			<div class="req_wrap">
+
+				<!-- step 1 -->
+				<div class="process_st_1">
+					<!-- step state -->
+					<div class="step_state">
+						<!-- 181101 수정 -->
+						<span class="past">1<span class="hide">단계</span></span>
+						<h1 class="now">STEP 2<span class="hide">현재단계</span></h1>
+						<!-- 181217 추가 -->
+						<span class="future">3<span class="hide">단계</span></span>
+						<span class="future">4<span class="hide">단계</span></span>
+						<!-- 181217 추가 -->
+						<!-- //181101 수정 -->
+					</div>
+
+					<!-- type1 : 모두 체크 했을 경우 -->
+					<div class="ps_type type1">
+						<h2 class="im_tit">프로젝트를 바로 시작해도 됩니다</h2>
+						<div class="im_txt">
+							<p>구체적인 기획과 기능에 대한 정의가 되었기 때문에 UX품질을 높이는데 좀 더 많은 시간을 사용할 수 있습니다.</p><!-- 181101 수정 -->
+							<p>프로젝트 의뢰서를 작성해 주십시오.</p>
+						</div>
+
+						<!-- button -->
+						<div class="btn_wrap">
+							<button type="button" class="btn btn_gray"><span>프로젝트 의뢰작성</span></button>
+						</div>
+					</div>
+
+					<!-- type2 : 정책체크, RFP 체크 했을 경우 -->
+					<div class="ps_type type2">			
+						<div class="txt">
+							<h2 class="im_tit">프로젝트를 시작할 준비가 되셨군요</h2>
+							<div class="im_txt">
+								<p>하지만 서비스 기획과정이 필요하기 때문에 프로젝트 기간이 좀 더 길어질 수 있습니다.</p>
+								<p>서비스 목표, 전략, 참고할 만한 사이트나 대표기능정의를 통해 서비스나 주요기능의 방향을 말해줄 수 있는 자료를 추가로 준비하시거나 해당 업무를 포함하여 의뢰내용을 작성해주세요.</p>
+							</div>
+						</div>
+						<!-- button -->
+						<div class="btn_wrap">
+							<button type="button" class="btn btn_gray"><span>프로젝트 의뢰작성</span></button>
+						</div>
+
+						<!-- 참고 샘플 -->
+						<div class="refe_sample">										
+							<aside class="refe_wrap">
+								<h1 class="ch_tit">샘플을 참고 하시겠어요?</h1>
+								<div class="box_refe">
+									<ul>
+										<li>
+											<!-- pdf (.pdf), pptx (.ppt) : 현재 아이콘은 2 종류만 확인받았습니다. -->
+											<a href="#" class="btn_file ico pdf">
+												바이널씨 서비스기획서
+											</a>
+										</li>
+										<li>
+											<a href="#" class="btn_file ico pdf">
+												바이널씨 서비스기획서
+											</a>
+										</li>
+									</ul>
+								</div>
+							</aside>							
+						</div>			
+					</div>
+
+					<!-- type3 : 정책정의 미체크 되었을 경우 -->
+					<div class="ps_type type3">
+						<div class="txt">
+							<h2 class="im_tit">시작하기에는 준비가 좀 더 필요합니다</h2>
+							<div class="im_txt">
+								<!-- 181101 수정 -->
+								<p>아래 정책서와 제안요청서(RFP) 샘플을 참고하여 프로젝트 착수를 위한 몇 가지 준비를 더 하시거나,<br class="p_display"> UX컨설팅 프로젝트 형태로 의뢰해 주십시오.</p>
+								<p>준비가 되었다면 프로젝트 의뢰작성 버튼을 눌러 의뢰내용을 작성해주세요.</p>
+								<!-- //181101 수정 -->
+							</div>
+						</div>
+
+						<!-- button -->
+						<div class="btn_wrap">
+							<button type="button" class="btn btn_gray"><span>프로젝트 의뢰작성</span></button>
+						</div>
+
+						<!-- 참고 샘플 -->
+						<div class="refe_sample">
+							<aside class="refe_wrap">
+								<h1 class="ch_tit">샘플을 참고 하시겠어요?</h1>
+								<div class="box_refe">
+									<ul>
+										<li>
+											<!-- pdf (.pdf) -->
+											<a href="#" class="btn_file ico pdf">
+												바이널씨 회원정책서
+											</a>
+										</li>
+										<li>
+											<a href="#" class="btn_file ico pdf">
+												바이널씨 회원정책서
+											</a>
+										</li>
+										<li>
+											<a href="#" class="btn_file ico pdf">
+												바이널씨 제안요청서
+											</a>
+										</li>
+										<li>
+											<a href="#" class="btn_file ico pdf">
+												바이널씨 제안요청서
+											</a>
+										</li>
+										<li>
+											<a href="#" class="btn_file ico pdf">
+												바이널씨 서비스기획서
+											</a>
+										</li>
+										<li>
+											<a href="#" class="btn_file ico pdf">
+												바이널씨 서비스기획서
+											</a>
+										</li>
+									</ul>
+								</div>
+							</aside>
+						</div>
+					</div>
+						
+				</div>
+
+
+			</div>
+
+		</div>
+		<!-- //content -->
+	</section>
+	<!-- //190201 수정-->
+
+	<!-- footer -->
+	@@include('./include/footer.html')
+	<!-- //footer -->
+	
+</div>
+
+
+<!--script 영역-->
+<script type="text/javascript" src="/js/libs/jquery-1.11.2.min.js"></script>
+<script type="text/javascript" src="/js/vcui.js"></script>
+<script type="text/javascript" src="/js/vinylc.site.js"></script>
+<script type="text/javascript">
+vcui.require( ['vinylc/selectbox'], function () { 
+	$('.ui_selectbox').vcSelectbox();
+});
+</script>
+<!--//script 영역-->
+
+</body>
+</html>

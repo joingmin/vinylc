@@ -1,0 +1,42 @@
+
+
+/************* iphone X Mobile Screen  (landscape) *************/
+@media only screen and (device-width : 375px ) and (device-height : 812px) and (-webkit-device-pixel-ratio : 3) and (orientation: landscape), (device-width : 414px) and (device-height : 896px) and (-webkit-device-pixel-ratio : 3) and (orientation: landscape), (device-width : 414px) and (device-height : 896px) and (-webkit-device-pixel-ratio : 2) and (orientation: landscape)  { 
+
+/*****************************************
+
+* filename : common_768_land.css
+* description : 768 이하 또는 디바이스 기기 1024 이하 landscape css
+
+* px/71.5 = rem
+
+
+*****************************************/
+
+
+
+/* 상단 */
+body[data-page="works"] .head_info_txt .hd_txt,
+body[data-page="goods"] .head_info_txt .hd_txt,
+body[data-page="careers"] .head_info_txt .hd_txt {margin-bottom:160px;}
+
+body[data-page="works"] .head_info_txt .hd_txt .em_txt,
+body[data-page="goods"] .head_info_txt .hd_txt .em_txt,
+body[data-page="careers"] .head_info_txt .hd_txt .em_txt {top:51vh;}
+
+
+/* VinylCrews */
+.crews_wrap .info_wrap .info_cont {bottom:2.5174rem;}
+.crews_wrap .indi_wrap {bottom:2.2097rem; }
+
+.crews_wrap .crews_main .msg_wrap .msg_cover {padding-top:49vh; padding-bottom:5.7202rem;}
+
+header nav .nav_cont {width:17.4rem !important;}
+header nav button.btn_nav {right:-1.12rem !important;}
+
+
+
+} 
+
+
+

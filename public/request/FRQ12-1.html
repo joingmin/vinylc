@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<title>Request Step2 의뢰등록 || VINYLC</title>
+	<link href="" rel="shortcut icon" type="image/x-icon">
+	<link rel="apple-touch-icon-precomposed" href="">
+	<link rel="stylesheet" type="text/css" href="/css/common.css">
+</head>
+
+<body data-page="request"><!-- 181101 수정 -->
+
+<div id="skipnavi">
+	<ul>
+		<li><a href="#container_title">본문바로가기</a></li>
+	</ul>
+</div>
+<div id="wrap">
+	<!-- header -->
+	<header class="sub request">
+		<div class="header_wrap">
+			@@include('./include/logo.html')
+		</div>
+		@@include('./include/nav.html')
+	</header>
+
+	<!-- //header -->
+
+	<!-- 190201 수정-->
+	<section id="container">
+		<div id="container_title" class="hide" tabindex="-1">본문 시작</div> 
+		<!-- content -->
+		<div id="content">
+
+			<h1 class="hide">의뢰접수완료</h1> <!-- 190320 수정 -->
+
+			<div class="req_wrap">
+
+				<!-- step 2 -->
+				<section class="process_st_2 st3">
+					<!-- step state -->
+					<!-- 190304 수정-->
+					<!-- <div class="step_state">
+						<span class="past">1<span class="hide">단계</span></span>
+						<span class="past">2<span class="hide">단계</span></span>
+						<span class="past">3<span class="hide">단계</span></span>
+						<h1 class="now">STEP 4<span class="hide">현재단계</span></h1>
+					</div> -->
+					<!-- //190304 수정-->
+					
+					<!-- 완료 -->
+					<div class="ps_complet">
+						<!-- 190305 수정-->
+						<h2 class="im_tit">프로젝트가<br>정상적으로 접수되었습니다.</h2>
+						<div class="im_txt">							
+							<p>프로젝트 의뢰가 정상적으로 접수되었습니다.</p>
+						<!-- // 190305 수정-->
+							<p>내부검토에 1~2일이 소요되며, 검토 후 담당부서에서 000@naver.com 으로 연락 드릴 예정입니다.</p>
+							<p>유사 프로젝트를 더 둘러보거나 회사소개서를 다운로드 받아보세요.</p>
+						</div>
+
+						<!-- button -->
+						<div class="btn_wrap">
+							<button type="button" class="btn btn_gray"><span>프로젝트 둘러보기</span></button>
+						</div>
+					</div>
+
+					<!-- 참고 샘플 -->
+					<div class="refe_sample">
+					<aside class="refe_wrap">
+						<h1 class="ch_tit">회사소개서</h1>
+						<div class="box_refe">
+							<ul>
+								<li>
+									<a href="#" class="btn_file ico pdf">
+										바이널씨 회사소개서
+									</a>
+								</li>
+								<!-- 181108 삭제 <li>
+									<a href="#" class="btn_file ico pdf">
+										바이널씨 회사소개서
+									</a>
+								</li> -->
+							</ul>
+						</div>
+					</aside>
+				</div>
+				</section>
+
+			</div>
+
+		</div>
+		<!-- //content -->
+	</section>
+	<!-- //190201 수정-->
+	
+	<!-- footer -->
+	@@include('./include/footer.html')
+	<!-- //footer -->
+	
+</div>
+
+
+<!--script 영역-->
+<script type="text/javascript" src="/js/libs/jquery-1.11.2.min.js"></script>
+<script type="text/javascript" src="/js/vcui.js"></script>
+<script type="text/javascript" src="/js/vinylc.site.js"></script>
+<script type="text/javascript">
+vcui.require( ['vinylc/selectbox', 'vinylc/filebox'], function () { 
+	$('.ui_selectbox').vcSelectbox();
+	$('.ui_filebox').vcFilebox();
+});
+</script>
+<!--//script 영역-->
+
+</body>
+</html>

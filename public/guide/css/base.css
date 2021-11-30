@@ -1,0 +1,85 @@
+@charset "utf-8";
+/************************************************************************
+ * filename : base.css
+ * description : UI개발진행 공통 CSS
+ * date :
+************************************************************************/
+/**{margin:0;padding:0;}
+body	{margin:0;padding:0;font:normal 12px "Malgun Gothic",applegothic,sans-serif;background-color:#4e136c;}
+img{border:none;font-size:0;vertical-align:top;}
+.hide{display:inline-block;position:absolute;z-index:-10;width:0 !important;height:0 !important;overflow:hidden !important;font-size:medium;line-height:normal;word-break:break-all;opacity:0 !important;filter:alpha(opacity=0);-ms-filter:'progid:DXImageTransform.Microsoft.Alpha(opacity=0)';}
+.header_wrap{width:100%; min-width:1024px; background:#4e136c;}
+.header{position:relative; height:50px; background:url('../images/bg_header.png') no-repeat;}
+.header .tit_logo{position:absolute; top:15px; left:20px; width:184px; height:22px; background:url('../images/sp_logo_vinylc.png') no-repeat;}
+.header a.btn_go{display:inline-block; position:absolute; right:50px; top:12px; height:25px; padding:0 10px; border:1px solid #806c8a; color:#fff; font-family:'hapcheR', sans-serif; font-size:13px; line-height:25px; text-decoration:none;}
+.header a.btn_go:hover{padding:1px 11px; border:none; background-color:rgba(255,255,255,.2); background-color:#714289 \0/IE8; text-decoration:none;}*/
+* {margin:0; padding:0;}
+body {margin:0; padding:0; font-size:14px; font-family:Arial, '맑은 고딕', dotum, sans-serif; -webkit-text-size-adjust:none;}
+img {border:0 none; vertical-align:middle}
+xmp {margin:0; padding:0; white-space:pre-wrap;}
+h1.c_left {height:40px; margin:24px 24px 17px 20px;  color:#fff; font-size:20px; line-height:38px;}
+h1.c_left img {height:40px}
+h2.c_left {margin:0 0 2px 20px; padding:2px; color:#555; font-size:17px; line-height:normal}
+ol {margin-left:20px; list-style:decimal; list-style-position: inside; padding-left:2px}
+li {margin-left:0; padding:2px 0;}
+/*li span {margin-left:-2px;}*/
+.dtree {margin:30px 0 0 20px; white-space:nowrap;}
+.dtree p {text-align:right}
+.dtree a {color:#777; text-decoration:none;}
+.dtree a.node, .dtree a.nodeSel {padding: 1px 2px 1px 2px; white-space:nowrap;}
+.dtree a.nodeSel {background-color: #ffefae;}
+.dtree > .clip{margin-bottom:20px;}
+.sub_t	{padding:2px 0 1px 5px;color:#ff0000;line-height:150%;}
+.t_ing {color:#777 !important;}
+.t_js {color:brown !important;}
+.t_app {color:#0042ff !important;}
+.t_ing_js {color:brown !important;}
+.t_app_js {color:#40724b !important;}
+.t_csapp {color:#008c0d !important;}
+.t_confirm {color:#000 !important;}
+.t_melon {color:#000 !important;}
+.t_modify {color:#ff0000 !important;}
+.lib_link{position:absolute;top:5px;right:10px;font-size:12px;color:#000;text-decoration:none;}
+
+.hide{display:inline-block;position:absolute;z-index:-10;width:0 !important;height:0 !important;overflow:hidden !important;font-size:medium;line-height:normal;word-break:break-all;opacity:0 !important;filter:alpha(opacity=0);-ms-filter:'progid:DXImageTransform.Microsoft.Alpha(opacity=0)';}
+
+.coding_guide {}
+.coding_guide h1.h1_guide {margin-bottom:15px; padding:12px 0 12px 10px; background:#58626F; color:white; font-size:18px; line-height:normal}
+.coding_guide h2.h2_guide {margin:20px 0 10px 20px; color:#000; font-size:16px; line-height:normal}
+.coding_guide h3.h3_guide {margin:20px 0 10px 20px; color:#000; font-size:14px; line-height:normal}
+.coding_guide dl.notice {padding-left:20px}
+.coding_guide dl.notice ol {list-style-type:decimal; list-style-position:inside}
+.coding_guide dl.notice li {padding:2px; list-style-type:decimal; list-style-position:inside}
+.coding_guide dl.notice li li {margin-left:10px}
+.coding_guide .guide_wrap {margin:0 20px 10px 20px; }
+.coding_guide .d_desc {margin:0 20px 20px 20px; padding:9px; border:1px dashed #bdbfc2; background:#f5f5f5; font-size:12px; line-height:15px}
+.coding_guide .d_desc.code {padding:0;}
+.coding_guide .d_desc .num_list {padding-left:20px; list-style-type:decimal; list-style-position:outside}
+.coding_guide .d_desc .num_list li {padding:0 0 5px 0; list-style-type:decimal; list-style-position:outside}
+.coding_guide .d_desc .info {}
+.coding_guide .d_desc .info dt {padding-top:10px; font-weight:bold;}
+.coding_guide .d_desc .info dt:first-child {padding-top:0;}
+.coding_guide .d_desc .info dd {padding-left:10px;}
+.coding_guide .d_desc .info li {list-style:none;}
+.coding_guide .t_point {margin:0 0 7px; padding-bottom:5px; border-bottom:1px solid #e5e5e5}
+
+.guide_table {width:100%; border:0 none; border-collapse:collapse;}
+.guide_table th,
+.guide_table td {padding:5px 10px; border:1px solid #ccc;}
+.guide_table th {color:#000;}
+.guide_table thead th {background-color:#ddd; border-bottom:0 none;}
+
+.coding_header_wrap{width:100%; min-width:1024px; background:#4e136c;}
+.coding_header{position:relative; height:50px; background:#c00266; background:-moz-linear-gradient(left, #c00266 7%, #4e136c 68%); background:-webkit-linear-gradient(left, #c00266 7%,#4e136c 68%); background:linear-gradient(to right, #c00266 7%,#4e136c 68%); filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#c00266', endColorstr='#4e136c',GradientType=1 );}
+
+.coding_header .tit_logo{position:absolute; top:10px; left:20px; color:#fff; font-size:18px;}
+.coding_header a.btn_go{display:inline-block; position:absolute; right:50px; top:12px; height:25px; padding:0 10px; border:1px solid #806c8a; color:#fff; font-size:13px; line-height:25px; text-decoration:none;}
+.coding_header a.btn_go:hover{padding:1px 11px; border:none; background-color:rgba(255,255,255,.2); background-color:#714289 \0/IE8; text-decoration:none;}
+
+.mainF_tit {position:absolute; top:120px; left:0; width:100%; background:none; color:#000; font-size:30px; font-weight:bold; text-align:center;}
+
+.footer{position:relative; bottom:0; width:100%; min-width:1024px; background:#222;}
+.footer .conts{position:relative; width:1024px; height:50px;}
+.footer .conts .ft_logo{position:absolute; left:36px; top:18px; width:80px; height:20px; background:url('../images/sp_logo_vinylc.png') no-repeat -200px 0;}
+.footer .conts .copy{padding:20px 0 0 183px; color:#999; font-family:Arial; font-size:10px; line-height:100%}
+.footer .conts .copy strong{color:#fff; font-size:12px; font-weight:normal;}

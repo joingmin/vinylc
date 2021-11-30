@@ -1,0 +1,235 @@
+{
+    "page": "news",
+    "category": "list-insight",
+    "pageTotal": 3,
+    "pageCount": 1,
+    "module": {
+      "set_length": 4,
+      "list": [
+        {
+          "href": "/ko/news/gn00000079",
+          "title": "컬러에 담은 바이널씨의 브랜드 아이덴티티 ",
+          "ga_code": "tracking_code_01",
+          "img_frame": {
+            "context": "컬러에 담은 바이널씨의 브랜드 아이덴티티 컬러에 담은 바이널씨의 브랜드 아이덴티티",
+            "src": "",
+            "alt": ""
+          },
+          "txt_frame": {
+            "txt": "",
+            "date": "News - Jun 22, 2021"
+          }
+        },
+        {
+          "href": "/ko/news/gn00000078",
+          "title": "바이널크루의 역량 강화를 위한 전사 교육 채널 - 바이널캠퍼스(VinylCampus) ",
+          "ga_code": "tracking_code_01",
+          "img_frame": {
+            "context": "바이널크루의 역량 강화를 위한 전사 교육 채널 - 바이널캠퍼스(VinylCampus) 바이널크루의 역량 강화를 위한 전사 교육 채널 - 바이널캠퍼스(VinylCampus)",
+            "src": "",
+            "alt": ""
+          },
+          "txt_frame": {
+            "txt": "",
+            "date": "News - Jun 08, 2021"
+          }
+        },
+        {
+          "href": "/ko/news/gn00000077",
+          "title": "디자인 프로세스 고도화를 위한 디자인 연구소 - 바이널코어(VinylCore) ",
+          "ga_code": "tracking_code_01",
+          "img_frame": {
+            "context": "디자인 프로세스 고도화를 위한 디자인 연구소 - 바이널코어(VinylCore) 디자인 프로세스 고도화를 위한 디자인 연구소 - 바이널코어(VinylCore)",
+            "src": "",
+            "alt": ""
+          },
+          "txt_frame": {
+            "txt": "",
+            "date": "News - Jun 03, 2021"
+          }
+        },
+        {
+          "href": "/ko/news/gn00000076",
+          "title": "바이널씨, 고용노동부가 꼽은 올해의 ‘강소기업’ 선정",
+          "ga_code": "tracking_code_01",
+          "img_frame": {
+            "context": "바이널씨, 고용노동부가 꼽은 올해의 ‘강소기업’ 선정 바이널씨, 고용노동부가 꼽은 올해의 ‘강소기업’ 선정",
+            "src": "",
+            "alt": ""
+          },
+          "txt_frame": {
+            "txt": "",
+            "date": "News - May 04, 2021"
+          }
+        },
+        {
+          "href": "/ko/news/gn00000075",
+          "title": "바이널씨, iF 디자인 어워드 2021에서 4개 프로젝트 수상 ",
+          "ga_code": "tracking_code_01",
+          "img_frame": {
+            "context": "바이널씨, iF 디자인 어워드 2021에서 4개 프로젝트 수상 ",
+            "src": "",
+            "alt": ""
+          },
+          "txt_frame": {
+            "txt": " ",
+            "date": "News - Apr 19, 2021"
+          }
+        },
+        {
+          "href": "/ko/news/gn00000073",
+          "title": "고객 경험을 높이는 금융 서비스 &#39;오늘의 투자&#39; 주제로 인사이트 나눠 ",
+          "ga_code": "tracking_code_01",
+          "img_frame": {
+            "context": "고객 경험을 높이는 금융 서비스 &#39;오늘의 투자&#39; 주제로 인사이트 나눠 고객 경험을 높이는 금융 서비스 &#39;오늘의 투자&#39; 주제로 인사이트 나눠 ",
+            "src": "",
+            "alt": ""
+          },
+          "txt_frame": {
+            "txt": "",
+            "date": "News - Apr 06, 2021"
+          }
+        },
+        {
+          "href": "/ko/news/gn00000071",
+          "title": "MZ세대의 관점에서 본 증권업에 대한 이해 - 22nd VinylCeremony ",
+          "ga_code": "tracking_code_01",
+          "img_frame": {
+            "context": "MZ세대의 관점에서 본 증권업에 대한 이해 - 22nd VinylCeremony MZ세대의 관점에서 본 증권업에 대한 이해 - 22nd VinylCeremony",
+            "src": "",
+            "alt": ""
+          },
+          "txt_frame": {
+            "txt": " ",
+            "date": "News - Mar 11, 2021"
+          }
+        },
+        {
+          "href": "/ko/news/gn00000072",
+          "title": "디지털 프로덕트의 실용적인 커뮤니케이션 방법론, T/SCHOOL에서 발표돼",
+          "ga_code": "tracking_code_01",
+          "img_frame": {
+            "context": "디지털 프로덕트의 실용적인 커뮤니케이션 방법론, T/SCHOOL에서 발표돼 디지털 프로덕트의 실용적인 커뮤니케이션 방법론, T/SCHOOL에서 발표돼",
+            "src": "",
+            "alt": ""
+          },
+          "txt_frame": {
+            "txt": " ",
+            "date": "News - Mar 04, 2021"
+          }
+        },
+        {
+          "href": "/ko/news/gn00000070",
+          "title": "Figma 스터디로 준비하는 디지털 프로덕트의 내일  ",
+          "ga_code": "tracking_code_01",
+          "img_frame": {
+            "context": "Figma 스터디로 준비하는 디지털 프로덕트의 내일 Figma 스터디로 준비하는 디지털 프로덕트의 내일",
+            "src": "",
+            "alt": ""
+          },
+          "txt_frame": {
+            "txt": " ",
+            "date": "News - Mar 02, 2021"
+          }
+        },
+        {
+          "href": "/ko/news/gn00000069",
+          "title": "바이널씨와 바이널크루의 더 나은 내일을 준비하는 경영전략본부",
+          "ga_code": "tracking_code_01",
+          "img_frame": {
+            "context": "바이널씨와 바이널크루의 더 나은 내일을 준비하는 경영전략본부 바이널씨와 바이널크루의 더 나은 내일을 준비하는 경영전략본부",
+            "src": "",
+            "alt": ""
+          },
+          "txt_frame": {
+            "txt": " ",
+            "date": "News - Feb 09, 2021"
+          }
+        },
+        {
+          "href": "/ko/news/gn00000068",
+          "title": "바이널씨, 금융 서비스 프로젝트로 앤어워드 2개 수상  ",
+          "ga_code": "tracking_code_01",
+          "img_frame": {
+            "context": "바이널씨, 금융 서비스 프로젝트로 앤어워드 2개 수상 바이널씨, 금융 서비스 프로젝트로 앤어워드 2개 수상",
+            "src": "",
+            "alt": ""
+          },
+          "txt_frame": {
+            "txt": " ",
+            "date": "News - Jan 26, 2021"
+          }
+        },
+        {
+          "href": "/ko/news/gn00000067",
+          "title": "사용자 경험을 새롭게 구축해 가는 디지털 컨버전스 사업본부",
+          "ga_code": "tracking_code_01",
+          "img_frame": {
+            "context": "사용자 경험을 새롭게 구축해 가는 디지털 컨버전스 사업본부 사용자 경험을 새롭게 구축해 가는 디지털 컨버전스 사업본부",
+            "src": "",
+            "alt": ""
+          },
+          "txt_frame": {
+            "txt": " ",
+            "date": "News - Jan 14, 2021"
+          }
+        },
+        {
+          "href": "/ko/news/gn00000066",
+          "title": "인턴십 프로그램으로 예비 디자이너와 함께 성장하는 시간 ",
+          "ga_code": "tracking_code_01",
+          "img_frame": {
+            "context": "인턴십 프로그램으로 예비 디자이너와 함께 성장하는 시간 인턴십 프로그램으로 예비 디자이너와 함께 성장하는 시간",
+            "src": "",
+            "alt": ""
+          },
+          "txt_frame": {
+            "txt": " ",
+            "date": "News - Dec 29, 2020"
+          }
+        },
+        {
+          "href": "/ko/news/gn00000065",
+          "title": "바이널씨, 스마트앱어워드2020 최고대상 외 2개 부문 수상  ",
+          "ga_code": "tracking_code_01",
+          "img_frame": {
+            "context": "바이널씨, 스마트앱어워드2020 최고대상 외 2개 부문 수상 바이널씨, 스마트앱어워드2020 최고대상 외 2개 부문 수상",
+            "src": "",
+            "alt": ""
+          },
+          "txt_frame": {
+            "txt": " ",
+            "date": "News - Dec 11, 2020"
+          }
+        },
+        {
+          "href": "/ko/news/gn00000064",
+          "title": "바이널씨, 어도비&#40;Adobe&#41; 워크플로 리서치 ‘Share For Review’ 참여",
+          "ga_code": "tracking_code_01",
+          "img_frame": {
+            "context": "바이널씨, 어도비&#40;Adobe&#41; 워크플로 리서치 ‘Share For Review’ 참여 바이널씨, 어도비&#40;Adobe&#41; 워크플로 리서치 ‘Share For Review’ 참여",
+            "src": "",
+            "alt": ""
+          },
+          "txt_frame": {
+            "txt": " ",
+            "date": "News - Oct 30, 2020"
+          }
+        },
+        {
+          "href": "/ko/news/gn00000063",
+          "title": "쓸모없는 경험의 ‘쓸모’에 관한 어떤 물음 - 15th VinylConference ",
+          "ga_code": "tracking_code_01",
+          "img_frame": {
+            "context": "쓸모없는 경험의 ‘쓸모’에 관한 어떤 물음 - 15th VinylConference 쓸모없는 경험의 ‘쓸모’에 관한 어떤 물음 - 15th VinylConference",
+            "src": "",
+            "alt": ""
+          },
+          "txt_frame": {
+            "txt": " ",
+            "date": "News - Oct 23, 2020"
+          }
+        }
+      ]
+    }
+  }

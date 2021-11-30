@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .sr_only {
+            display: none;
+        }
+
+        .ui_tab {
+            display: block;
+            height: 30px;
+        }
+
+        .ui_tab > ul {
+            list-style: none;
+        }
+        
+        .ui_tab > ul > li {
+            float: left;
+            width: 200px;
+            text-align: center;
+        }
+
+        .ui_tab > ul > li.on {
+            background-color: yellow;
+        }
+
+        .ui_tab_panel > div {
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+
+<div>
+    <h1>탭컨트롤 예제</h1>
+    <div class="ui_tab" id="tab01">
+        <ul>
+            <li><a href="#tab1" class="ui_tab_nav">탭1</a></li>
+            <li><a href="#tab2" class="ui_tab_nav">탭2</a></li>
+        </ul>
+    </div>
+    <div class="ui_tab_panel">
+        <div id="tab1">1. 첫번째 탭 내용...</div>
+        <div id="tab2" style="display:none;">2. 두번째 탭 내용...</div>
+    </div>
+    <div id="result"></div>
+</div>
+<script src="/js/libs/jquery-1.11.2.min.js"></script>
+<script src="/js/vcui.js"></script>
+<script src="/js/vinylc.site.js"></script>
+<script>
+    $(function () {
+        $('#tab01').on('tabbeforechange tabchange', function (e, data) {
+            console.log(e.type, data);
+            if (e.type === 'tabchange') {
+                $('#result').text(data.selectedIndex + '번째 탭이 선택됨');
+            }
+        });
+    });
+</script>
+</body>
+</html>

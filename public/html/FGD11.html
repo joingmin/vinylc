@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<title>Goods 상세 || VINYLC</title>
+	<link href="" rel="shortcut icon" type="image/x-icon">
+	<link rel="apple-touch-icon-precomposed" href="">
+	<link rel="stylesheet" type="text/css" href="/css/common.css">
+</head>
+
+<body data-page="goods">
+<div id="skipnavi">
+	<ul>
+		<li><a href="#container_title">본문바로가기</a></li>
+	</ul>
+</div>
+<div id="wrap">
+	<!-- header -->
+	<header class="det goods"> <!-- goods 목록페이지일때 goods 클래스 추가. 정보영역을 넘어가면 goods 클래스 클래스 삭제  -->
+		<!-- 181101 수정 : svg로 교체 -->
+		<div class="header_wrap">
+			<!--#include virtual="/include/logo_det.html"-->
+			<a href="#" class="go_h_prev">
+				<svg id="svg_go_back" viewBox="0 0 56 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+					<title>이전페이지로 가기</title>
+					<g id="g_go_back" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+						<path d="M11.4861406,22.6214132 L23.8648203,35.0000929 L19.6221796,39.2427336 L-7.10542736e-15,19.620554 L19.6222725,-5.32907052e-14 L23.8647274,4.24282648 L11.4850564,16.6214132 L55.2427336,16.6214132 L55.2427336,22.6214132 L11.4861406,22.6214132 Z" id="Stroke-1" fill-rule="nonzero"></path>
+					</g>
+				</svg>
+			</a>
+		</div>
+		<!-- //181101 수정 : svg로 교체 -->
+		<!--#include virtual="/include/nav.html"-->
+	</header>
+	<!-- //header -->
+
+	<section id="container">
+		<div id="container_title" class="hide" tabindex="-1">본문 시작</div>
+		<!-- content -->
+		<div id="content">
+
+			<div class="news_detail"><!-- 181220 수정 : news_detail div 추가 -->
+				<!-- 정보영역 -->
+				<div class="head_info_txt det"><!-- 181122 수정 : det 클래스 추가 -->
+					<h1 class="hide">Goods 상세</h1>
+					<!-- text -->
+					<!-- 181122 수정 -->
+					<div class="hd_txt goods"> <!-- goods 일 경우 goods 클래스 추가 -->
+						<div class="moti_wrap">
+							<div class="em">
+								<div><span>127명의 특별한 생각이</span></div>
+								<div><span>담긴 노트</span></div>
+							</div>
+							<div class="moti_hid">
+								<!-- image -->
+								<div class="hd_img_goods"><img src="/images/@img_module_3col_big_type.jpg" alt=""></div>
+							</div>
+						</div>
+					</div>
+					<!-- //181122 수정 -->
+				</div>
+				<!-- //정보영역 -->
+
+				<!-- 181122 추가 -->
+				<!-- goods link -->
+				<div class="gs_link">
+					<div class="txt_frame">
+						<div>
+							<a href="#"><span>CJ오쇼핑, 셀렙샵 '글로벌 패션 편집샵'으로 키운다</span></a><!-- 190116 수정 -->
+							<a href="#"><span>CJ오쇼핑 '셀렙샵', 첫 팝업스토어 인스피레이션 개최 성료</span></a><!-- 190116 수정 -->
+						</div>
+					</div>
+				</div>
+				<!-- //181122 추가 -->
+
+				<!-- 상세 module -->
+				<!--#include virtual="/include/module.html"-->
+				<!-- //상세 module -->
+			</div><!-- //181220 수정 : news_detail div 추가 -->
+
+			<!-- next list -->
+			<aside class="next_list goods"> <!-- goods 일 경우 goods 클래스 추가 -->
+				<div> <!-- 181122 수정 : div 추가  -->
+					<a href="#" class="nx_link">
+						<div class="nx_text">
+							<p class="tit">Next Product</p>
+							<!-- 181122 수정 -->
+							<div class="txt">
+								<div><span>CJ오쇼핑</span></div>
+								<div><span>CelebShop 웹사이트를</span></div>
+								<div><span>오픈하였습니다.</span></div>
+							</div>
+							<!-- //181122 수정 -->
+						</div>
+						<div class="bg"><img src="/images/@img_module_3col_big_type.jpg" alt=""></div> <!-- goods 에서 노출 -->
+					</a>
+				</div> <!-- 181122 수정 : /div 추가  -->
+			</aside>
+			<!-- //next list -->
+
+		</div>
+		<!-- //content -->
+	</section>
+
+	<!-- footer -->
+	<!--#include virtual="/include/footer.html"-->
+	<!-- //footer -->
+
+</div>
+
+<script type="text/javascript" src="/js/libs/jquery-1.11.2.min.js"></script>
+<script type="text/javascript" src="/js/vcui.js"></script>
+<script type="text/javascript" src="/js/vinylc.site.js"></script>
+<script type="text/javascript">
+var type = ( window.location.href.indexOf('list') > -1 ) ? 'list' : 'view';
+type = 'view';	// 코딩진행표 테스트용
+
+vcui.require( ['vinylc/goods'], function( Goods ) {
+    new Goods( '#wrap', {state:type} );
+});
+</script>
+
+<script type="text/javascript">
+/*!
+	------ 개발 참고용, 임시 확인용 코드 ------
+	프로젝트 경험 상세 | 바이널씨
+	http://www.vinylc.com/project/view.do?id=12&pageCount=12&searchCate=
+
+	function listProject() {
+	   location.href = "/project/list.do?pageCount=12&searchCate=";
+	}
+*/
+
+$(function() {
+	// Back 뒤로가기, 리스트 페이지 임시 Link
+	$('a.go_h_prev').attr( {'href':'/goods/FGD10.html?pageCount=12&searchCate='} );
+});
+</script>
+</body>
+</html>

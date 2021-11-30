@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width, user-scalable=no">
+    <title>Title</title>
+    <style>
+    
+    pre {
+        border:1px dashed #000;
+        border-radius: 4px 4px 4px;
+        background-color: #efefef;
+        padding: 3px;
+    }
+    </style>
+</head>
+<body>
+창사이즈를 변경해보세요.
+
+<pre>
+// vcui 프레임워크에서 breakpoint를 지날 때마다 breakpointchange 라는 이벤트를 발생시켜 준다.
+// 스크립트단에서 모바일/PC에 따라 처리해야 하는 작업이 있을 경우 이 이벤트를 이용하면 된다.
+
+$(window).on('breakpointchange', function (e) {
+    console.log(window.breakpoint); // window.breakpoint객체에 현재 해상도에 대한 정보가 담겨있다.
+    $('body').css('backgroundColor', window.breakpoint.isMobile ? 'red' : 'blue');
+});
+</pre>
+<script src="/js/libs/jquery-1.11.2.min.js"></script>
+<script src="/js/vcui.js"></script>
+<script src="/js/vinylc.site.js"></script>
+<script>
+    $(window).on('breakpointchange', function (e) {
+        $('body').css('backgroundColor', window.breakpoint.isMobile ? 'red' : 'blue');
+    });
+</script>
+</body>
+</html>

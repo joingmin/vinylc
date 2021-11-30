@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="ja">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<title>Request Step2 의뢰등록 || VINYLC</title>
+	<link href="" rel="shortcut icon" type="image/x-icon">
+	<link rel="apple-touch-icon-precomposed" href="">
+	<link rel="stylesheet" type="text/css" href="/css/common.css">
+</head>
+
+<body data-page="request"><!-- 181101 수정 -->
+
+<div id="skipnavi">
+	<ul>
+		<li><a href="#container_title">本文に移動</a></li>
+	</ul>
+</div>
+<div id="wrap">
+	<!-- header -->
+	<header class="sub request">
+		<div class="header_wrap">
+			@@include('./include/logo.html')
+		</div>
+		@@include('./include/nav.html')
+	</header>
+
+	<!-- //header -->
+
+	<!-- 190201 수정-->
+	<section id="container">
+		<div id="container_title" class="hide" tabindex="-1">본문 시작</div> 
+		<!-- content -->
+		<div id="content">
+
+			<h1 class="hide">依頼受付完了</h1>
+
+			<div class="req_wrap">
+
+				<!-- step 2 -->
+				<section class="process_st_2 st3">
+					
+					<!-- 완료 -->
+					<div class="ps_complet">
+						<h2 class="im_tit">プロジェクト依頼の件が正常に受理されました。</h2>
+						<div class="im_txt">
+							<p>デリム美術館ウェブサイト改編プロジェクト依頼の件が正常に受理されました。</p>
+							<p>1～2日間の内部検討を経て、担当部署から000@naver.com宛てにご連絡を差し上げる予定です。</p>
+							<p>類似プロジェクトの閲覧や、会社紹介書のダウンロードなどをご利用いただけます。</p>
+						</div>
+
+						<!-- button -->
+						<div class="btn_wrap">
+							<button type="button" class="btn btn_gray"><span>プロジェクトをもっと見る</span></button>
+						</div>
+					</div>
+
+					<!-- 참고 샘플 -->
+					<div class="refe_sample">
+					<aside class="refe_wrap">
+						<h1 class="ch_tit">会社紹介</h1>
+						<div class="box_refe">
+							<ul>
+								<li>
+									<a href="#" class="btn_file ico pdf">										
+										バイノル氏会社紹介
+									</a>
+								</li>
+								<!-- 181108 삭제 <li>
+									<a href="#" class="btn_file ico pdf">
+										바이널씨 회사소개서
+									</a>
+								</li> -->
+							</ul>
+						</div>
+					</aside>
+				</div>
+				</section>
+
+			</div>
+
+		</div>
+		<!-- //content -->
+	</section>
+	<!-- //190201 수정-->
+	
+	<!-- footer -->
+	@@include('./include/footer.html')
+	<!-- //footer -->
+	
+</div>
+
+
+<!--script 영역-->
+<script type="text/javascript" src="/js/libs/jquery-1.11.2.min.js"></script>
+<script type="text/javascript" src="/js/vcui.js"></script>
+<script type="text/javascript" src="/js/vinylc.site.js"></script>
+<script type="text/javascript">
+vcui.require( ['vinylc/selectbox', 'vinylc/filebox'], function () { 
+	$('.ui_selectbox').vcSelectbox();
+	$('.ui_filebox').vcFilebox();
+});
+</script>
+<!--//script 영역-->
+
+</body>
+</html>

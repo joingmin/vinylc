@@ -1,0 +1,505 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<title>Request Step2 의뢰작성완료 || VINYLC</title>
+	<link href="" rel="shortcut icon" type="image/x-icon">
+	<link rel="apple-touch-icon-precomposed" href="">
+	<link rel="stylesheet" type="text/css" href="/css/common.css">
+</head>
+
+<body data-page="request">
+	<!-- 181101 수정 -->
+
+	<div id="skipnavi">
+		<ul>
+			<li><a href="#container_title">본문바로가기</a></li>
+		</ul>
+	</div>
+	<div id="wrap">
+		<!-- header -->
+		<header class="sub request">
+			<div class="header_wrap">
+				@@include('./include/logo.html')
+			</div>
+			@@include('./include/nav.html')
+		</header>
+
+		<!-- //header -->
+
+		<!-- 190201 수정-->
+		<section id="container">
+			<div id="container_title" class="hide" tabindex="-1">본문 시작</div>
+			<!-- content -->
+			<div id="content">
+
+				<h1 class="hide">Request Step2 의뢰등록</h1>
+
+				<div class="req_wrap">
+
+					<!-- step 2 -->
+					<section class="process_st_2">
+						<!-- 입력 -->
+						<div class="ps_form"> 
+							<h2 class="im_tit">프로젝트에 대해<br class="m_display"> 알려주세요</h2> <!-- 181101 수정 -->
+							<!-- 181217 수정 -->
+							<!-- <div class="im_txt">
+								<p>필수 입력 항목입니다.</p>
+							</div> -->
+							<!-- //181217 수정 -->
+							<ul class="list_form">
+								<li>
+									<div class="inp_wrap">
+										<div class="file_wrap ui_filebox">											
+											<!-- 181203 : <div class="btn_file ico ui_file_list"> 에 첨부 문서 종류에 따라 아래 클래스를 추가 부탁 드립니다. 
+														=> 워드(.word), 엑셀(.excel), 파워포인트(.ppt), pdf(.pdf), jpg/png/ gif(.img), txt/zip(.etc) -->
+											<div class="list_box ui_file">
+												<textarea class="textarea wran" placeholder="프로젝트 배경 및 주안점, 의뢰업무 등을 기재해 주세요."></textarea>
+												<div class="file_head">
+														<!-- <p class="sub_txt">최대 15MB까지 첨부 가능합니다.</p> 181101 이동 -->
+														<div class="al_file ui_file_select">
+															<input multiple="multiple" type="file" name="uploadFile[]" title="파일 등록" class="ui_filedblock">
+															<button class="txt ">첨부파일 추가</button>
+														</div>			
+														<div class=""></div>
+													</div>
+											</div>
+	
+											<!-- 181029 수정 -->
+											<!-- alert popup : dimmed 는 opacity가 0 입니다. -->
+											<div class="lay_wrap alert">
+												<div class="guide_txt">
+													<p>최대 15MB까지 업로드가 가능합니다.</p>
+													<p>파일의 용량을 다시 확인 해주세요</p>
+												</div>
+	
+												<div class="btn_wrap">
+													<button class="btn btn_gray ui_modal_close" type="button"><span>확인</span></button>
+												</div>
+											</div>
+											<!-- //181029 수정 -->
+										</div>
+									</div>
+									<!-- //181217 수정 -->
+								</li>
+								<li>
+									<div class="half">
+										<!-- 181217 수정 -->
+										<p class="label">착수시점 <span class="desc">(필수)</span></p>
+										<div class="s_cal">
+											<!-- 181221 수정 : 에러 시 wran 추가 -->
+											<!-- 2018-12-21 id 추가 -->
+											<button type="button" id='ui_startdate_selector' class="ui_calendar input_cal" data-input-target="#startDate"
+											 data-min-date="2017-09-06" data-max-date="2020-09-06"><span class="hide">날짜 선택</span></button>
+											<input type="text" id="startDate" class="input_txt" readonly="" placeholder="예상시작일을 선택하세요." required>
+											<span class="warn_txt">필수입력사항입니다.</span>
+										</div>
+										<!-- //181217 수정 -->
+									</div>
+
+									<div class="half">
+										<p class="label">기간 <span class="desc">(필수)</span></p> <!-- 181217 수정 -->
+										<div id='ui_period_selector' class="selectbox_wrap placeholder ui_selectbox" data-title="기간 선택">
+											<!-- 181221 수정 : 에러 시 wran 추가 -->
+											<select name="select1" style="display:none;">
+												<option value="3개월 미만">3개월 미만</option>
+												<option value="3개월~6개월">3개월~6개월</option>
+												<option value="6개월~9개월">6개월~9개월</option>
+											</select>
+											<div class="selectbox_view">
+												<a href="#" title="기간 선택 열기">
+													<span class="select_text">예산사업기간을 선택하세요.</span> <!-- 181217 수정 -->
+													<span class="hide">선택됨</span>
+													<span class="ico"></span>
+												</a>
+											</div>
+											<div class="selectbox_list" style="display:none;"></div>
+											<span class="warn_txt">필수입력사항입니다.</span> <!-- 181221 수정 : 에러 시 wran 추가 -->
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="half">
+										<p class="label">사업예산</p><!-- 181217 수정 -->
+										<div class="selectbox_wrap placeholder ui_selectbox" data-title="사업예산 선택">
+											<select name="select1" style="display:none;">
+												<option value="5천만원~1억">5천만원~1억</option>
+												<option value="1억~3억">1억~3억</option>
+												<option value="3억~5억">3억~5억</option>
+												<option value="5억~6억">5억~6억</option>
+												<option value="7억이상">7억이상</option>
+											</select>
+											<div class="selectbox_view">
+												<a href="#" title="사업예산 선택 열기">
+													<span class="select_text">예상사업예산을 선택하세요.</span><!-- 181217 수정 -->
+													<span class="hide">선택됨</span>
+													<span class="ico"></span>
+												</a>
+											</div>
+											<div class="selectbox_list" style="display:none;"></div>
+										</div>
+									</div>
+								</li>
+							</ul>
+							<h2 class="im_tit">의뢰하시는 분의<br class="m_display"> 정보를 알려주세요</h2>
+							<!-- 181217 삭제 -->
+							<!-- <div class="im_txt">
+							<p>필수 입력 항목입니다.</p>
+						</div> -->
+							<!-- //181217 삭제 -->
+							<ul class="list_form cols">
+								<li>
+									<!-- 181217 수정 -->
+									<label for="fi_in_company">회사/단체명 <span class="desc">(필수)</span></label>
+									<div class="inp_wrap">
+										<input type="text" value="" id="fi_in_company" class="input_txt" placeholder="&nbsp;"><!-- 에러 일 경우 (.wran) 클래스 추가 -->
+										<!-- 에러기호 -->
+										<span class="warn_mark"><span class="hide">다시 확인해주세요</span></span>
+										<span class="warn_txt">필수입력사항입니다.</span>
+									</div>
+									<!-- //181217 수정 -->
+								</li>
+								<li>
+									<!-- 181217 수정 -->
+									<label for="fi_in_homepage">홈페이지</label>
+									<div class="inp_wrap">
+										<input type="text" value="" id="fi_in_homepage" class="input_txt" placeholder="&nbsp;">
+										<!-- 에러기호 -->
+										<span class="warn_mark"><span class="hide">다시 확인해주세요</span></span>
+									</div>
+									<!-- //181217 수정 -->
+								</li>
+								<li>
+									<!-- 181217 수정 -->
+									<label for="fi_in_name">의뢰자명 <span class="desc">(필수)</span></label>
+									<div class="inp_wrap">
+										<input type="text" value="" id="fi_in_name" class="input_txt" placeholder="&nbsp;">
+										<!-- 에러기호 -->
+										<span class="warn_mark"><span class="hide">다시 확인해주세요</span></span>
+										<span class="warn_txt">필수입력사항입니다.</span>
+									</div>
+									<!-- //181217 수정 -->
+								</li>
+								<li>
+									<!-- 181217 수정 -->
+									<label for="fi_in_part">부서/직함 <span class="desc">(필수)</span></label>
+									<div class="inp_wrap">
+										<input type="text" value="" id="fi_in_part" class="input_txt" placeholder="&nbsp;">
+										<!-- 에러기호 -->
+										<span class="warn_mark"><span class="hide">다시 확인해주세요</span></span>
+										<span class="warn_txt">필수입력사항입니다.</span>
+									</div>
+									<!-- //181217 수정 -->
+								</li>
+								<li>
+									<!-- 181217 수정 -->
+									<label for="fi_in_email">이메일 <span class="desc">(필수)</span></label>
+									<div class="inp_wrap">
+										<input type="text" value="" id="fi_in_email" class="input_txt wran error_type1" placeholder="&nbsp;">
+										<!-- 에러 메시지: 첫번째(.error_type1), 두번째 (.error_type2) -->
+										<!-- 에러기호 -->
+										<span class="warn_mark"><span class="hide">다시 확인해주세요</span></span>
+										<!-- 181207 에러메시지 추가 -->
+										<span class="warn_txt type1">필수입력사항입니다.</span> <!-- 첫번째 에러메시지 -->
+										<span class="warn_txt type2">이메일 형식에 맞지 않습니다.</span> <!-- 두번째 에러메시지 -->
+										<!-- //181207 에러메시지 추가 -->
+									</div>
+									<!-- //181217 수정 -->
+								</li>
+								<li>
+									<!-- 181217 수정 -->
+									<label for="fi_in_phone">연락처 <span class="desc">(필수)</span></label>
+									<div class="inp_wrap">
+										<input type="text" value="" id="fi_in_phone" class="input_txt" placeholder="&nbsp;">
+										<!-- 에러기호 -->
+										<span class="warn_mark"><span class="hide">다시 확인해주세요</span></span>
+										<span class="warn_txt">연락처는 필수입력사항입니다.</span>
+									</div>
+									<!-- //181217 수정 -->
+								</li>
+							</ul>
+
+							<h2 class="im_tit">추가적인 정보<br class="m_display"> <br class="p_display">입력 시 빠른 회신이 가능합니다</h2>
+							<div class="im_txt">
+								<p>다중 선택이 가능한 항목입니다.</p>
+							</div>
+
+							<ul class="list_form">
+								<li>
+									<p class="label">중타이틀1</p>
+									<!-- 181207 에러메시지 수정 -->
+									<div class="list_form_item">
+										<ul class="list_btn_chk warn">
+											<!-- 에러메시지 활성 경우 wran 클래스 추가 -->
+											<li>
+												<span class="btn_chk_wrap">
+													<input type="checkbox" name="fn_ck_mt1" id="fi_ck_mt11"><label for="fi_ck_mt11">브랜드/제조1</label>
+												</span>
+											</li>
+											<li>
+												<span class="btn_chk_wrap">
+													<input type="checkbox" name="fn_ck_mt1" id="fi_ck_mt12"><label for="fi_ck_mt12">브랜드/제조2</label>
+												</span>
+											</li>
+											<li>
+												<span class="btn_chk_wrap">
+													<input type="checkbox" name="fn_ck_mt1" id="fi_ck_mt13"><label for="fi_ck_mt13">브랜드/제조3</label>
+												</span>
+											</li>
+											<li>
+												<span class="btn_chk_wrap">
+													<input type="checkbox" name="fn_ck_mt1" id="fi_ck_mt14"><label for="fi_ck_mt14">브랜드/제조4</label>
+												</span>
+											</li>
+											<li>
+												<span class="btn_chk_wrap">
+													<input type="checkbox" name="fn_ck_mt1" id="fi_ck_mt15"><label for="fi_ck_mt15">브랜드/제조5</label>
+												</span>
+											</li>
+											<li>
+												<span class="btn_chk_wrap">
+													<input type="checkbox" name="fn_ck_mt1" id="fi_ck_mt16"><label for="fi_ck_mt16">브랜드/제조6</label>
+												</span>
+											</li>
+											<li>
+												<span class="btn_chk_wrap">
+													<input type="checkbox" name="fn_ck_mt1" id="fi_ck_mt17"><label for="fi_ck_mt17">브랜드/제조7</label>
+												</span>
+											</li>
+										</ul>
+										<span class="warn_txt">에러 메시지가 들어갑니다.</span>
+									</div>
+									<!-- //181207 에러메시지 수정 -->
+								</li>
+								<li>
+									<p class="label">중타이틀2</p>
+									<!-- 181207 에러메시지 수정 -->
+									<div class="list_form_item">
+										<ul class="list_btn_chk">
+											<!-- 에러메시지 활성 경우 wran 클래스 추가 -->
+											<li>
+												<span class="btn_chk_wrap">
+													<input type="checkbox" name="fn_ck_mt2" id="fi_ck_mt21"><label for="fi_ck_mt21">브랜드/제조1</label>
+												</span>
+											</li>
+											<li>
+												<span class="btn_chk_wrap">
+													<input type="checkbox" name="fn_ck_mt2" id="fi_ck_mt22"><label for="fi_ck_mt22">브랜드/제조2</label>
+												</span>
+											</li>
+											<li>
+												<span class="btn_chk_wrap">
+													<input type="checkbox" name="fn_ck_mt2" id="fi_ck_mt23"><label for="fi_ck_mt23">브랜드/제조3</label>
+												</span>
+											</li>
+											<li>
+												<span class="btn_chk_wrap">
+													<input type="checkbox" name="fn_ck_mt2" id="fi_ck_mt24"><label for="fi_ck_mt24">브랜드/제조4</label>
+												</span>
+											</li>
+											<li>
+												<span class="btn_chk_wrap">
+													<input type="checkbox" name="fn_ck_mt2" id="fi_ck_mt25"><label for="fi_ck_mt25">브랜드/제조5</label>
+												</span>
+											</li>
+											<li>
+												<span class="btn_chk_wrap">
+													<input type="checkbox" name="fn_ck_mt2" id="fi_ck_mt26"><label for="fi_ck_mt26">브랜드/제조6</label>
+												</span>
+											</li>
+											<li>
+												<span class="btn_chk_wrap">
+													<input type="checkbox" name="fn_ck_mt2" id="fi_ck_mt27"><label for="fi_ck_mt27">브랜드/제조7</label>
+												</span>
+											</li>
+										</ul>
+										<span class="warn_txt">에러 메시지가 들어갑니다.</span>
+									</div>
+									<!-- //181207 에러메시지 수정 -->
+								</li>
+								<li>
+									<p class="label">중타이틀3</p>
+									<!-- 181207 에러메시지 수정 -->
+									<div class="list_form_item">
+										<!-- 에러메시지 활성 경우 wran 클래스 추가 -->
+										<ul class="list_btn_chk">
+											<li>
+												<span class="btn_chk_wrap">
+													<input type="checkbox" name="fn_ck_mt3" id="fi_ck_mt31"><label for="fi_ck_mt31">브랜드/제조1</label>
+												</span>
+											</li>
+											<li>
+												<span class="btn_chk_wrap">
+													<input type="checkbox" name="fn_ck_mt3" id="fi_ck_mt32"><label for="fi_ck_mt32">브랜드/제조2</label>
+												</span>
+											</li>
+											<li>
+												<span class="btn_chk_wrap">
+													<input type="checkbox" name="fn_ck_mt3" id="fi_ck_mt33"><label for="fi_ck_mt33">브랜드/제조3</label>
+												</span>
+											</li>
+											<li>
+												<span class="btn_chk_wrap">
+													<input type="checkbox" name="fn_ck_mt3" id="fi_ck_mt34"><label for="fi_ck_mt34">브랜드/제조4</label>
+												</span>
+											</li>
+											<li>
+												<span class="btn_chk_wrap">
+													<input type="checkbox" name="fn_ck_mt3" id="fi_ck_mt35"><label for="fi_ck_mt35">브랜드/제조5</label>
+												</span>
+											</li>
+											<li>
+												<span class="btn_chk_wrap">
+													<input type="checkbox" name="fn_ck_mt3" id="fi_ck_mt36"><label for="fi_ck_mt36">브랜드/제조6</label>
+												</span>
+											</li>
+											<li>
+												<span class="btn_chk_wrap">
+													<input type="checkbox" name="fn_ck_mt3" id="fi_ck_mt37"><label for="fi_ck_mt37">브랜드/제조7</label>
+												</span>
+											</li>
+										</ul>
+										<span class="warn_txt">에러 메시지가 들어갑니다.</span>
+									</div>
+									<!-- //181207 에러메시지 수정 -->
+								</li>
+							</ul>
+
+							<!-- 개인정보보호정책 -->
+							<div class="al_btn">
+								<div class="chk_wrap wran">
+									<!-- 에러 일 경우 (.wran) 클래스 추가 -->
+									<input type="checkbox" name="fn_ck_age" id="fi_ck_age1"><label for="fi_ck_age1">개인정보보호정책 동의</label>
+									<!-- link -->
+									<a href="#layer_term" data-control="modal" class="arr_link">내용보기</a><!-- 181029 수정 -->
+									<!-- 에러 메시지 -->
+									<span class="wran">에러 메시지가 들어갑니다.</span>
+								</div>
+
+								<!-- 181029 수정 -->
+								<!-- layer popup -->
+								<section class="lay_wrap comm" id="layer_term">
+									<div class="lay_head">
+										<h1>개인정보보호정책</h1>
+									</div>
+									<div class="lay_conts">
+										<div class="conts terms">
+											<h2>개인정보 수집이용에 대한 동의</h2>
+											<div class="txt">
+												회원님의 소중한 개인정보는 다음과 같은 정책에 따라 수집 및 이용됩니다.<br>
+												바이널씨에서는 해당 목적에 연관되는 개인정보만을 수집하며, 수집된 정보를 투명하고 안전하게
+												보호 관리할 것을 약속합니다. 이에 개인정보 수집및 이용에 대한 동의를 구합니다.
+											</div>
+
+											<h2>개인정보의 수집이용 목적</h2>
+											<div class="txt">
+												- 회원님의 프로젝트에 대한 견적, 기간, 개발방법 등의 문의에 대한 정보가 보다 정확한 답변을 위해
+												수집됩니다.<br>
+												- 수집항목 : 성명, 회사명, 부서/직함, 연락처, 이메일, 의뢰내용, 예산, 첨부파일, 홈페이지
+											</div>
+
+											<h2>보유이용 기간</h2>
+											<div class="txt">
+												원칙적으로, 개인정보 수집 및 이용목적이 달성된 후에는 해당 정보를 지체 없이 파기합니다.<br>
+												단, 아래의 사유로 명시한 기간 동안 보존합니다.
+											</div>
+
+											<h2>보존 이유</h2>
+											<div class="txt">
+												회원님의 동의를 통한 정보 유지
+											</div>
+
+											<h2>보존 기간</h2>
+											<div class="txt">
+												회원정보 삭제 요청시까지
+											</div>
+										</div>
+									</div>
+									<button type="button" class="btn_close ui_modal_close"><span class="hide">닫기</span></button>
+								</section>
+								<!-- //layer popup -->
+								<!-- //181029 수정 -->
+							</div>
+
+							<!-- button -->
+							<div class="btn_wrap">
+								<button type="button" class="btn btn_gray" id='btn_regist'><span>프로젝트 의뢰작성</span></button>
+								<!-- 181116 수정 : disabled="disabled" 속성 추가 -->
+							</div>
+						</div>
+
+					</section>
+
+
+
+				</div>
+
+			</div>
+			<!-- //content -->
+		</section>
+		<!-- //190201 수정-->
+
+		<!-- footer -->
+		@@include('./include/footer.html')
+		<!-- //footer -->
+
+	</div>
+
+
+	<!--script 영역-->
+	<script type="text/javascript" src="/js/libs/jquery-1.11.2.min.js"></script>
+	<script type="text/javascript" src="/js/vcui.js"></script>
+	<script type="text/javascript" src="/js/vinylc.site.js"></script>
+	<script type="text/javascript">
+		$(function () {
+			vcui.require(['vinylc/selectbox', 'vinylc/filebox', 'vinylc/calendar'], function (Calendar) {
+
+				$('.ui_filebox').vcFilebox({submitURL:"http://dev.vinylc.com/ko/request/step4", successCallback:formSendSuccess, errorCallback:formSendError});
+				
+				$('.ui_selectbox').vcSelectbox().on('hidden', focusOutHandler);
+				$('.ui_calendar').vcCalendar().on('hidden', focusOutHandler);
+
+
+				function focusOutHandler(e, data) {
+					var id = $(e.currentTarget).attr('id');
+					var value = data.value; //input value
+
+					if (id == "ui_startdate_selector") {
+						//착수시점
+
+						addWranClass($(e.currentTarget).parent(), value);
+					} else if (id == "ui_period_selector") {
+						//기간
+
+						addWranClass($(e.currentTarget), value);
+					}
+				}
+
+				function addWranClass(item, value) {
+					if (value == "") item.addClass('wran');
+					else item.removeClass('wran');
+				}
+
+			});
+		});
+
+		/** 여긴 테스트용이니 적용할 필요 없습니다. **/
+		function formSendSuccess(e){
+			console.log("formSendSuccess")
+		}
+
+		function formSendError(e){
+			console.log("formSendError")
+		}
+		/** 여긴 테스트용이니 적용할 필요 없습니다. **/
+	</script>
+	<!--//script 영역-->
+
+</body>
+
+</html>

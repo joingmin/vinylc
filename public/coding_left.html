@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>현대자동차 상용 국내판매 웹사이트 구축(1차) UI개발 진행표</title>
+    <link rel="stylesheet" type="text/css" href="./guide/css/guide.css">
+    <link rel="stylesheet" type="text/css" href="./guide/js/jstree/style.css">
+
+    <script type="text/javascript" src="./guide/js/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="./guide/js/jstree/jstree.js"></script>
+    <script type="text/javascript" src="./guide/js/guide.js"></script>
+    <style type="text/css">
+
+    </style>
+</head>
+<body>
+
+<h1 class="c_left">VinylC</h1><!-- 담당 프로젝트 로고이미지 적용 -->
+<h2 class="c_left">Process</h2>
+<ol id="uiStatusList">
+    <li><a href="#" class="t_ing" data-label="진행중">UI개발 진행중 <span class="count">(0)</span></a></li>
+    <li><a href="#" class="t_app" data-label="검수요청">UI개발 검수요청 <span class="count">(0)</span></a></li>
+    <li><a href="#" class="t_confirm" data-label="검수완료">검수완료 -> 개발전달 <span class="count">(0)</span></a></li>
+    <li><a href="#" class="t_modify" data-label="개발전달후수정">개발전달후수정 <span class="count">(0)</span></a></li>
+</ol>
+
+<!-- Dtree 시작-->
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <div class="input-group">
+            <input type="text" class="form-control" placeholder="Search node..." id="search">
+            <span class="input-group-btn">
+                <button class="btn btn-default" type="button" id="btn-search">Clear</button>
+            </span>
+        </div><!-- /input-group -->
+    </div>
+    <div class="panel-body">
+        <div class="jstree-controls">
+            <a href="javascript: $('#jstree-wrap').jstree('open_all');"><img src="./guide/images/btn_expand.png" alt="Expand All"/></a>
+            <a href="javascript: $('#jstree-wrap').jstree('close_all');"><img src="./guide/images/btn_collapse.png" alt="Collapse All"/></a>
+        </div>
+        <div class="panel-content">
+            <div id="jstree-wrap"></div>
+        </div>
+    </div>
+</div>
+
+<script type='text/javascript'>
+    $(function () {
+        $.ajax({
+            url: 'data.json',
+            dataType: 'json'
+        }).done(function (res) {
+            builsJsTree(res)
+        });
+    });
+
+    //-->
+</script>
+</body>
+</html>

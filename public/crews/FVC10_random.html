@@ -1,0 +1,370 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<title>VinylCrews || VINYLC</title>
+	<link href="" rel="shortcut icon" type="image/x-icon">
+	<link rel="apple-touch-icon-precomposed" href="">
+	<link rel="stylesheet" type="text/css" href="/css/common.css">
+<style type="text/css">
+.crews_wrap .crews_main { z-index:50; position:relative; } 
+.crews_wrap .crews_main .quest_cont { overflow:hidden; opacity:0; position:absolute; left:0; top:0; width:100%; height:100vh; }
+.crews_wrap .crews_main .msg_wrap { position:relative; width:100%; } 
+.crews_wrap .crews_main .msg_wrap .msg_cover { padding:70vh 1.4583rem 50vh 4.5833rem; } 
+.crews_wrap .crews_main .msg_wrap .msg_cover a:hover { color:#fff; text-decoration:underline; }
+
+@media only screen and (max-width:767px) {
+	.crews_wrap .crews_main .msg_wrap .msg_cover { padding:70vh 0 50vh 0; }
+}
+
+.crews_wrap .crews_main .msg_wrap .scrollbar { position:absolute; top:0; } 
+.crews_wrap .crews_main .msg_wrap .viewport { overflow:hidden; position:relative; height:100%; } 
+.crews_wrap .crews_main .msg_wrap .overview { position:relative; } 
+
+.crews_wrap .bg_wrap { z-index:5; } 
+.crews_wrap .info_wrap { z-index:1; position:relative; } 
+</style>
+</head>
+
+<body data-page="vinylcrews">
+<div id="skipnavi">
+	<ul>
+		<li><a href="#container_title">본문바로가기</a></li>
+	</ul>
+</div>
+<div id="wrap">
+	<!-- header -->
+	<header class="sub vinylcrews">
+		<div class="header_wrap">
+			@@include('./include/logo.html')
+		</div>
+		@@include('./include/nav.html')
+	</header>
+	<!-- //header -->
+
+	<section id="container">
+		<div id="container_title" class="hide" tabindex="-1">본문 시작</div> 
+
+		<div id="content">
+			<div class="crews_wrap" data-ajax="/json/vinylCrews.json">
+				<div class="crews_main">
+					<!-- 배경텍스트 -->
+					<div class="quest_cont">
+						<div class="quest_cover">
+							<div>바이널, 바이널씨에 대한</div>
+							<div>생각</div>
+						</div>
+					</div>
+
+					<!-- 메시지 리스트 -->
+					<div class="msg_wrap">
+						<div class="msg_cont">
+							<div class="msg_cover">
+								<!-- <a href="#">생각이 늙지 않는 것, 천진함을 잃지 않는 것, 그리고 꿈을 잃지 않는 것. </a> --> 
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="bg_wrap">
+				</div>
+
+				<div class="info_wrap">
+				</div>				
+
+				<div class="indi_wrap">
+					<div class="indi">
+						<span class="now">1</span>
+						<span class="total">555</span>
+					</div>
+				</div>
+
+				<button class="btn_arrow prev"></button>
+				<button class="btn_arrow next"></button>
+			</div>
+		</div>
+	</section>
+</div>
+
+<script type="text/html" id="template-crew-item">
+<div class="bg_item">
+	<div class="img_cont">
+		<img src="" alt="${photo.alt}" data-src="${photo.src}">
+		<div class="dimmed"></div>
+	</div>
+
+	<div class="txt_cont">
+		<div class="txt_box">
+			<p>
+				{{html answer.message}}
+			</p>
+		</div>
+	</div>
+</div>
+</script>
+
+<script type="text/html" id="template-crew-info">
+<div class="info_item">
+	<div class="info_cont">
+		<div class="info_box">
+			<p class="name">${info.name}</p>
+			<p class="period"><span>${info.period.start}</span> <span>${info.period.end}</span></p>
+			<p class="duty">${info.duty}</p>
+		</div>
+	</div>
+</div>
+</script>
+
+<script type="text/javascript" src="/js/libs/jquery-1.11.2.min.js"></script>
+<script type="text/javascript" src="/js/libs/jquery.tinyscrollbar-2.4.2.min.js"></script>
+<script type="text/javascript" src="/js/vcui.js"></script>
+<script type="text/javascript" src="/js/vinylc.site.js"></script>
+<script type="text/javascript">
+var resource = {
+    "page": "vinylCrews", 
+    "vinylCrews": {
+        "total": "4",
+        "question": "당신에게<br>바이널 혹은 바이널씨란?",
+        "crews": [
+        {
+            "photo": {
+                "src": "/images/@img_crew_1.jpg",
+                "alt": "Crew 사진" 
+            }, 
+            "answer": {
+                "direction": "right",
+                "message": "생각이 늙지 않는 것, <br/>천진함을 잃지 않는 것, <br/>그리고 꿈을 잃지 않는 것. " 
+            }, 
+            "info": {
+                "direction": "Seunghong, Cha",
+                "period": {
+                    "start": "JUL 2015 -",
+                    "end": "JUL 2016"
+                }, 
+                "duty": "Interaction Designer at Vinyl C" 
+            }
+        }, {
+            "photo": {
+                "src": "/images/@img_crew_2.jpg",
+                "alt": "Crew 사진" 
+            }, 
+            "answer": {
+                "direction": "left",
+                "message": "자신의 부족한 점을 <br/>더 많이 부끄러워할 줄 아는 이는 <br/>더 존경받을 가치가 있는 사람이다." 
+            }, 
+            "info": {
+                "direction": "Subin, Lee",
+                "period": {
+                    "start": "DEB 2017 ~",
+                    "end": ""
+                }, 
+                "duty": "UI Designer at Vinyl C" 
+            }
+        }, {
+            "photo": {
+                "src": "/images/@img_crew_3.jpg",
+                "alt": "Crew 사진" 
+            }, 
+            "answer": {
+                "direction": "left",
+                "message": "산은 산이요. <br/>물은 self" 
+            }, 
+            "info": {
+                "direction": "Kisang, Kim",
+                "period": {
+                    "start": "AUG 2016 -",
+                    "end": "OCT 2018"
+                }, 
+                "duty": "Interaction Designer at Vinyl C" 
+            }
+        }, {
+            "photo": {
+                "src": "/images/@img_crew_4.jpg",
+                "alt": "Crew 사진" 
+            }, 
+            "answer": {
+                "direction": "right",
+                "message": "함께 할 수 있음에 <br/>감사를" 
+            }, 
+            "info": {
+                "direction": "Nayoung, Kang",
+                "period": {
+                    "start": "DEC 2017 -",
+                    "end": ""
+                }, 
+                "duty": "UI Designer at Vinyl C" 
+            }
+        }, {
+            "photo": {
+                "src": "http://placehold.it/1920x1280/101010/ffffff?text=5",
+                "alt": "Crew 사진" 
+            }, 
+            "answer": {
+                "direction": "left",
+                "message": "미지의 세계를 찾아가는 동반자" 
+            }, 
+            "info": {
+                "direction": "Subin, Lee",
+                "period": {
+                    "start": "DEB 2017 ~",
+                    "end": ""
+                }, 
+                "duty": "UI Designer at Vinyl C" 
+            }
+        }, {
+            "photo": {
+                "src": "http://placehold.it/1920x1280/101010/ffffff?text=6",
+                "alt": "Crew 사진" 
+            }, 
+            "answer": {
+                "direction": "right",
+                "message": "아직 알아가고 있는 곳" 
+            }, 
+            "info": {
+                "direction": "Subin, Lee",
+                "period": {
+                    "start": "DEB 2017 ~",
+                    "end": ""
+                }, 
+                "duty": "UI Designer at Vinyl C" 
+            }
+        }, {
+            "photo": {
+                "src": "http://placehold.it/1920x1280/101010/ffffff?text=7",
+                "alt": "Crew 사진" 
+            }, 
+            "answer": {
+                "direction": "left",
+                "message": "일상의 여백을 채워가는 공간" 
+            }, 
+            "info": {
+                "direction": "Subin, Lee",
+                "period": {
+                    "start": "DEB 2017 ~",
+                    "end": ""
+                }, 
+                "duty": "UI Designer at Vinyl C" 
+            }
+        }, {
+            "photo": {
+                "src": "http://placehold.it/1920x1280/101010/ffffff?text=8",
+                "alt": "Crew 사진" 
+            }, 
+            "answer": {
+                "direction": "right",
+                "message": "바다 같이 변화가 밀려오기도 <br/>고요하기도 아름답기도 하다" 
+            }, 
+            "info": {
+                "direction": "Subin, Lee",
+                "period": {
+                    "start": "DEB 2017 ~",
+                    "end": ""
+                }, 
+                "duty": "UI Designer at Vinyl C" 
+            }
+        }, {
+            "photo": {
+                "src": "http://placehold.it/1920x1280/101010/ffffff?text=9",
+                "alt": "Crew 사진" 
+            }, 
+            "answer": {
+                "direction": "left",
+                "message": "Renewal." 
+            }, 
+            "info": {
+                "direction": "Subin, Lee",
+                "period": {
+                    "start": "DEB 2017 ~",
+                    "end": ""
+                }, 
+                "duty": "UI Designer at Vinyl C" 
+            }
+        }, {
+            "photo": {
+                "src": "http://placehold.it/1920x1280/101010/ffffff?text=10",
+                "alt": "Crew 사진" 
+            }, 
+            "answer": {
+                "direction": "right",
+                "message": "기술을 익히고 시험하는 <br/>도장(道場) 같은 장소" 
+            }, 
+            "info": {
+                "direction": "Subin, Lee",
+                "period": {
+                    "start": "DEB 2017 ~",
+                    "end": ""
+                }, 
+                "duty": "UI Designer at Vinyl C" 
+            }
+        }, {
+            "photo": {
+                "src": "http://placehold.it/1920x1280/101010/ffffff?text=11",
+                "alt": "Crew 사진" 
+            }, 
+            "answer": {
+                "direction": "left",
+                "message": "나를 꿈틀거리게 하며 <br/>살아있는 변화의 산실" 
+            }, 
+            "info": {
+                "direction": "Subin, Lee",
+                "period": {
+                    "start": "DEB 2017 ~",
+                    "end": ""
+                }, 
+                "duty": "UI Designer at Vinyl C" 
+            }
+        }, {
+            "photo": {
+                "src": "http://placehold.it/1920x1280/101010/ffffff?text=12",
+                "alt": "Crew 사진" 
+            }, 
+            "answer": {
+                "direction": "right",
+                "message": "협업에 대해 생각하게 하는 곳" 
+            }, 
+            "info": {
+                "direction": "Subin, Lee",
+                "period": {
+                    "start": "DEB 2017 ~",
+                    "end": ""
+                }, 
+                "duty": "UI Designer at Vinyl C" 
+            }
+        }]
+    }
+}
+
+function _noOverlapRandom( min, max, repeat ) {
+    var rendom, results=[], lists=[]; 
+    for( var i=min, len=max; i<=len; i++ ) lists.push(i); 
+    for( i=0; i<repeat; i++ ) { 
+        rendom = Math.floor( Math.random()*lists.length ); 
+        results.push( lists[rendom] ); 
+        lists.splice( rendom, 1 ); 
+    } 
+    return results; 
+} 
+
+var crewsCopy = resource.vinylCrews.crews; 
+var len = crewsCopy.length; 
+var randomIndexs = _noOverlapRandom( 0, len-1, len ); 
+resource.vinylCrews.crews = []; 
+for( var i=0,len=crewsCopy.length; i<len; i++ ) { 
+	var randomIndex = randomIndexs[i]; 
+	resource.vinylCrews.crews[i] = crewsCopy[randomIndex]; 
+}
+</script>
+
+<script type="text/javascript">
+$(function() { 
+	 vcui.require( ['vinylc/vinylCrews'], function( VinylCrews ) { 
+	    $('#wrap').vcVinylCrews( {data:resource} ); 
+	}); 
+});
+</script>
+</body>
+</html>

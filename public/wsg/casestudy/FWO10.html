@@ -1,0 +1,524 @@
+<!doctype html>
+
+<html lang="ko"> <!-- GNB 가 열리면 .gr_open 클래스 추가 -->
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<title>Works 목록 || VINYLC</title>
+	<link href="" rel="shortcut icon" type="image/x-icon">
+	<link rel="apple-touch-icon-precomposed" href="">
+	<link rel="stylesheet" type="text/css" href="/css/common.css">
+</head>
+
+<body data-page="works">
+<div id="skipnavi">
+	<ul>
+		<li><a href="#container_title">본문바로가기</a></li>
+	</ul>
+</div>
+
+<div id="wrap">
+	<header class="sub">
+		<div class="header_wrap">
+			@@include('./include/logo.html')
+		</div>
+		@@include('./include/nav.html')
+	</header>
+
+	<section id="container">
+		<div id="container_title" class="hide" tabindex="-1">본문 시작</div> 
+
+		<div id="content">
+			<div class="head_info_txt">
+				<h1 class="hide">Works 목록</h1>
+				<div class="hd_txt">
+					<div class="em_txt">
+						<div><span>바이널씨는</span></div>
+						<div><span>창의적으로 만들어 활성화시키고,</span></div>
+						<div><span>그 가치를 확산시켜 냅니다.</span></div>
+						<div><span>그리고, 다시 진단하여 발전시키는</span></div>
+						<div><span>디지털 융합 전문가 입니다.</span></div>
+					</div>
+				</div>
+			</div>
+			
+			<!-- 목록 module -->
+			<div class="list_comm more_load" data-template="/template/list.html" data-ajax="/json/works-list.json">
+			<!-- Image & Video List Template 
+				<li>
+				    <a href="${href}">
+				        <div class="img_frame">
+				            <img src="${img_frame.src}" class="img" alt="${img_frame.alt}">
+				            <span class="img_logo"><img src="${img_frame.logo}" class="img_logo" alt=""></span>
+				        </div>
+				        <div class="txt_frame">
+				            <p class="txt">{{html txt_frame.txt}}</p>
+				            <p class="date">${txt_frame.data}</p>
+				        </div>
+				    </a>
+				</li>
+
+				<li>
+				    <a href="${href}">
+				        <div class="video_frame">
+				            <video class="f_mov" title="${video_frame.title}" autoplay loop muted playsinline>
+				                <source src="${video_frame.src}" type="${video_frame.type}">
+				            </video>
+				        </div>
+				        <div class="img_frame">
+				            <img src="${img_frame.src}" class="img" alt="${img_frame.alt}">
+				        </div>
+				        <div class="txt_frame">
+				            <p class="txt">{{html txt_frame.txt}}</p>
+				            <p class="date">${txt_frame.data}</p>
+				        </div>
+				    </a>
+				</li>
+			-->
+			</div>	
+
+			<div class="btn_list_more">
+				<button type="button"><span>MORE</span></button>
+			</div>
+
+			<div class="list_loading">
+				<span class="is-show"></span>
+			</div>
+		</div>
+	</section>
+
+	@@include('./include/footer.html')
+</div>
+
+<script type="text/javascript" src="/js/libs/jquery-1.11.2.min.js"></script>
+<script type="text/javascript" src="/js/vcui.js"></script>
+<script type="text/javascript" src="/js/vinylc.site.js"></script>
+<script type="text/javascript">
+/*! 
+ * module vcui.vinylc.works 
+ * extends vcui.ui.View 
+ * description works content 
+ * author VinylC UID Group 
+ * create 2018-10-10 
+ * update 2019-01-08 
+*/ 
+
+define( 'vinylc/works', ['jquery', 'jquery.transit', 'vcui', 'greensock'], function( $, transit, core, greensock ) { 
+    'use strict';
+
+    var Works = core.ui( 'Works', { 
+        bindjQuery: 'works', 
+        defaults: { state:'list', ajax:'/json/works-list.json' }, 
+        selectors: { 
+            template: $('<div class="template"></div>'), 
+            content: '#content', 
+            titleWrap: '.head_info_txt', 
+            moduleWrap: '.list_comm', 
+            loading: '.list_loading'
+        }, 
+        initialize: function initialize( el, options ) {
+            if( this.supr(el, options) === false ) return; 
+
+            this.state = this.options.state; 
+            this.windowWidth = $(window).width(); 
+            this.windowHeight = $(window).height(); 
+
+             if( this.state == 'list' ) { 
+                this._loadTemplate(); 
+
+            } else {
+                this._render(); 
+            }  
+        }, 
+
+        // 00 List template load 
+        _loadTemplate: function() { 
+            var templateUrl = this.$moduleWrap.attr('data-template'); 
+            this.$template.load( templateUrl, this._completeTemplate.bind(this) );
+        }, 
+
+        _completeTemplate: function( html ) { 
+            $(html).insertAfter( this.$el ); 
+            this.$template.empty(); 
+
+            this.MODULETYPE_FIRST_FULLS = [ 5, 8, 10 ]; 
+            this.MODULETYPE_LAST_FULLS = [ 6, 7, 9 ]; 
+            this.MODULETYPE_VIDEO_START = 5; 
+            this.MODULETYPE_MAX_LENGTH = 10; 
+            this.$topTitle = this.$titleWrap.find('.em_txt'); 
+            this.topTitleLen = this.$topTitle.find('>div').length; 
+            this.$listMore = this.$content.find('.btn_list_more > button'); 
+            this.$listLoader = this.$content.find('.list_loading'); 
+            this.ajax = this.$moduleWrap.attr('data-ajax') || this.options.ajax; 
+            this.pageCount = 1; 
+            this.pageTotal = 0; 
+            var a = this.$el.find('.header_wrap').css('padding-bottom'); 
+            var b = ( a.indexOf('.') > -1 ) ? a.split()[0] : a.replace(/[^0-9]/g,''); 
+            this.headerH = parseInt(b)||120; // Header padding-bottom 
+            this.footerH = this.$el.find('footer').height(); 
+            this.listMoreH = this.$listMore.height(); 
+
+            // this._loadListData(); 
+            vcui.util.delayedCall( this._render, 500, this ); 
+        }, 
+
+        // 01 List data load 
+        _loadListData: function( pageCount ) { 
+            this.pageCount = pageCount || this.pageCount; 
+
+            var settings = {}; 
+            settings.dataType = 'json'; 
+            settings.url = this.ajax+'?pageCount='+this.pageCount; 
+            settings.error = this._errorListData.bind(this); 
+            settings.success = this._completeListData.bind(this); 
+            $.ajax( settings ); 
+            // console.log( 'AJAX Call URL: '+settings.url ); 
+        }, 
+
+        _errorListData: function( $data, $status, $message ) { 
+            console.log( 'JSON load error Status: '+$status+' - Message: '+$message );
+        }, 
+
+        // 02 Initialize page render 
+        _completeListData: function( data ) { 
+            this.$listLoader.hide(); 
+
+            this.pageCount = data.pageCount; 
+            this.pageTotal = data.pageTotal; 
+            console.log( 'AJAX Success pageCount: '+data.pageCount+'/'+data.pageTotal ); 
+
+            if( data.pageCount === data.pageTotal ) {
+                this.$listMore.hide().parent().hide(); 
+            } else { 
+                this.$listMore.show().parent().show(); 
+            } 
+
+            // reLoadList, moveScrollTop 
+            if( !!this.$moduleWrap.children().length ) { 
+                TweenLite.delayedCall( 0.5, this._reLoadedScrollMove.bind(this) );
+            } 
+
+            this._parserData( data ); 
+            this._setModule(); 
+            this._motionModule();   /* 190108_추가 */
+        }, 
+
+        _reLoadedScrollMove: function() { 
+            var y = $(window).scrollTop() + ($(window).height()-this.headerH-this.footerH-this.listMoreH); 
+            $('html,body').stop().animate( {scrollTop:y}, 1600, 'easeInOutExpo' ); 
+        }, 
+
+        // Append module & list / random module type 
+        _parserData: function( data ) { 
+            var lists = data.module.list; 
+            var groupLen = data.module.set_length; 
+            var moduleLen = Math.ceil(lists.length/groupLen); 
+            var moduleCount = this.$moduleWrap.find('.list_type').length; 
+            var $modules = null; 
+
+            // ① Detect HTML Template, list type sectect 
+            $.each( lists, function( i, list ) { 
+                var group = i % groupLen; 
+                if( group == 0 ) moduleCount++; 
+                var type = ( list.video_frame !== undefined ) ? 'video' : 'image'; 
+                var templateObj = {}; 
+                templateObj.href = list.href; 
+                templateObj.img_frame = { src:list.img_frame.src, alt:list.img_frame.alt, logo:list.img_frame.logo }; 
+                templateObj.txt_frame = { txt:list.txt_frame.txt, date:list.txt_frame.date }; 
+                if( type == 'video' ) { 
+                    templateObj.video_frame = { title:list.video_frame.title, src:list.video_frame.src, type:list.video_frame.type }; 
+                } 
+
+                var templateList = $.tmpl( $('#template-list-'+type+'-type').html(), templateObj ); 
+                templateList.attr('data-type', type); 
+
+                if( group == 0 ) {
+                    var templateModule = $.tmpl('<ul class="list_type"></ul>'); 
+                    this.$moduleWrap.append( templateModule ); 
+                } 
+
+                $modules = this.$moduleWrap.find('.list_type'); 
+                $modules.eq(moduleCount-1).append( templateList ); 
+                /* $modules.data( {videoLen:0} ); 
+                setTimeout( function() { 
+                    $modules.find('video').load(); 
+                }.bind(this), 0 ); */ 
+            }.bind(this)); 
+
+            $modules = this.$moduleWrap.find('.list_type').not('.ui-render'); 
+            $.each( $modules, function( i, module ) { 
+                if( !$(module).data('render') ) { 
+                    $(module).data( {videoLen:0} ); 
+                    setTimeout( function() { 
+                        $(module).find('video').load(); 
+                    }.bind(this), 0 ); 
+                }
+            }.bind(this)); 
+
+            // ② When moduleType random, image 1~10 & video 5~10 
+            $.each( $modules, function( i, module ) { 
+                if( $(module).data('render') ) return; 
+
+                // Detect video type in list & video list count 
+                var videoCount = 0; 
+                $.each( $(module).find('li'), function( j, list ) { 
+                    if( $(list).attr('data-type') == 'video' ) { 
+                        videoCount = videoCount + 1; 
+                        $(module).data('videoLen', videoCount); 
+                    } 
+                }.bind(this)); 
+
+                // Set moduleType, random count 
+                var a = ( $(module).data('videoLen') > 0 ) ? this.MODULETYPE_VIDEO_START : 1; 
+                var moduleType = core.number.random( a, this.MODULETYPE_MAX_LENGTH ); 
+                $(module).addClass( 'type_'+moduleType ); 
+
+                var moduleTypeNo = parseInt( $(module).attr('class').replace(/[^0-9]/g,'') ); 
+                if( this.MODULETYPE_VIDEO_START <= moduleTypeNo && moduleTypeNo <= this.MODULETYPE_MAX_LENGTH ) { 
+                    // MODULETYPE_FIRST_FULLS - moduleTypeNo 5, 8, 10 
+                    if( this._isFirstFullList(moduleTypeNo) ) { 
+                        $(module).attr( 'data-fullSize-index', 1 ); 
+
+                        if( !!$(module).data('videoLen') ) { 
+                            var videoLen = $(module).data('videoLen'); 
+                            if( videoLen == 1 ) { 
+                                $.each( $(module).find('li'), function( j, list ) { 
+                                    if( $(list).attr('data-type') == 'video' ) { 
+                                        $(list).addClass('full'); 
+                                        $(module).find('li').eq(0).before( $(list) ); 
+                                    } 
+                                }.bind(this)); 
+
+                            } else if( videoLen > 1 ) {
+                                var checkFirstVideo = false; 
+                                $.each( $(module).find('li'), function( j, list ) { 
+                                    if( $(list).attr('data-type') == 'video' ) { 
+                                        if( !checkFirstVideo ) { 
+                                            checkFirstVideo = true; 
+                                            $(list).addClass('full'); 
+                                            $(module).find('li').eq(0).before( $(list) ); 
+
+                                        } else {
+                                            $(list).find('.video_frame').hide(); 
+                                            $(list).find('.img_frame').show(); 
+                                        }
+                                    } 
+                                }.bind(this)); 
+                            } 
+
+                        } else { 
+                            $(module).find('li').eq(0).addClass('full'); 
+                        } 
+
+                    // MODULETYPE_LAST_FULLS - moduleTypeNo 6, 7, 9 
+                    } else if( this._isLastFullList(moduleTypeNo) ) { 
+                        $(module).attr( 'data-fullSize-index', 4 ); 
+
+                        if( !!$(module).data('videoLen') ) { 
+                            var videoLen = $(module).data('videoLen'); 
+                            var len = $(module).find('li').length; 
+                            if( videoLen == 1 ) { 
+                                $.each( $(module).find('li'), function( j, list ) { 
+                                    if( $(list).attr('data-type') == 'video' ) { 
+                                        $(list).addClass('full'); 
+                                        $(module).find('li').eq(len-1).after( $(list) ); 
+                                    } 
+                                }.bind(this)); 
+
+                            } else if( videoLen > 1 ) { 
+                                var checkFirstVideo = false; 
+                                $.each( $(module).find('li'), function( j, list ) { 
+                                    if( $(list).attr('data-type') == 'video' ) { 
+                                        if( !checkFirstVideo ) { 
+                                            checkFirstVideo = true; 
+                                            $(list).addClass('full'); 
+                                            $(module).find('li').eq(len-1).after( $(list) ); 
+
+                                        } else {
+                                            $(list).find('.video_frame').hide(); 
+                                            $(list).find('.img_frame').show(); 
+                                        }
+                                    } 
+                                }.bind(this)); 
+                            } 
+
+                        } else { 
+                            var len = $(module).find('li').length; 
+                            $(module).find('li').eq(len-1).addClass('full'); 
+                        } 
+                    } 
+                } 
+
+                $(module).addClass('ui-render').data( {render:true} ); 
+            }.bind(this)); 
+
+            // ③ upate global variable, $lists 
+            this.$lists = $modules.find('>li'); 
+        }, 
+
+        /* 190108_수정 */ 
+        _render: function() { 
+            this._setLayout(); 
+            this._bindEvent(); 
+
+            if( this.state == 'list' ) { 
+                 this._motionTitle( this._loadListData.bind(this) ); 
+                 setTimeout( function() { 
+                    $('footer').show(); 
+                }.bind(this), this.topTitleLen*500 ); 
+            } 
+        }, 
+        /* //190108_수정 */
+
+        _setLayout: function() { 
+            if( this.state == 'list' ) { 
+                this._setTitle(); 
+                // this._setModule(); 
+            } 
+        },  
+
+        _bindEvent: function() { 
+            if( this.state == 'list' ) { 
+                this.$listMore.on( 'click', this._clickListMore.bind(this) ); 
+            } 
+
+            $(window).on( 'resize.works', this._resizeHandler.bind(this) ); 
+            $(window).on( 'scroll.works', this._scrollHandler.bind(this) ); 
+            $(document).on( 'mousewheel.works', this._mouseWheelHandler.bind(this) ); 
+        }, 
+
+        _clickListMore: function( evt ) { 
+            this.$listMore.hide(); 
+            this.$listLoader.show(); 
+            this.pageCount = this.pageCount + 1; 
+
+            // Loading motion ... 
+            setTimeout( function() { 
+                this._loadListData(); 
+            }.bind(this), 500 ); 
+        }, 
+
+        _isFirstFullList: function( no ) {
+            var arr = this.MODULETYPE_FIRST_FULLS; 
+            for( var i=0,len=arr.length; i<len; i++ ) { 
+                if( arr[i] == no ) return true; 
+            } 
+            return false; 
+        }, 
+
+        _isLastFullList: function( no ) { 
+            var arr = this.MODULETYPE_LAST_FULLS; 
+            for( var i=0,len=arr.length; i<len; i++ ) { 
+                if( arr[i] == no ) return true; 
+            } 
+            return false; 
+        }, 
+
+        _resizeHandler: function( evt ) { 
+            this.windowHeight = $(window).height(); 
+        }, 
+
+        _scrollHandler: function( evt ) { 
+            var scrollTop = $(window).scrollTop(); 
+            /* var isMoreData = ( this.pageCount < this.pageTotal ) ? true : false; 
+            if( isMoreData && scrollTop >= $(document).height() - this.windowHeight ) { 
+                this._loadListData();    
+            } */             
+
+            if( this.state == 'list' ) { 
+                this._motionModule(); 
+            } 
+            return false; 
+        }, 
+
+        _mouseWheelHandler: function( evt ) { 
+            /* if( this.state == 'list' ) { 
+                this._motionModule(); 
+            } */ 
+
+            $(window).trigger( 'scroll.works' ); 
+            return; // evt.preventDefault(); 
+        }, 
+
+        _setTitle: function() { 
+            var $titles = this.$topTitle.find('>div'); 
+            TweenLite.set( $titles.find('span'), {css:{y:50}} );
+        }, 
+
+        /* 190108_수정 */
+        _motionTitle: function( callback ) { 
+            $.each( this.$topTitle.find('>div'), function( i, item ) { 
+                TweenLite.to( $(item).find('span'), 0.7, {y:0, delay:0.1*i, ease:Quart.easeOut, onComplete: function() {
+                	if( typeof callback === 'function' && i == this.topTitleLen-1 ) { 
+                        callback(); 
+                	}
+                }.bind(this)}); 
+            }.bind(this)); 
+        }, 
+        /* //190108_수정 */
+
+        _setModule: function() { 
+            $.each( this.$lists, function( i, item ) { 
+                var $imgFrame = $(item).find('.img_frame'); 
+                $imgFrame.data('play',false); 
+                var $txtFrame = $(item).find('.txt_frame'); 
+                $txtFrame.data('play',false); 
+            }.bind(this)); 
+        }, 
+
+        _motionModule: function() { 
+            var scrollTop = -$(window).scrollTop(); 
+
+            $.each( this.$lists, function( i, item ) { 
+                var $videoFrame = $(item).find('.video_frame'); 
+                var $imgFrame = $(item).find('.img_frame'); 
+                var $txtFrame = $(item).find('.txt_frame'); 
+
+                // Appearance image 
+                var moduleTop = this.windowHeight - $(item).position().top; 
+                if( !$imgFrame.data('play') && scrollTop < moduleTop ) { 
+                    $videoFrame.addClass('fade-in'); 
+                    $imgFrame.addClass('fade-in'); 
+                    $imgFrame.data('play',true); 
+                }; 
+
+                // Appearance text 
+                var txtFrameTop = this.windowHeight - $txtFrame.position().top; 
+                if( !$txtFrame.data('play') && scrollTop < txtFrameTop ) { 
+                    $txtFrame.addClass('fade-in'); 
+                    $txtFrame.data('play',true); 
+                }; 
+
+                // Reset image & text 
+                /* if( $imgFrame.data('play') && this.wheelDirection == 'down' && scrollTop > moduleTop ) { 
+                    this._setModule(); 
+                }; */
+            }.bind(this)); 
+        }, 
+
+        // public methode ------------------------------- 
+
+        loadList: function( pageCount ) { 
+            // Exception external call, no list data 
+            if( this.pageCount == this.pageTotal ) return; 
+
+            this._loadListData( pageCount ); 
+        } 
+    });
+
+    return Works;
+});
+</script>
+
+<script type="text/javascript">
+vcui.require( ['vinylc/works'], function( Works ) { 
+	var type = ( window.location.href.indexOf('list') > -1 ) ? 'list' : 'view'; 
+	type = 'list';	// 코딩진행표 테스트용 
+    new Works( '#wrap', {state:type, menu:1} ); 
+}); 
+</script>
+</body>
+</html>

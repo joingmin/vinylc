@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <title>2018 바이널씨 홈페이지</title>
+    <link rel="stylesheet" type="text/css" href="">
+    <script type="text/javascript" src="/kr/js/libs/jquery-1.11.2.min.js"></script>
+
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+            line-height: 100%;
+        }
+
+        #wrap {
+            width: 100vw;
+            height: 100vh;
+            background: #eee;
+        }
+
+        .conts {
+            margin: 0 auto;
+            max-width: 1024px;
+            height: 100vh;
+            background: #ddd;
+            font-size: 16px;
+        }
+
+        .conts:after {
+            content: '';
+            display: black;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .conts .p_cont,
+        .n_cont {
+            position: relative;
+            width: 50%;
+            height: 300px;
+            border: 1px solid #333;
+            box-sizing: border-box;
+        }
+
+        .conts .p_cont {
+            float: left;
+            font-size: 1.2em;
+        }
+
+        .conts .n_cont {
+            float: right;
+            font-size: 1.2vw;
+        }
+
+        .conts .p_cont span,
+        .conts .n_cont span {
+            position: absolute;
+            top: 50%;
+            left: 20%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="wrap">
+        <div class="conts">
+            <div class="p_cont"><span>16px(parents element)*1.2em=19.2px</span></div>
+            <div class="n_cont"><span>1000px(viewport)/1vw=10px</span></div>
+        </div>
+    </div>
+    <!--script 영역-->
+    <!-- include('./kr/wsg/guide_common_scripts.html') -->
+    <!--//script 영역-->
+
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+{
+  "name": "hcgkr",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-format": "^1.0.8",
+    "gulp-js-beautify": "0.0.2",
+    "gulp-rimraf": "^0.2.2",
+    "js-beautify": "^1.7.5",
+    "sharp": "^0.20.3"
+  },
+  "devDependencies": {
+    "gulp-gm": "0.0.9",
+    "gulp-image-resize": "^0.13.0",
+    "gulp-imagemin": "^4.1.0",
+    "gulp-jsbeautifier": "^2.1.2",
+    "gulp-remove-files": "0.0.3",
+    "gulp-rename": "^1.2.3",
+    "gulp-responsive": "^2.10.0",
+    "gulp-sequence": "^1.0.0",
+    "gulp-spawn": "^0.4.0",
+    "gulp-uglify": "^3.0.0",
+    "gulp-watch": "^5.0.0",
+    "imagemagick": "^0.1.3"
+  }
+}

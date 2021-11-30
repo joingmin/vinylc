@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+        pre {
+            border:1px dashed #000;
+            border-radius: 4px 4px 4px;
+            background-color: #efefef;
+            padding: 3px;
+        }
+                
+        .sr_only {
+            display: none;
+        }
+
+        .ui_dropdown {
+            position: relative;
+            width: 100px;
+            height: 26px;
+            display: inline-block;
+        }
+
+        .ui_dropdown .ui_dropdown_list {
+            display: none;
+            box-shadow: 4px 4px 4px rgba(0,0,0,.5);
+            border: 1px solid #000;
+            border-bottom-left-radius: 4px;
+            border-bottom-right-radius: 4px;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 120px;
+            background-color: #fff;
+            z-index: 9999;
+        }
+
+        .ui_dropdown .ui_dropdown_list ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .ui_dropdown .ui_dropdown_list a {
+            line-height: 24px;
+            padding: 2px 4px;
+            display: inline-block;
+            width: 100%;
+        }
+
+        .ui_dropdown.open .ui_dropdown_list {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <div class="ui_dropdown">
+        <button class="ui_dropdown_toggle">드룹다운 버튼 <span class="sr_only"></span> </button>
+        <div class="ui_dropdown_list">
+            <ul>
+                <li><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+            </ul>
+        </div>
+    </div>
+    <br><br>
+
+    <div class="ui_dropdown">
+        <button class="ui_dropdown_toggle">드룹다운 버튼 <span class="sr_only"></span> </button>
+        <div class="ui_dropdown_list">
+            <ul>
+                <li><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+            </ul>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+<pre>&lt;div class="ui_dropdown"&gt;
+    &lt;button class="ui_dropdown_toggle"&gt;드룹다운 버튼 &lt;span class="sr_only"&gt;&lt;/span&gt; &lt;/button&gt;
+    &lt;div class="ui_dropdown_list"&gt;
+        &lt;ul&gt;
+            &lt;li&gt;&lt;a href="#"&gt;1&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;2&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;3&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;4&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;5&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</pre>
+</div>
+<script src="/js/libs/jquery-1.11.2.min.js"></script>
+<script src="/js/vcui.js"></script>
+<script src="/js/vinylc.site.js"></script>
+<script>
+    $(function () {
+        console.log(0)
+    });
+</script>
+</body>
+</html>

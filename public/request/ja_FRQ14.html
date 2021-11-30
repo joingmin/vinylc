@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<title>Request layer popup</title>
+	<link href="" rel="shortcut icon" type="image/x-icon">
+	<link rel="apple-touch-icon-precomposed" href="">
+	<link rel="stylesheet" type="text/css" href="/css/common.css">
+</head>
+
+<body>
+
+<div id="wrap">
+
+<a href="#layer_term" data-control="modal">개인정보취급방침</a>
+
+<section class="lay_wrap comm" id="layer_term">
+	<div class="lay_head">
+		<h1>プライバシーポリシー</h1>
+	</div>
+	<div class="lay_conts">
+		<div class="conts terms">
+			<h2>プライバシーポリシー</h2>
+			<div class="txt">
+				会員様の大切な個人情報は、次のポリシーに基づいて収集・利用されます。<br>
+				VinylCは、当該目的に関連のある個人情報のみを収集し、収集された情報を透明かつ安全に保護・管理することをお約束いたします。そのため、個人情報の収集および利用の同意を求めます。
+			</div>
+
+			<h2>個人情報収集利用の目的</h2>
+			<div class="txt">
+				- 会員様のプロジェクトに対する見積もり、期間、開発方法などのお問い合わせにより正確にお答えするために収集します。<br>
+				- 収集項目：氏名、会社名、部門/役職、連絡先、メールアドレス、依頼内容、予算、添付ファイル、ホームページ
+			</div>
+
+			<h2>保有利用期間</h2>
+			<div class="txt">
+				原則的に、個人情報の収集および利用目的が達成された後は、当該情報を遅滞なく破棄します。<<br>
+				ただし、以下の理由で明示した期間中は保管します。
+			</div>
+
+			<h2>保管理由</h2>
+			<div class="txt">
+				会員様の同意を通じた情報の保持
+			</div>
+
+			<h2>保管期間</h2>
+			<div class="txt">
+				個人情報削除要請時まで
+			</div>
+		</div>
+	</div>
+	<button type="button" class="btn_close ui_modal_close"><span class="hide">閉じる</span></button>
+</section>
+
+<br><br>
+
+<a href="#layer_file" data-control="modal" data-dim-style="background-color:#fff">파일 용량 가이드 팝업</a>
+
+<!-- alert popup : dimmed 는 opacity가 0 입니다. -->
+<div class="lay_wrap alert" id="layer_file">
+	<!-- 190320 수정 -->
+	<div class="guide_txt">
+		<p>最大15MBまでアップロードできます。</p>
+		<p>ファイルの容量を確認してください。</p>
+	</div>
+	<!-- //190320 수정 -->
+	<div class="btn_wrap">
+		<button class="btn btn_gray ui_modal_close" type="button"><span>確認</span></button>
+	</div>
+</div>
+
+</div>
+
+
+<!--script 영역-->
+<script type="text/javascript" src="/js/libs/jquery-1.11.2.min.js"></script>
+<script type="text/javascript" src="/js/vcui.js"></script>
+<script type="text/javascript" src="/js/vinylc.site.js"></script>
+<script type="text/javascript">
+
+</script>
+<!--//script 영역-->
+
+</body>
+</html>
